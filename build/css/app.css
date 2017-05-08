@@ -3086,7 +3086,7 @@ button {
 
 .request__send-btn {
   padding: 0 73px 0 5px;
-  min-width: 196px;
+  min-width: 220px;
   font-size: 18px;
   line-height: 38px;
   height: 38px;
@@ -4148,7 +4148,6 @@ button {
   }
   .btn{
     min-width: 210px;
-    padding: 6px 34px 6px 5px;
     font-size: 16px;
   }
   .btn::after{
