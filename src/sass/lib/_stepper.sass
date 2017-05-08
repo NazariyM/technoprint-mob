@@ -1,0 +1,56 @@
+.stepper
+	display: flex
+	align-items: center
+	overflow: hidden
+	position: relative
+	.stepper-input
+		overflow: hidden
+		z-index: 49
+		-moz-appearance: textfield
+		&::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+			-webkit-appearance: none
+			margin: 0
+		&:focus
+			background-color: #fff
+	.stepper-arrow
+		cursor: pointer
+		position: relative
+		z-index: 50
+		display: inline-block
+		width: 30px
+		height: 39px
+		background: #D7EAFA
+		border-bottom: 1px solid #C5E1FA
+		+hide-text
+		+vertical
+		text-align: center
+		transition: .15s
+		&:hover
+			background: #9ECDFF
+			border-bottom-color: #DFDFDF
+		&:active
+			background: #335E8C
+			border-bottom-color: #E63E2D
+		&::after
+			font-size: 25px
+			line-height: 39px
+			+f('oss')
+			color: #000
+		&.up
+			order: 1
+	.stepper-arrow + .stepper-arrow
+		margin-right: 3px
+	.stepper-icon
+		display: inline-block
+		vertical-align: middle
+		font-size: 13px
+		pointer-events: none
+	&.disabled
+		.stepper-input
+			background: #fff
+			border-color: #eee
+			color: #ccc
+		.stepper-arrow
+			background: #fff
+			border-color: #eee
+			cursor: default

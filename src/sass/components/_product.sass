@@ -1,0 +1,375 @@
+.product
+	&__container
+		padding: 0
+		+sm
+			padding: 0
+	&__sect
+		position: relative
+		padding: 15px 30px 15px 15px
+		background-color: #EBECEC
+		border-bottom: 1px solid #D1D1D1
+		&.open .product__sect-arr
+			+rotate(-180)
+			fill: #3D6791
+		&_color
+			background: #DFE6EB
+			.product__sect-link
+				background: #F8F9F8
+			.product__sect-link::after,
+			.product__sect-link::before
+				background: #DFE6EB
+			.product__sect-count
+				background: #DFE6EB
+		&-title
+			color: #000
+			font-size: 18px
+			+sm
+				font-size: 16px
+		&-icon-wrap
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
+			width: 50px
+		&-icon
+			fill: #C7CBCF
+			&.icon-machine
+				font-size: 28px
+			&.icon-shirts
+				font-size: 34px
+			&.icon-cups
+				font-size: 28px
+			&.icon-books
+				font-size: 38px
+			&.icon-souvenirs
+				font-size: 28px
+			&.icon-pictures
+				font-size: 26px
+			&.icon-balloons
+				font-size: 32px
+			//&.icon-lovers
+			//	font-size: 28px
+			//&.icon-watched
+			//	font-size: 27px
+			//	fill: #7C8B99
+		&-arr
+			position: absolute
+			right: 10px
+			top: 10px
+			font-size: 10px
+			fill: #BCBFC2
+			z-index: 1
+			+trs
+			&.active
+				fill: #3D6791
+		span
+			display: inline-block
+			vertical-align: middle
+			width: calc(100% - 60px)
+	&__inn
+		display: none
+		text-align: center
+	&__examples
+		padding: 5px
+		background: #EBECEC
+	&__zoom
+		+coverdiv
+		z-index: 5
+		transition: transform .45s .2s, opacity .45s .2s, background 0s
+	&__zoom:hover &__zoom-icon
+		fill: #45484F
+	&__zoom:active &__zoom-icon
+		fill: #B9BDC7
+	&__zoom-icon-wrap
+		position: absolute
+		bottom: 5px
+		left: 5px
+		width: 35px
+		height: 35px
+		background: rgba(#fff, .7)
+		+vertical
+		+sm
+			width: 25px
+			height: 25px
+	&__zoom-icon
+		fill: #7B7F8A
+		font-size: 20px
+		display: inline-block
+		vertical-align: middle
+		
+	// <============== item starts here ==============>
+	&__item
+		position: relative
+		display: flex
+		padding: 10px
+		background: #fff
+		+clr
+		+sm
+			padding: 5px 0 5px 5px
+		& + &
+			margin-top: 5px
+		&-pic-wrap
+			position: relative
+			float: left
+			align-self: flex-start
+			width: 140px
+			transition: transform .3s
+			-webkit-tap-highlight-color: transparent
+			+gpu
+			+sm
+				width: 100px
+			&.is-active
+				transform: translate3d(0, -3px ,0)
+			&.is-active .decor__line
+				height: 2px
+			&.is-active .decor__line::before
+				border-bottom-color: rgba(0, 0, 0, .3)
+			&.is-active .decor__line::after
+				border-top-color: rgba(238, 244, 251, 1)
+			&.is-active .product__zoom
+				opacity: 1
+				transform: scale(1)
+		&-pic
+			height: 150px
+			position: relative
+			z-index: 1
+			display: flex
+			align-items: center
+			justify-content: center
+			+sm
+				height: 110px
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
+		&-info
+			float: left
+			display: flex
+			flex-direction: column
+			width: calc(100% - 140px)
+			padding-left: 15px
+			color: #2f2e2d
+			text-align: left
+			+f("oss",15)
+			+sm
+				width: calc(100% - 100px)
+				padding-left: 10px
+		&-title
+			color: #000000
+		&-descr
+			margin-bottom: 15px
+			color: #797774
+		&-buy
+			margin-top: auto
+			text-align: right
+	&__buy-opt
+		font-size: 15px
+		line-height: 12px
+		+f("psb")
+		color: #FCBD7E
+		+sm
+			display: block
+			margin-bottom: 10px
+		.product__val-icon
+			font-size: 12px
+			fill: #FCBD7E
+	&__buy-opt:hover
+		color: #EF7C1B
+	&__buy-opt:hover .product__val-icon
+		fill: #EF7C1B
+	&__buy-opt:active
+		color: #FCBD7E
+	&__buy-opt:active .product__val-icon
+		fill: #FCBD7E
+	&__cart-add
+		position: relative
+		padding: 0 31px 0 5px
+		height: 28px
+		min-width: 102px
+		background-color: $blue-light
+		white-space: nowrap
+		margin-left: 40px
+		+sm
+			margin-left: 6px
+		.product__val-icon
+			font-size: 12px
+			fill:	 #E63833
+			
+		&::after
+			position: absolute
+			right: -2px
+			top: -2px
+			z-index: 1
+			content: ''
+			+s('btn_cart')
+			transform: scale(.9)
+			+md
+				top: -6px
+				right: -6px
+				transform: scale(0.7)
+		&:hover::after
+			+s('btn_cart-hvr')
+		&:active::after
+			+s('btn_cart-act')
+	&__price-current
+		display: inline-block
+		vertical-align: middle
+		color: #E63833
+		+f("psb",19)
+		line-height: 15px
+		+lg
+			font-size: 19px
+		+md
+			font-size: 15px
+	&__suggest
+		position: relative
+		background: #EBECEC
+		&-text
+			padding: 20px 15px 5px
+			border-top: 1px solid #DBDBDB
+			border-bottom: 1px solid #DBDBDB
+			text-align: center
+		&-title
+			margin-bottom: 10px
+			font-family: Arial, sans-serif
+			text-transform: uppercase
+		&-descr
+			display: inline
+			text-indent: 30px
+			line-height: 1.25
+			&_hidden
+				display: none
+				padding-bottom: 0
+			&.is-open
+				display: inline
+		&-more
+			position: relative
+			top: -8px
+			background: #EBECEC
+			height: 30px
+			width: 100%
+			&-icon
+				font-size: 12px
+				fill: #999999
+			&.is-active
+				top: 0
+			&.is-active .product__suggest-more-icon
+				+rotate(180)
+				
+		&-links
+			padding: 10px 15px 25px
+			text-align: center
+			+sm
+				padding: 10px 10px 20px
+		&-link
+			display: block
+			line-height: 1
+			color: #144987
+			&:hover
+				color: #000
+			&:hover span
+				border-bottom-color: #C6C6C6
+			span
+				border-bottom: 1px solid #DBDBDB
+			& + &
+				margin-top: 10px
+		&-btn
+			margin: 20px auto
+			+sm
+				margin: 10px auto
+	&__item-pic
+		+sm
+			.decor__line
+				width: 88%
+			.decor__line::after
+				right: -12px
+	&__rating
+		display: inline-block
+		vertical-align: middle
+		margin-right: 20px
+		&-text
+			margin-bottom: 3px
+			font-size: 18px
+			color: #1C487A
+		&-in
+			display: flex
+			flex-direction: row-reverse
+			justify-content: center
+		&-input
+			display: none
+		&-input ~ &-icon .product__rating-star
+			fill: #DBDBDB
+			stroke: #DBDBDB
+		&-input:checked ~ &-icon .product__rating-star,
+		&-input:checked &-icon .product__rating-star
+			fill: #FFED00
+			stroke: #FFED00
+		&-icon:hover .product__rating-star,
+		&-icon:hover ~ &-icon .product__rating-star
+			fill: #C7CBCF
+			stroke: #DBDBDB
+		&-input:checked &-icon:hover .product__rating-star,
+		&-input:checked ~ &-icon .product__rating-star
+			fill: #FFED00
+			stroke: #FFED00
+		&-icon
+			display: inline-block
+			cursor: pointer
+		&-star
+			font-size: 23px
+			
+	&__descr-title
+		padding: 2px 15px
+		margin-bottom: 15px
+		font-size: 25px
+		text-transform: uppercase
+		color: #00306B
+		background-color: #F4F8FD
+	&__descr-item
+		padding: 0 20px 0 15px
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+	&__buy
+		margin: 5px 0 0
+	&__buy-in
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+	&__price
+		min-width: 152px
+		padding: 0 10px
+		height: 85px
+		line-height: 85px
+		+f('psb',30)
+		color: #00306B
+		text-align: center
+		border-top-left-radius: 10px
+		background: #F4F8FD url(../img/bg/price-bg.svg) no-repeat 0 0
+		background-size: 100% 195%
+		.icon-ruble
+			display: inline-block
+			margin-left: 5px
+			fill: #00306B
+			font-size: 21px
+	&__sale-link
+		display: inline-block
+		margin: 5px 0 0 25px
+		color: #FCBD7E
+		border-bottom: 3px dashed #FCBD7E
+		+f('psb',25)
+		+trs
+		&:hover
+			color: darken(#FCBD7E, 15)
+			border-bottom: 3px dashed darken(#FCBD7E, 15)
+	&__cart-btn
+		padding: 20px 70px 20px 5px
+		margin: 30px auto 0
+		display: block
+		font-size: 21px
+		min-width: 362px
+		background: #27B0E2
+		&:hover
+			background: #02B5F7
+		&:active
+			background: #23568A
+			

@@ -1,0 +1,51 @@
+//begin footer
++b.FOOTER.footer
+	+e.container.container
+		+e.top
+			+e.top-col
+				+b.logo._footer
+					+e.A(href="#!").link
+						+e.IMG.img(src="img/logo.svg" alt="Техно-принт")
+
+				- var socialsClass = '_footer'
+					include ../components/_socials
+
+			+e.top-col
+				+b.nav._footer
+					+e.UL.list
+						+e.item
+							+e.A.link(href="#!") Главная
+						+e.item
+							+e.A.link(href="#!") Услуги фирмы
+						+e.item
+							+e.A.link(href="#!") О нас
+						+e.item
+							+e.A.link(href="#!") Доставка
+						+e.item
+							+e.A.link(href="#!") Оплата
+						+e.item
+							+e.A.link(href="#!") Новости
+						+e.item
+							+e.A.link(href="#!") Лучшие дизайны
+						+e.item
+							+e.A.link(href="#!") Оптовые цены
+		+e.ADDRESS.address
+			+e.address-row
+				+e.address-str
+					+icon('icon-geo', 'icon')
+					+e.SPAN г. Самара, ул. Первомайская, 25
+				+e.address-descr (офис по сувенирной продукции)
+				+e.A(href="tel:88462671022").address-tel Тел.: 8(846) 267-10-22
+				+e.A(href="tel:89613808095").address-tel Сот.: 8-961-380-80-95
+			+e.address-row
+				+e.address-str
+					+icon('icon-geo', 'icon')
+					+e.SPAN г. Самара, ул. Чапаевская, 232
+				+e.address-descr (полиграфия, печать, чертежи)
+				+e.A(href="tel:88463327740").address-tel Тел.: 8(846) 332-77-40
+				+e.A(href="tel:89277507375").address-tel Сот.: 8-927-750-73-75
+		+e.copy
+			+e.A(href="#!").copy-link Полная версия сайта
+			+e.copy-text &copy; 2017.  Права защищены.
+
+//end footer

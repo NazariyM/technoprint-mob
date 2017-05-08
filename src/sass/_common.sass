@@ -1,0 +1,152 @@
+body
+	min-width: 320px
+	+f("psr", 18)
+	line-height: 1.2
+	color: $black
+	-webkit-font-smoothing: subpixel-antialiased
+	+sm
+		font-size: 16px
+	
+// layout
+.container
+	padding: 0 15px
+	+sm
+		padding: 0 10px
+
+.out
+	overflow: hidden
+	
+// titles
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+	
+.title-xs
+	+f("oss",19,30)
+	color: $black
+
+.title-sm
+	+f("psb",20)
+
+.title-md
+	font-family: Arial, sans-serif
+	font-size: 20px
+	line-height: 1.3
+	
+.title-lg
+	color: #274F7F
+	+f('psr',27)
+	text-transform: uppercase
+	
+// basic transition
+=trs
+	transition: .2s cubic-bezier(0.55, 0.09, 0.68, 0.53)
+
+// links
+.link-decor
+	padding: 3px
+	color: #008CFF
+	background-image: linear-gradient(to right, #008CFF 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, #008CFF 16%, rgba(255, 255, 255, 0) 0%)
+	background-size: 22px 2px, 6px 2px
+	background-repeat: repeat-x
+	background-position: bottom
+	&:hover
+		color: darken(#008CFF, 10)
+		background-image: linear-gradient(to right, darken(#008CFF, 10) 33%, rgba(255, 255, 255, 0) 0%), linear-gradient(to left, darken(#008CFF, 10) 16%, rgba(255, 255, 255, 0) 0%)
+
+// mini reset
+a
+	text-decoration: none
+	color: inherit
+	
+img
+	display: block
+	
+button
+	background: none
+	+f('psr')
+
+// buttons
+.btn
+	position: relative
+	display: inline-block
+	min-width: 238px
+	padding: 11px 41px 11px 5px
+	+f("psr",18)
+	color: $white
+	outline: none
+	text-decoration: none
+	text-align: center
+	background-color: #52C0E9
+	border-bottom: 1px solid #E7E7E7
+	+sm
+		min-width: 210px
+		padding: 6px 34px 6px 5px
+		font-size: 16px
+	&::after
+		content: ''
+		position: absolute
+		top: calc(50% - 18px)
+		right: 10px
+		z-index: 1
+		+s('btn_arr')
+		transform: scale(.7)
+		+sm
+			right: 6px
+			transform: scale(.6)
+	&:hover
+		background-color: #128FCD
+		border-bottom-color: #F9BF84
+	&:hover::after
+		+s('btn_arr-hvr')
+	&:active
+		background-color: #24568D
+		border-bottom-color: #E63833
+	&:active::after
+		+s('btn_arr-act')
+	&_dark
+		background-color: #1768BF
+		border-bottom-color: #F9BF84
+		&::after
+			+s('btn_dark')
+		&:hover
+			background-color: #00BBFF
+			border-bottom-color: #F9BF84
+		&:hover::after
+			+s('btn_dark-hvr')
+		&:active
+			background-color: #24568D
+			border-bottom-color: #E63833
+
+.send-btn
+	position: relative
+	padding: 0 70px 0 5px
+	min-width: 232px
+	line-height: 45px
+	height: 45px
+	color: #fff
+	background: #6ca5db
+	text-align: right
+	border-bottom: 2px solid #a7b8c9
+	+f("ver",19)
+	overflow: hidden
+	&::after
+		position: absolute
+		top: -4px
+		right: -4px
+		+s('send')
+		content: ''
+		transform: scale(.87)
+		+md
+			top: -7px
+			right: -8px
+			transform: scale(.73)
+	&:hover
+		background-color: #63afed
+		border-bottom-color: #ffff74
+	&:hover::after
+		+s('send-hvr')
+	&:active
+		background-color: #415c89
+		border-bottom-color: #a95a63
+	&:active::after
+		+s('send-act')

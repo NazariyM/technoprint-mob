@@ -1,0 +1,33 @@
+.benefits
+	padding: 20px 0 30px
+	background-color: #d8e7f9
+	&__item
+		& + &
+			margin-top: 20px
+		&:nth-child(2)
+			padding-left: 25px
+		&-pic
+			display: inline-block
+			vertical-align: middle
+			width: 85px
+			height: 85px
+			&::after
+				content: ''
+				display: block
+				transform: scale(0.7)
+				position: relative
+				top: -9px
+				left: -23px
+				
+			&_pic-1::after
+				+s('benefit_1')
+			&_pic-2::after
+				+s('benefit_2')
+			&_pic-3::after
+				+s('benefit_3')
+		&-text
+			display: inline-block
+			vertical-align: middle
+			width: calc(100% - 90px)
+			line-height: (26/20)
+			color: #595858

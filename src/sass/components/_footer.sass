@@ -1,0 +1,63 @@
+.footer
+	padding: 20px 0
+	background-color: #002757
+	background-image: linear-gradient(to top, #002757 0%, rgba(0, 62, 138, 0.65) 100%)
+	color: #fff
+	overflow: hidden
+	&__top
+		+clr
+	&__top-col
+		position: relative
+		&:nth-child(1)
+			float: left
+			width: 55%
+		&:nth-child(2)
+			float: right
+			top: 45%
+	&__address
+		margin-top: 25px
+		position: relative
+		z-index: 10
+		font-style: normal
+		+clr
+		+sm
+			font-size: 16px
+		&-row
+			max-width: 310px
+			margin: 0 auto 10px
+			padding: 0 5px 0 25px
+			transform: translateX(30px)
+		&-tel
+			display: inline-block
+			width: 100%
+			margin-bottom: 3px
+		&-descr
+			margin-bottom: 3px
+		&-str
+			position: relative
+			margin-bottom: 3px
+		.icon
+			position: absolute
+			top: 5px
+			left: -21px
+			z-index: 1
+			fill: #CFE7F9
+			font-size: 31px
+			+md
+				font-size: 24px
+	&__copy
+		margin-top: 10px
+		text-align: center
+		color: #CFE7F9
+		font-size: 15px
+		&-text
+			margin: 10px 0 0
+		&-link
+			color: #CFE7F9
+			text-decoration: underline
+			text-decoration-color: #CFE7F9
+			font-size: 18px
+			+sm
+				font-size: 16px
+			&:hover
+				text-decoration: none

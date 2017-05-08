@@ -1,0 +1,117 @@
+.rubric
+	&__item
+		margin: 4px 0
+	&__list
+		position: relative
+		text-align: left
+	&__list-item
+		position: relative
+		&:hover
+			background: darken(#F5F5F5, 10)
+		&:hover .rubric__list-link
+			color: #00306b
+			fill: #56708A
+		&:hover span
+			border-bottom-color:  rgba(#00306b, .5)
+		&_color
+			color: #000
+			.rubric__sub-link
+				color: #00306B
+	&__list-icon
+		position: absolute
+		right: 10px
+		top: calc(50% - 5px)
+		font-size: 11px
+		fill: #BCBFC2
+	&__list-link
+		position: relative
+		display: block
+		padding: 15px 30px 15px 15px
+		font-size: 18px
+		color: #00306b
+		background: #F5F5F5
+		-webkit-tap-highlight-color: transparent
+		+sm
+			padding: 12px 30px 12px 12px
+			font-size: 16px
+		&.open .rubric__list-icon
+			+rotate(-180)
+			fill: #56708A
+		&:hover
+			background-color: darken(#F5F5F5, 7)
+		span
+			border-bottom: 3px solid #E6E9ED
+			text-transform: uppercase
+		&_color
+			background-color: #f5f8fd
+			color: #000
+			&:hover
+				background-color: darken(#f5f8fd, 10)
+				
+	&__sub-list
+		display: none
+	&__sub-item
+		position: relative
+		line-height: 1.2
+	&__sub-link
+		padding: 10px 15px
+		text-transform: none
+		display: block
+		background: #f5f8fd
+		color: #333333
+		border-bottom: 1px solid darken(#f5f8fd, 10)
+		font-size: 18px
+		+sm
+			font-size: 16px
+		&:hover
+			background: darken(#f5f8fd, 10)
+	&__mini
+		margin: 5px 3px 5px -12px
+		color: #00306B
+	&__mini.is-active &__mini-icon
+			fill: #56708A
+	&__mini-title
+		position: relative
+		display: block
+		padding: 2px 28px 2px 12px
+		background: #F5F5F5
+		cursor: pointer
+		&:hover
+			background: #F5F7FF
+		&:active
+			background: #E8E8E8
+	&__mini-title:hover &__mini-icon
+		fill: #4E91FF
+	&__mini-list
+		display: none
+		padding: 10px 0
+	&__mini-item
+		position: relative
+		padding: 0 0 0 30px
+		margin: 2px 0
+		line-height: 1.05
+	&__mini-link
+		color: #00306b
+		display: inline-block
+		border-bottom: 2px solid transparent
+		&:hover
+			border-bottom-color: #B2CCFF
+	&__mini-icon
+		position: absolute
+		top: 11px
+		right: 10px
+		font-size: 9px
+		fill: #C2C2C2
+	&__mini-icon-sm
+		position: absolute
+		left: 15px
+		top: 6px
+		font-size: 7px
+		fill: #00306B
+		+rotate(-90)
+		
+	&__hit
+		position: absolute
+		margin-left: 3px
+		color: #4CB02E
+		+f('psb', 18, 18)

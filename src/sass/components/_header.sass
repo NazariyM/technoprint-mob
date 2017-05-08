@@ -1,0 +1,216 @@
+// header
+.header
+	&__container
+		position: relative
+		padding: 20px 15px 10px
+		font-size: 0
+		+sm
+			padding: 20px 10px 5px
+		&::before
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 100%
+			background-image: repeating-linear-gradient(to bottom, rgba(9, 161, 217, 0.2) 0%, rgba(72, 190, 233, 0) 54%, rgba(72, 190, 233, 0) 11%, rgba(72, 190, 233, 0) 77%, rgba(72, 190, 233, 0) 40%, #09a1d9 100%)
+			z-index: 1
+			content: ''
+		&::after
+			position: absolute
+			top: 0
+			left: -55%
+			right: -4%
+			bottom: 0
+			background-image: repeating-linear-gradient(90deg, #09A1D9 0%, #48bee9 54%, #48bee9 11%, #48bee9 90%, #48bee9 72%, #09A1D9 98%)
+			z-index: 0
+			pointer-events: none
+			content: ''
+	&__top
+		padding: 10px 25px 12px 20px
+		background-color: #F8F8F8
+		+justify
+		&-col
+			display: inline-block
+			vertical-align: middle
+		&-btn
+			-webkit-tap-highlight-color: transparent
+		&-btn:hover &-icon
+			fill: darken(#999999, 20)
+		&-icon
+			fill: #999999
+			font-size: 38px
+			&.icon-user
+				font-size: 38px
+	&__mid
+		position: relative
+		background-color: #09A1D9
+		overflow: hidden
+		+clr
+		&-col
+			display: inline-block
+			vertical-align: top
+			width: 50%
+			
+	&__nav
+		position: relative
+		z-index: 10
+		text-align: right
+		.nav__list
+			position: relative
+			padding-right: 10px
+			height: 90px
+	&__top-links
+		position: relative
+		margin-top: 20px
+		z-index: 1
+
+	&__search
+		display: none
+		padding: 5px 15px
+		background: #09A1D9
+		+sm
+			padding: 5px 10px
+	&__breadcrumbs
+		position: relative
+		padding: 5px 0
+		z-index: 1
+// end header
+
+// search
+.search
+	&__field
+		position: relative
+	&__input
+		padding: 0 39px 0 7px
+		font-size: 15px
+		line-height: 13px
+		height: 31px
+		width: 100%
+		+f("psr",17)
+		background-color: #fff
+		border: 1px solid transparent
+		color: #000
+		+trs
+		+placeholder-color(#B3B3B3)
+		&:focus
+			border-color: #0076D1
+		&:focus + .search__btn:hover
+			border-color: #0076D1
+		&.is-active + .search__btn
+				border-color: #0076D1
+		&.is-active + .search__btn:hover
+			background: #D6D6D6
+		+sm
+			font-size: 16px
+	&__btn
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 41px
+		height: 41px
+		background-color: #F5F5F5
+		border: 2px solid #fff
+		transition: .3s
+		+md
+			width: 33px
+			height: 31px
+		&::after
+			display: block
+			margin: 0 auto
+			content: ''
+			+st('search')
+			transform: scale(1.1)
+		&:active
+			background-color: #D6D6D6
+	
+// top links
+.top-links
+	font-size: 0
+	text-align: center
+	&__link
+		display: inline-block
+		margin-bottom: 5px
+		width: calc(50% - 5px)
+		padding: 0 5px
+		height: 38px
+		line-height: 33px
+		color: #fff
+		border: 2px solid #fff
+		font-size: 18px
+		+sm
+			font-size: 16px
+			width: calc(50% - 3px)
+		+trs
+		&:nth-child(2n)
+			margin-left: 10px
+			+sm
+				margin-left: 5px
+		&:hover
+			background-color: rgba(#385794, .3)
+			border-color: #348EBF
+		
+// cart
+.cart
+	position: relative
+	&:hover &__icon
+		fill: darken(#999999, 20)
+	&__icon
+		font-size: 40px
+		fill: #999999
+	&__total
+		position: absolute
+		min-width: 38px
+		right: -15px
+		bottom: -10px
+		padding: 2px 4px
+		border: 1px solid #999999
+		border-radius: 5px
+		+f('oss',15,15)
+		color: #4D4D4D
+		text-align-last: center
+		white-space: nowrap
+		background: #fff
+		
+// menu
+.menu
+	display: none
+	position: relative
+	z-index: 2
+	&__list
+		position: relative
+		font-size: 0
+		text-align: center
+	&__item
+		position: relative
+		z-index: 2
+		display: block
+		margin-right: 6px
+		vertical-align: top
+		width: 100%
+		text-align: center
+	&__link
+		display: block
+		padding: 9px 10px
+		background-color: #EDFAFF
+		border-bottom: 2px solid #48A6DD
+		font-size: 18px
+		color: #000
+		+sm
+			font-size: 16px
+		&:hover
+			background-color: #F2FBFF
+			border-bottom-color: #F8B772
+		&:active
+			background-color: #A8DEFF
+			border-bottom-color: #F18F82
+	&__new
+		position: absolute
+		top: 2px
+		right: 50%
+		transform: translateX(200%)
+		z-index: 1
+		color: #ff0000
+		font-size: 14px
+		pointer-events: none
+		+sm
+			font-size: 13px

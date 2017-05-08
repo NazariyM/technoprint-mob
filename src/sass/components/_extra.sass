@@ -1,0 +1,64 @@
+.extra
+	padding: 20px 0 0
+	background-color: #f5f8fc
+	&__title
+		text-align: center
+		font-size: 19px
+		+sm
+			font-size: 17px
+	&__text
+		padding: 25px 0
+	&__item
+		& + &
+			margin-top: 20px
+		&-list
+			position: relative
+		&-icon, &-icon_parts::before
+			position: absolute
+			top: -5px
+			z-index: 1
+			fill: #B8BEC4
+			transform: scale(.8)
+			left: -5px
+		&-icon_parts
+			content: ''
+			+s('parts')
+		.icon-polygraph
+			font-size: 44px
+		.icon-framing
+			font-size: 72px
+		&-title
+			position: relative
+			padding-top: 5px
+			margin-bottom: 20px
+			padding-left: 51px
+			+f("psb",17,26)
+			+sm
+				margin-bottom: 20px
+				font-size: 15px
+			&_offset
+				padding-top: 20px
+				margin-bottom: 40px
+				+sm
+					margin-bottom: 25px
+		&-product
+			font-size: 17px
+			+sm
+				font-size: 16px
+	&__link
+	&__links
+		margin-top: 10px
+	&__pic
+		padding: 10px 0
+		background: #EDEDED
+	&__pic-wrap
+		height: 280px
+		padding: 10px 0
+		background: #F5F8FC
+		+sm
+			height: 230px
+	&__img
+		height: 100%
+		width: 100%
+		max-width: 440px
+		margin: 0 auto

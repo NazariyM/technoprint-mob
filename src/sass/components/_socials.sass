@@ -1,0 +1,88 @@
+/* socials
+	----------------------------------- */
+.socials
+	position: relative
+	z-index: 10
+	font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		width: 36px
+		height: 36px
+		border-radius: 50%
+		background-color: #C0C0C2
+		text-align: center
+		+trs
+		& + &
+			margin-left: 5px
+		&_vk:hover
+			background-color: #4E74A3
+		&_fb:hover
+			background-color: #6C88C9
+		&_tw:hover
+			background-color: #72BFE3
+		&_od:hover
+			background-color: #FDA046
+		&_gp:hover
+			background-color: #DF3029
+		
+		&_vk:active
+			background-color: #324D6F
+		&_fb:active
+			background-color: #5C6B90
+		&_tw:active
+			background-color: #478EAF
+		&_od:active
+			background-color: #763A00
+		&_gp:active
+			background-color: #92170D
+		
+		.icon
+			+vcenter
+			+trs
+			fill: #fff
+		.icon-vk
+			font-size: 13px
+		.icon-fb
+			font-size: 18px
+		.icon-tw
+			font-size: 16px
+		.icon-od
+			font-size: 20px
+		.icon-gp
+			font-size: 16px
+	
+	&_footer
+		display: inline-block
+		margin-top: 30px
+		+sm
+			margin-top: 20px
+		.socials__item
+			width: 28px
+			height: 28px
+			&_vk
+				background-color: #1E78B0
+			&_fb
+				background-color: #12447A
+			&_tw
+				background-color: #91D0EB
+			&_od
+				background-color: #FFC486
+			&_gp
+				background-color: #E63E2D
+			.icon-gp
+				font-size: 12px
+			.icon-tw
+				font-size: 12px
+			.icon-vk
+				font-size: 10px
+			.icon-od
+				font-size: 16px
+			.icon-fb
+				font-size: 14px
+	
+	&_product
+		display: inline-block
+		vertical-align: middle
+		margin-top: 8px

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=cyrillic,cyrillic-ext')
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,cyrillic-ext')
++font("Verdana", Verdana)
++font("TruthCYRMedium", TruthCYRMedium)
+
+=f($name, $font-size: null, $line-height: null, $font-weight: null)
+	$font-family: null
+	@if $name == "osl"
+		$font-family: "Open Sans"
+		$font-weight: 300
+	@if $name == "oss"
+		$font-family: "Open Sans"
+		$font-weight: 600
+	@if $name == "psb"
+		$font-family: "PT Sans"
+		$font-weight: 700
+	@if $name == "psr"
+		$font-family: "PT Sans"
+		$font-weight: 400
+	@if $name == "ver"
+		$font-family: "Verdana"
+	@if $name == "tcm"
+		$font-family: "TruthCYRMedium"
+	font-family: $font-family, Arial, sans-serif
+	@if $font-family != null
+	@if $font-size != null
+		font-size: $font-size * 1px
+	@if $line-height != null
+		line-height: $line-height/$font-size
+	@if $font-weight != null
+		font-weight: $font-weight

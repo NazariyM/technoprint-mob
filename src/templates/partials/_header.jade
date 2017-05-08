@@ -1,0 +1,80 @@
+// begin header
++b.HEADER.header
+  +e.top
+    +b.hamburger.header__top-col
+      +e.bar.js-menu-open
+    +e.top-col
+      +e.BUTTON.top-btn(type='button')
+        +icon('icon-user', 'header__top-icon')
+    +e.top-col
+      +e.BUTTON.top-btn.js-search-open(type='button')
+        +icon('icon-loupe', 'header__top-icon')
+    +b.cart.header__top-col
+      +e.A.in(href='#!')
+        +icon('icon-cart', 'cart__icon')
+        +e.DIV.total
+          +e.SPAN 0
+          = ' '
+          | ₽
+
+  +b.menu.js-menu
+    +e.UL.list
+      +e.item
+        +e.A(href="#!").link Футболки / Одежда
+      +e.item
+        +e.A(href="#!").link Вышивка
+      +e.item.is-active
+        +e.A(href="#!").link Значки / Брелки
+      +e.item
+        +e.A(href="#!").link Кружки / Сувениры
+      +e.item
+        +e.new Новое!
+        +e.A(href="#!").link Фотокниги
+      +e.item
+        +e.A(href="#!").link Печать картин
+
+  +b.search.header__search.js-search
+    +e.field
+      +e.INPUT.input(type="text" name="" placeholder='Изготовление сувениров и подарков' required)
+      +e.BUTTON.btn(type="submit")
+
+  +e.mid
+    +e.container.container
+      +e.mid-col
+        +b.logo
+          +e.A(href="#!").link
+            +e.IMG.img(src="img/logo.svg" alt="Техно-принт")
+      +e.mid-col
+        +b.NAV.nav.header__nav
+          +e.UL.list.js-nav-list-scroll
+            +e.LI.item
+              +e.A.link(href='#!') Доставка
+            +e.LI.item
+              +e.A.link(href='#!') Оплата
+            +e.LI.item
+              +e.A.link(href='#!') Оптовые цены
+            +e.LI.item
+              +e.A.link(href='#!') Оплата
+            +e.LI.item
+              +e.A.link(href='#!') Услуги
+            +e.LI.item
+              +e.A.link(href='#!') Сувениры по тематике
+            +e.LI.item
+              +e.A.link(href='#!') О нас
+            +e.LI.item
+              +e.A.link(href='#!') Новости
+            +e.LI.item
+              +e.A.link(href='#!') Контакты
+
+      +b.top-links.header__top-links
+        +e.A(href="#!").link Услуги фирмы
+        +e.A(href="#!").link Подарки
+        +e.A(href="#!").link Корпоративные
+        +e.A(href="#!").link Лучшие
+
+      +b.breadcrumbs.header__breadcrumbs
+        +e.A.link(href='#!')
+          +icon('icon-house', 'breadcrumbs__icon')
+          = ' '
+          +e.SPAN Главная
+// end header
