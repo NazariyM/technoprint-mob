@@ -85,7 +85,7 @@
 		+sm
 			font-size: 18px
 		&:hover
-			color: #053B76
+			color: #0055FF
 	
 	&_footer
 		float: right
@@ -105,6 +105,7 @@
 			+sm
 				font-size: 16px
 // end nav
+
 // pic decor
 .decor
 	position: relative
@@ -136,7 +137,7 @@
 			transition: border-color .3s
 		&::before
 			right: 1px
-			+arr(10,12, rgba(#000, .25),br)
+			+arr(10, 12, rgba(#000, .25), br)
 		&::after
 			right: -12px
 			width: 0
@@ -172,7 +173,6 @@
 		.decor__line::before
 			right: -8px
 			border-width: 0 0 18px 13px
-		
 
 /* breadcrumbs
 	----------------------------------- */
@@ -204,7 +204,7 @@
 		vertical-align: middle
 		margin-right: 5px
 		fill: #0B73A7
-		
+
 /* page
 	----------------------------------- */
 .page
@@ -236,7 +236,7 @@
 		display: flex
 		flex-direction: column
 		width: percentage(1340 / 1680)
-	
+
 /* pagination
 	----------------------------------- */
 .pagination
@@ -259,7 +259,7 @@
 		&_dots
 			margin: 0 10px
 	&__list-item.is-active &__list-link
-			background: #FFEBAB
+		background: #FFEBAB
 	&__list-link
 		display: inline-block
 		font-size: 21px
@@ -278,14 +278,14 @@
 			vertical-align: middle
 			fill: #EDEDED
 			font-size: 29px
-			
+	
 	&_product
 		margin: 60px 0 70px
-		
+	
 	&_watched
 		margin: 40px 0
 		background: none
-		
+
 /* bordered decor
 	----------------------------------- */
 .bordered
@@ -315,6 +315,6 @@
 		+trs
 		&:hover
 			background: #E5F0FC
-			
+	
 	&_default
 		margin-top: auto

@@ -1700,7 +1700,7 @@ button {
 }
 
 .nav__link:hover {
-  color: #053B76;
+  color: #0055FF;
 }
 
 .nav_footer {
@@ -3886,6 +3886,11 @@ button {
   background: #fff;
 }
 
+.cart__val-icon {
+  fill: currentColor;
+  font-size: 11px;
+}
+
 .menu {
   display: none;
   position: relative;
@@ -4218,12 +4223,8 @@ button {
     width: calc(100% - 100px);
     padding-left: 10px;
   }
-  .product__buy-opt{
-    display: block;
-    margin-bottom: 10px;
-  }
   .product__cart-add{
-    margin-left: 6px;
+    margin-left: 10px;
   }
   .product__suggest-links{
     padding: 10px 10px 20px;
@@ -4312,6 +4313,13 @@ button {
   }
   .footer__copy-link{
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 374px){
+  .product__buy-opt{
+    display: block;
+    margin-bottom: 10px;
   }
 }
 

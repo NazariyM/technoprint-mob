@@ -21,7 +21,7 @@ $(document).ready(function () {
 	})();
 
 	function menuToggling() {
-		var $menuOpenBtn = $('.js-menu-open'),
+		var $menuOpenBtn = $('.js-menu-open').find('.hamburger__bar'),
 			$menu = $('.js-menu');
 
 		$menuOpenBtn.on('click', function () {
