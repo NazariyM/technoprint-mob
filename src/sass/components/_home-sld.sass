@@ -6,12 +6,10 @@
 	&.slick-initialized
 		display: block
 	&:hover &__btn
-		opacity: 1
+		//opacity: 0
 	&__item
 		position: relative
 		height: 160px
-		+sm
-			height: 120px
 		img
 			width: 100%
 			height: 100%
@@ -37,34 +35,32 @@
 			background: darken(#ECF7FD, 20)
 	&__btn
 		position: absolute
-		top: calc(50% - 6px)
+		top: calc(50% - 21px)
 		z-index: 1
 		background-color: transparent
-		opacity: 0
 		+trs
-	&__btn.slick-disabled &__icon
-		fill: #FDFDFD
-	&__btn.slick-disabled &__icon:hover
-		fill: #FDFDFD
-	&__btn_next
-		right: 15px
-		+md
-			right: 0
 	&__btn_prev
 		left: 15px
-		+md
-			left: 0
+		display: none!important
+	//&__btn_prev[aria-disabled='true']
+	//	opacity: 0
+	//	visibility: hidden
+	&__btn_prev &__icon
+		+rotate(180)
+	&__btn_next
+		right: 15px
+	//&__btn_prev[aria-disabled='false'] ~ &__btn_next[aria-disabled='false']
+	//	opacity: 0
+	//	visibility: hidden
 	&__btn:hover &__icon
-		fill: rgba(#000, .6)
+		fill: #fff
 	&__icon
-		fill: rgba(#000, .4)
-		font-size: 45px
+		font-size: 42px
+		fill: #fff
+		stroke: #ADAEAD
+		stroke-width: 10px
 		+trs
-		+md
-			font-size: 33px
-		+sm
-			font-size: 27px
-			
+		
 	&_home
 		padding: 5px 0 15px
 

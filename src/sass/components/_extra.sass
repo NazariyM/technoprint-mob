@@ -13,16 +13,16 @@
 			margin-top: 20px
 		&-list
 			position: relative
-		&-icon, &-icon_parts::before
+		&-icon
 			position: absolute
 			top: -5px
 			z-index: 1
 			fill: #B8BEC4
 			transform: scale(.8)
 			left: -5px
-		&-icon_parts
-			content: ''
-			+s('parts')
+			&_svgfix
+				width: 47px
+				height: 47px
 		.icon-polygraph
 			font-size: 44px
 		.icon-framing
@@ -42,16 +42,17 @@
 				+sm
 					margin-bottom: 25px
 		&-product
+			padding: 3px 0
 			font-size: 17px
 			+sm
 				font-size: 16px
-	&__link
 	&__links
-		margin-top: 10px
+		margin: 30px 0 20px
 	&__pic
 		padding: 10px 0
 		background: #EDEDED
 	&__pic-wrap
+		position: relative
 		height: 280px
 		padding: 10px 0
 		background: #F5F8FC
@@ -62,3 +63,17 @@
 		width: 100%
 		max-width: 440px
 		margin: 0 auto
+		
+	&__zoom
+		position: absolute
+		width: 40px
+		height: 40px
+		top: 5px
+		right: 5px
+		background: #A4D3F4
+		border-radius: 50px
+		z-index: 2
+		&-icon
+			+vcenter
+			fill: #fff
+			font-size: 22px

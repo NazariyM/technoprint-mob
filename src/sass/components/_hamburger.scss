@@ -1,6 +1,6 @@
-$bar-width: 38px;
+$bar-width: 26px;
 $bar-height: 4px;
-$bar-spacing: 10px;
+$bar-spacing: 8px;
 
 .hamburger {
   position: relative;
@@ -13,10 +13,10 @@ $bar-spacing: 10px;
     content: '';
     background: #E6E6E6;
     position: absolute;
-    top: -8px;
+    top: -10px;
     right: -8px;
     left: -8px;
-    bottom: -8px;
+    bottom: -10px;
     z-index: -1;
   }
 }

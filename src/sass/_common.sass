@@ -70,7 +70,7 @@ button
 	position: relative
 	display: inline-block
 	min-width: 238px
-	padding: 11px 41px 11px 5px
+	padding: 12px 41px 12px 5px
 	+f("psr",18)
 	color: $white
 	outline: none
@@ -78,9 +78,7 @@ button
 	text-align: center
 	background-color: #52C0E9
 	border-bottom: 1px solid #E7E7E7
-	+sm
-		min-width: 210px
-		font-size: 16px
+	-webkit-tap-highlight-color: transparent
 	&::after
 		content: ''
 		position: absolute
@@ -88,10 +86,7 @@ button
 		right: 10px
 		z-index: 1
 		+s('btn_arr')
-		transform: scale(.7)
-		+sm
-			right: 6px
-			transform: scale(.6)
+		transform: scale(.75)
 	&:hover
 		background-color: #128FCD
 		border-bottom-color: #F9BF84
@@ -128,17 +123,14 @@ button
 	border-bottom: 2px solid #a7b8c9
 	+f("ver",19)
 	overflow: hidden
+	-webkit-tap-highlight-color: transparent
 	&::after
 		position: absolute
-		top: -4px
+		top: -3px
 		right: -4px
 		+s('send')
 		content: ''
 		transform: scale(.87)
-		+md
-			top: -7px
-			right: -8px
-			transform: scale(.73)
 	&:hover
 		background-color: #63afed
 		border-bottom-color: #ffff74

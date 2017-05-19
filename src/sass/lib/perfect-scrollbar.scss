@@ -80,7 +80,7 @@
   -moz-transition: background-color .2s linear, opacity .2s linear;
   transition: background-color .2s linear, opacity .2s linear;
   right: 0;
-  width: 4px
+  width: 3px
 }
 
 .ps > .ps__scrollbar-y-rail > .ps__scrollbar-y {
@@ -93,7 +93,7 @@
   transition: background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;
   transition: background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -webkit-border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;
   right: 0;
-  width: 4px
+  width: 3px
 }
 
 .ps > .ps__scrollbar-y-rail:hover > .ps__scrollbar-y, .ps > .ps__scrollbar-y-rail:active > .ps__scrollbar-y {
