@@ -4,7 +4,7 @@
     +b.hamburger.js-menu-open.header__top-col
       +e.bar
     +e.top-col
-      +e.BUTTON.top-btn(type='button')
+      +e.BUTTON.top-btn._login.js-login-open(type='button')
         +icon('icon-user', 'header__top-icon')
     +e.top-col
       +e.BUTTON.top-btn.js-search-open(type='button')
@@ -32,6 +32,33 @@
         +e.A(href="#!").link Фотокниги
       +e.item
         +e.A(href="#!").link Печать картин
+
+  +b.login.js-login
+    +e.in
+      +e.enter
+        +e.text
+          +e.SPAN Вход:
+        +e.FORM(action='#!')
+          +e.field._name
+            +e.INPUT.input(type='name' placeholder='Имя / Организация')
+          +e.field._pass
+            +e.INPUT.input(type='password' placeholder='Пароль')
+          +e.BUTTON(type='submit').btn
+            +e.SPAN ВОЙТИ
+      +e.registr
+        +e.text
+          +e.SPAN Регистрация:
+        +e.FORM(action='#!')
+          +e.field._name
+            +e.INPUT.input(type='name' placeholder='Имя / Организация')
+          +e.field._email
+            +e.INPUT.input(type='email' placeholder='Почта')
+          +e.field._pass
+            +e.INPUT.input(type='password' placeholder='Пароль')
+          +e.field._pass
+            +e.INPUT.input(type='password' placeholder='Повторите пароль')
+          +e.BUTTON(type='submit').btn
+            +e.SPAN ЗАРЕГИСТРИРОВАТЬ
 
   +b.search.header__search.js-search
     +e.field

@@ -33,9 +33,22 @@
 			vertical-align: middle
 		&-btn
 			-webkit-tap-highlight-color: transparent
-		&-btn:hover &-icon
-			fill: darken(#999999, 20)
+			&_login
+				position: relative
+			&_login.is-active::after
+				position: absolute
+				top: -10px
+				left: -20px
+				right: -20px
+				bottom: -15px
+				content: ''
+				background: #ebecec
+				
+		&-btn.is-active &-icon
+			fill: #194073
 		&-icon
+			position: relative
+			z-index: 1
 			fill: #999999
 			font-size: 38px
 			&.icon-user
@@ -118,8 +131,12 @@
 			display: block
 			margin: 0 auto
 			content: ''
-			+st('search')
+			width: 21px
+			height: 17px
 			transform: scale(1.1)
+			background-position: -39px -162px
+			background-image: url(../img/sprite.png)
+			background-size: 223px 192px
 		&:active
 			background-color: #D6D6D6
 	
@@ -153,7 +170,7 @@
 .cart
 	position: relative
 	&:hover &__icon
-		fill: darken(#999999, 20)
+		fill: #194073
 	&__icon
 		font-size: 40px
 		fill: #999999
@@ -217,3 +234,75 @@
 		pointer-events: none
 		+sm
 			font-size: 13px
+			
+.login
+	display: none
+	padding: 20px 10px 40px
+	background: #ebecec
+	border-top: 1px solid #d9d9d9
+	&__in
+		max-width: 340px
+		margin: 0 auto
+	&__text
+		margin-bottom: 16px
+		padding-left: 50px
+		font-size: 18px
+		color: #6A7B91
+		span
+			border-bottom: 2px solid #CED2D6
+	&__field
+		position: relative
+		padding: 0 0 0 46px
+		border: 1px solid #99AFCF
+		overflow: hidden
+		&::before
+			position: absolute
+			top: -1px
+			left: 0
+			width: 48px
+			height: 37px
+			content: ''
+		&.is-focus
+			border-color: #5494F5
+		& + &
+			margin-top: 15px
+		& + &:nth-child(3)
+			margin-top: 30px
+		&_name::before
+			+ico('user-log')
+		&_pass::before
+			+ico('dots-log')
+		&_email::before
+			+ico('email-log')
+	&__input
+		width: 100%
+		height: 36px
+		padding: 0 10px
+		line-height: 36px
+		+f('ver', 15)
+		+placeholder-color(#999999)
+	&__btn
+		display: block
+		margin: 18px auto 0
+		width: 100%
+		max-width: 230px
+		height: 44px
+		line-height: 42px
+		background: #b9c0c9
+		color: #fff
+		+f('oss', 17)
+		border: 1px solid transparent
+		border-bottom-color: #99afcf
+		text-transform: uppercase
+		-webkit-tap-highlight-color: transparent
+		&:active, &:hover
+			border-color: #000
+			background: #b9c0c9
+			color: #666666
+			span
+				border-bottom-color: #999999
+		span
+			border-bottom: 2px solid #a0aaba
+		
+	&__registr
+		margin: 35px 0 10px

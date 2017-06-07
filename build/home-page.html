@@ -19,7 +19,7 @@
           <div class="hamburger js-menu-open header__top-col">
             <div class="hamburger__bar"></div>
           </div>
-          <div class="header__top-col"><button type="button" class="header__top-btn"><svg class="icon-user header__top-icon"><use xlink:href="img/sprite.svg#icon-user"></use></svg></button></div>
+          <div class="header__top-col"><button type="button" class="header__top-btn header__top-btn_login js-login-open"><svg class="icon-user header__top-icon"><use xlink:href="img/sprite.svg#icon-user"></use></svg></button></div>
           <div class="header__top-col"><button type="button" class="header__top-btn js-search-open"><svg class="icon-loupe header__top-icon"><use xlink:href="img/sprite.svg#icon-loupe"></use></svg></button></div>
           <div class="cart header__top-col"><a href="#!" class="cart__in"><svg class="icon-cart cart__icon"><use xlink:href="img/sprite.svg#icon-cart"></use></svg><div class="cart__total"><span>0</span> <svg class="icon-ruble cart__val-icon"><use xlink:href="img/sprite.svg#icon-ruble"></use></svg></div></a></div>
         </div>
@@ -33,6 +33,24 @@
               <div class="menu__new">Новое!</div><a href="#!" class="menu__link">Фотокниги</a></li>
             <li class="menu__item"><a href="#!" class="menu__link">Печать картин</a></li>
           </ul>
+        </div>
+        <div class="login js-login">
+          <div class="login__in">
+            <div class="login__enter">
+              <div class="login__text"><span>Вход:</span></div>
+              <form action="#!">
+                <div class="login__field login__field_name"><input type="name" placeholder="Имя / Организация" class="login__input" /></div>
+                <div class="login__field login__field_pass"><input type="password" placeholder="Пароль" class="login__input" /></div><button type="submit" class="login__btn"><span>ВОЙТИ</span></button></form>
+            </div>
+            <div class="login__registr">
+              <div class="login__text"><span>Регистрация:</span></div>
+              <form action="#!">
+                <div class="login__field login__field_name"><input type="name" placeholder="Имя / Организация" class="login__input" /></div>
+                <div class="login__field login__field_email"><input type="email" placeholder="Почта" class="login__input" /></div>
+                <div class="login__field login__field_pass"><input type="password" placeholder="Пароль" class="login__input" /></div>
+                <div class="login__field login__field_pass"><input type="password" placeholder="Повторите пароль" class="login__input" /></div><button type="submit" class="login__btn"><span>ЗАРЕГИСТРИРОВАТЬ</span></button></form>
+            </div>
+          </div>
         </div>
         <div class="search header__search js-search">
           <div class="search__field"><input type="text" name="" placeholder="Изготовление сувениров и подарков" required="required" class="search__input" /><button type="submit" class="search__btn"></button></div>

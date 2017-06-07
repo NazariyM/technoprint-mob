@@ -75,6 +75,7 @@ $(document).ready(function () {
         $searchField = $search.find('.search__input');
 
     $searchOpenBtn.on('click', function () {
+      $(this).toggleClass('is-active');
       $search.slideToggle();
     });
 
@@ -88,6 +89,19 @@ $(document).ready(function () {
   }
 
   initSearchField();
+
+  function initLogin() {
+    var $login = $('.js-login'),
+        $loginOpen = $('.js-login-open');
+
+    $loginOpen.on('click', function (e) {
+      e.preventDefault();
+      $(this).toggleClass('is-active');
+      $login.slideToggle();
+    });
+  }
+
+  initLogin();
 
   // stepper plugin
   function initStepper() {

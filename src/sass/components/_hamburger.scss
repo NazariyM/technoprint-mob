@@ -37,6 +37,9 @@ $bar-spacing: 8px;
 
   &.open {
     background: transparent;
+    &::after, &::before {
+      background: #194073;
+    }
   }
 }
 
