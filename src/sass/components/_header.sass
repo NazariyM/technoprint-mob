@@ -193,47 +193,59 @@
 		
 // menu
 .menu
-	display: none
-	position: relative
-	z-index: 2
+	&__block
+		border-left: 10px solid #ebecec
+		border-right: 10px solid #ebecec
+		border-bottom: 25px solid #ebecec
+	&__title
+		padding: 18px 0
+		text-align: center
+		background: #ebecec
+		&-text
+			display: inline-block
+			color: #194073
+			text-transform: uppercase
+			font-size: 20px
+			border-bottom: 2px solid #ced2d6
 	&__list
-		position: relative
-		font-size: 0
-		text-align: center
+		padding: 15px 0 20px
+		background: #fafafa
+		&:last-child, &:nth-child(4)
+			padding-bottom: 40px
 	&__item
-		position: relative
-		z-index: 2
-		display: block
-		margin-right: 6px
-		vertical-align: top
-		width: 100%
-		text-align: center
+		padding: 0 30px
+		&:not(:last-child)
+			margin-bottom: 6px
 	&__link
 		display: block
-		padding: 9px 10px
-		background-color: #EDFAFF
-		border-bottom: 2px solid #48A6DD
-		font-size: 18px
-		color: #000
-		+sm
-			font-size: 16px
+		padding: 2px 0
+		border-bottom: 1px solid #e6e6e6
+		color: #194073
+		font-size: 17px
 		&:hover
-			background-color: #F2FBFF
-			border-bottom-color: #F8B772
-		&:active
-			background-color: #A8DEFF
-			border-bottom-color: #F18F82
-	&__new
-		position: absolute
-		top: 2px
-		right: 50%
-		transform: translateX(200%)
-		z-index: 1
-		color: #ff0000
-		font-size: 14px
-		pointer-events: none
-		+sm
-			font-size: 13px
+			color: #000
+			border-bottom-color: #c1c1c1
+	&__rubric
+		&-open
+			position: relative
+			display: block
+			width: 100%
+			padding: 20px 35px
+			background: #fafafa
+			text-align: center
+			color: #194073
+			span
+				border-bottom: 3px solid #ededed
+				font-size: 18px
+		&-arr
+			position: absolute
+			top: 15px
+			right: 15px
+			font-size: 10px
+			fill: #bbbcbd
+			&.is-active
+				background: #d1d1d1
+				color: #fff
 			
 .login
 	display: none

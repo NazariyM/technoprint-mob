@@ -18,20 +18,64 @@
           +icon('icon-ruble','cart__val-icon')
 
   +b.menu.js-menu
-    +e.UL.list
-      +e.item
-        +e.A(href="#!").link Футболки / Одежда
-      +e.item
-        +e.A(href="#!").link Вышивка
-      +e.item.is-active
-        +e.A(href="#!").link Значки / Брелки
-      +e.item
-        +e.A(href="#!").link Кружки / Сувениры
-      +e.item
-        +e.new Новое!
-        +e.A(href="#!").link Фотокниги
-      +e.item
-        +e.A(href="#!").link Печать картин
+    +e.block
+      +e.title
+        +e.H3.title-text Меню
+      +e.UL.list
+        +e.item
+          +e.A(href="#!").link Главная
+        +e.item
+          +e.A(href="#!").link Услуги фирмы
+        +e.item
+          +e.A(href="#!").link О нас
+        +e.item
+          +e.A(href="#!").link Новости
+        +e.item
+          +e.A(href="#!").link Доставка
+        +e.item
+          +e.A(href="#!").link Оплата
+        +e.item
+          +e.A(href="#!").link Оптовые цены
+        +e.item
+          +e.A(href="#!").link Контакты
+      +e.UL.list
+        +e.item
+          +e.A(href="#!").link Корпоративные
+        +e.item
+          +e.A(href="#!").link Подарки
+        +e.item
+          +e.A(href="#!").link Сувениры по тематике
+        +e.item
+          +e.A(href="#!").link Лучшие
+      +e.UL.list
+        +e.item
+          +e.A(href="#!").link Войти
+        +e.item
+          +e.A(href="#!").link Регистрация
+        +e.item
+          +e.A(href="#!").link Мои заказы
+      +e.title
+        +e.H3.title-text Продукция
+      +e.UL.list
+        +e.item
+          +e.A(href="#!").link Футболки / Одежда
+        +e.item
+          +e.A(href="#!").link Вышивка
+        +e.item
+          +e.A(href="#!").link Кружки / Сувениры
+        +e.item
+          +e.A(href="#!").link Значки / Брелки
+        +e.item
+          +e.A(href="#!").link Фотокниги
+        +e.item
+          +e.A(href="#!").link Печать на холсте / Картины
+
+    +e.rubric
+      +e.BUTTON(type='button').rubric-open.js-rubric-open
+        +e.SPAN Вся продукция подробно
+        +icon('icon-arr-def', 'menu__rubric-arr')
+      - var rubricClass = '_home'
+      include ../components/_rubric
 
   +b.login.js-login
     +e.in
@@ -40,9 +84,9 @@
           +e.SPAN Вход:
         +e.FORM(action='#!')
           +e.field._name
-            +e.INPUT.input(type='name' placeholder='Имя / Организация')
+            +e.INPUT.input(type='name' name='' placeholder='Имя / Организация' required)
           +e.field._pass
-            +e.INPUT.input(type='password' placeholder='Пароль')
+            +e.INPUT.input(type='password' name='' placeholder='Пароль' required)
           +e.BUTTON(type='submit').btn
             +e.SPAN ВОЙТИ
       +e.registr
@@ -50,13 +94,13 @@
           +e.SPAN Регистрация:
         +e.FORM(action='#!')
           +e.field._name
-            +e.INPUT.input(type='name' placeholder='Имя / Организация')
+            +e.INPUT.input(type='name' name='' placeholder='Имя / Организация' required)
           +e.field._email
-            +e.INPUT.input(type='email' placeholder='Почта')
+            +e.INPUT.input(type='email' name='' placeholder='Почта' required)
           +e.field._pass
-            +e.INPUT.input(type='password' placeholder='Пароль')
+            +e.INPUT.input(type='password' name='' placeholder='Пароль' required)
           +e.field._pass
-            +e.INPUT.input(type='password' placeholder='Повторите пароль')
+            +e.INPUT.input(type='password' name='' placeholder='Повторите пароль' required)
           +e.BUTTON(type='submit').btn
             +e.SPAN ЗАРЕГИСТРИРОВАТЬ
 

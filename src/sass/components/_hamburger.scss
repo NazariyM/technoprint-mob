@@ -11,13 +11,29 @@ $bar-spacing: 8px;
   -webkit-tap-highlight-color: transparent;
   &::after {
     content: '';
-    background: #E6E6E6;
     position: absolute;
     top: -10px;
     right: -8px;
     left: -8px;
     bottom: -10px;
     z-index: -1;
+    background: #dedede;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: -21px;
+    right: -22px;
+    left: -22px;
+    bottom: -25px;
+    z-index: -1;
+    background: #ebecec;
+    visibility: hidden;
+    opacity: 0;
+  }
+  &.open::before {
+    visibility: visible;
+    opacity: 1;
   }
 }
 

@@ -11,20 +11,12 @@ $(document).ready(function () {
     });
   })();
 
-  (function () {
-    var $rubricListOpen = $('.js-open-rubric-list');
-
-    $rubricListOpen.on('click', function () {
-      $(this).toggleClass('open');
-      $(this).next().toggle();
-    });
-  })();
-
   function menuToggling() {
     var $menuOpenBtn = $('.js-menu-open').find('.hamburger__bar'),
       $menu = $('.js-menu');
 
     $menuOpenBtn.on('click', function () {
+      $(this).parent().toggleClass('open');
       $(this).toggleClass('open');
       $menu.slideToggle();
     });
@@ -93,13 +85,23 @@ $(document).ready(function () {
   
   function initLogin() {
     var $login = $('.js-login'),
-        $loginOpen = $('.js-login-open');
+        $loginOpen = $('.js-login-open'),
+        $loginInput = $login.find('input');
 
     $loginOpen.on('click', function (e) {
       e.preventDefault();
       $(this).toggleClass('is-active');
       $login.slideToggle();
-    })
+    });
+
+    $loginInput.on('focus', function () {
+      var $inputField = $(this).parent();
+      $inputField.addClass('is-focus');
+    });
+    $loginInput.on('focus', function () {
+
+      $inputField.removeClass('is-focus');
+    });
   }
 
   initLogin();
@@ -119,24 +121,19 @@ $(document).ready(function () {
 
   initStepper();
 
-  // rubric list toggling
+  // rubric menu toggling
   (function () {
     var $rubricList = $('.js-rubric-list');
+    var $rubricMiniList = $('.js-rubric-mini-list');
 
     $rubricList.on('click', function () {
-
       $(this).toggleClass('is-active');
-      $(this).find('.rubric__mini-list').slideToggle(150);
-
+    });
+    $rubricMiniList.on('click', function () {
+      $(this).toggleClass('is-active');
     });
 
-    $rubricList.each(function () {
-      if ($(this).hasClass('is-active')) {
-        $(this).find('.rubric__mini-list').slideDown();
-      }
-    });
-
-    $('.rubric__mini-list').on('click', function (e) {
+    $('.rubric__sub-list, .rubric__mini-list').on('click', function (e) {
       e.stopPropagation();
     });
 

@@ -1,94 +1,89 @@
 .rubric
-	&__item
-		margin: 4px 0
 	&__list
+		margin: 4px 0
 		position: relative
 		text-align: left
+		font-size: 16px
+	&__list.is-active &__sub-list
+		display: block
+	&__list.is-active &__list-link
+		background: #ededed
+	&__list.is-active &__list-link_color
+		background: #edf3fa
 	&__list-item
 		position: relative
-		&:hover
-			background: darken(#F5F5F5, 10)
-		&:hover .rubric__list-link
-			color: #00306b
-			fill: #56708A
-		&:hover span
-			border-bottom-color:  rgba(#00306b, .5)
-		&_color
-			color: #000
-			.rubric__sub-link
-				color: #00306B
+		
 	&__list-icon
 		position: absolute
-		right: 10px
-		top: calc(50% - 5px)
-		font-size: 11px
+		right: 15px
+		top: 10px
+		font-size: 10px
 		fill: #BCBFC2
 	&__list-link
 		position: relative
 		display: block
-		padding: 18px 30px 18px 12px
-		font-size: 18px
+		padding: 16px 35px 18px 25px
 		color: #00306b
 		background: #F5F5F5
 		-webkit-tap-highlight-color: transparent
-		+sm
-			padding: 12px 30px 12px 12px
-			font-size: 16px
+		&.open
+			background: #ededed
+			span
+				border-bottom-color: #c7d1de
 		&.open .rubric__list-icon
-			+rotate(-180)
 			fill: #56708A
-		&:hover
-			background-color: darken(#F5F5F5, 7)
 		span
 			border-bottom: 3px solid #E6E9ED
 			text-transform: uppercase
 		&_color
 			background-color: #f5f8fd
-			color: #000
-			&:hover
-				background-color: darken(#f5f8fd, 10)
+			//color: #000
+			&.open
+				background-color: #edf3fa
+			+ .rubric__sub-list
+				border-color: #edf3fa
+			+ .rubric__sub-list .rubric__sub-link
+					color: #00306B
 				
 	&__sub-list
 		display: none
+		//margin-top: -6px
+		padding: 10px 0 20px
+		border: 10px solid #ededed
+		border-top: none
 	&__sub-item
 		position: relative
 		line-height: 1.2
 	&__sub-link
-		padding: 10px 15px
+		padding: 3px 15px
 		text-transform: none
 		display: block
-		background: #f5f8fd
 		color: #333333
-		border-bottom: 1px solid darken(#f5f8fd, 10)
-		font-size: 18px
-		+sm
-			font-size: 16px
-		&:hover
-			background: darken(#f5f8fd, 10)
+		background: #fff
 	&__mini
-		margin: 5px 3px 5px -12px
+		margin: 5px 10px
 		color: #00306B
+		&:first-child
+			padding-top: 5px
+			margin-top: 0
+	&__mini.is-active &__mini-list
+		display: block
 	&__mini.is-active &__mini-icon
 			fill: #56708A
 	&__mini-title
 		position: relative
 		display: block
-		padding: 2px 28px 2px 12px
+		padding: 4px 28px 4px 12px
 		background: #F5F5F5
 		cursor: pointer
-		&:hover
-			background: #F5F7FF
-		&:active
-			background: #E8E8E8
-	&__mini-title:hover &__mini-icon
-		fill: #4E91FF
 	&__mini-list
 		display: none
 		padding: 10px 0
+		background: #fff
 	&__mini-item
 		position: relative
-		padding: 0 0 0 30px
-		margin: 2px 0
+		padding: 0 0 0 25px
+		margin: 5px 0
 		line-height: 1.05
 	&__mini-link
 		color: #00306b
@@ -98,7 +93,7 @@
 			border-bottom-color: #B2CCFF
 	&__mini-icon
 		position: absolute
-		top: 11px
+		top: 7px
 		right: 10px
 		font-size: 9px
 		fill: #C2C2C2
@@ -114,4 +109,5 @@
 		position: absolute
 		margin-left: 3px
 		color: #4CB02E
-		+f('psb', 18, 18)
+		+f('psb', 12)
+		line-height: 10px
