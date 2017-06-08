@@ -3,13 +3,17 @@
 		margin: 4px 0
 		position: relative
 		text-align: left
-		font-size: 16px
+		font-size: 18px
 	&__list.is-active &__sub-list
 		display: block
+	&__list.is-active &__list-icon
+		fill: #56708a
 	&__list.is-active &__list-link
 		background: #ededed
 	&__list.is-active &__list-link_color
 		background: #edf3fa
+	&__list.is-active &__list-link span
+		border-bottom-color: #c7d1de
 	&__list-item
 		position: relative
 		
@@ -111,3 +115,6 @@
 		color: #4CB02E
 		+f('psb', 12)
 		line-height: 10px
+		
+	&_menu
+		display: none

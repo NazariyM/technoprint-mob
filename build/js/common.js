@@ -13,18 +13,32 @@ $(document).ready(function () {
     });
   })();
 
-  function menuToggling() {
-    var $menuOpenBtn = $('.js-menu-open').find('.hamburger__bar'),
-        $menu = $('.js-menu');
+  function initTopBar() {
+    var $topBar = $('.js-header-bar'),
+        $topBarMenu = $topBar.find('.header__bar-btn'),
+        $topBarContent = $topBar.find('.header__bar-content > div');
 
-    $menuOpenBtn.on('click', function () {
-      $(this).parent().toggleClass('open');
-      $(this).toggleClass('open');
-      $menu.slideToggle();
+    $topBarMenu.each(function (i) {
+      $(this).attr('data-tab', 'tab' + i);
+    });
+    $topBarContent.each(function (i) {
+      $(this).attr('data-tab', 'tab' + i);
+    });
+
+    $topBarMenu.click(function () {
+      var tabData = $(this).data('tab');
+      $topBar.find($topBarContent).hide();
+      $topBar.find($topBarContent).filter('[data-tab=' + tabData + ']').show();
+    });
+
+    $topBarMenu.click(function () {
+      var before = $('.header__bar-btn.is-active');
+      before.removeClass('is-active');
+      $(this).addClass('is-active');
     });
   }
 
-  menuToggling();
+  initTopBar();
 
   function initHomeSlider() {
     var homeSlider = $('.home-slider');
@@ -61,49 +75,20 @@ $(document).ready(function () {
     });
   })();
 
-  function initSearchField() {
-    var $searchOpenBtn = $('.js-search-open'),
-        $search = $('.js-search'),
-        $searchField = $search.find('.search__input');
+  function initFocusFields() {
+    var $focusInput = $('.js-focus-fields').find('input');
 
-    $searchOpenBtn.on('click', function () {
-      $(this).toggleClass('is-active');
-      $search.slideToggle();
+    $focusInput.on('focus', function () {
+      var $focusField = $(this).parent();
+      $focusField.addClass('is-focus');
     });
-
-    $searchField.on('keyup', function () {
-      if ($(this).val().length) {
-        $(this).addClass('is-active');
-      } else {
-        $(this).removeClass('is-active');
-      }
+    $focusInput.on('blur', function () {
+      var $focusField = $(this).parent();
+      $focusField.removeClass('is-focus');
     });
   }
 
-  initSearchField();
-
-  function initLogin() {
-    var $login = $('.js-login'),
-        $loginOpen = $('.js-login-open'),
-        $loginInput = $login.find('input');
-
-    $loginOpen.on('click', function (e) {
-      e.preventDefault();
-      $(this).toggleClass('is-active');
-      $login.slideToggle();
-    });
-
-    $loginInput.on('focus', function () {
-      var $inputField = $(this).parent();
-      $inputField.addClass('is-focus');
-    });
-    $loginInput.on('focus', function () {
-
-      $inputField.removeClass('is-focus');
-    });
-  }
-
-  initLogin();
+  initFocusFields();
 
   // stepper plugin
   function initStepper() {
@@ -123,6 +108,7 @@ $(document).ready(function () {
   (function () {
     var $rubricList = $('.js-rubric-list');
     var $rubricMiniList = $('.js-rubric-mini-list');
+    var $rubricOpen = $('.js-rubric-open');
 
     $rubricList.on('click', function () {
       $(this).toggleClass('is-active');
@@ -133,6 +119,12 @@ $(document).ready(function () {
 
     $('.rubric__sub-list, .rubric__mini-list').on('click', function (e) {
       e.stopPropagation();
+    });
+
+    $rubricOpen.on('click', function (ev) {
+      ev.stopPropagation();
+      $(this).next().toggle();
+      $(this).toggleClass('is-active');
     });
   })();
 
