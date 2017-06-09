@@ -49,6 +49,8 @@
 			background: #ebecec
 	&__bar-btn.is-active &__bar-icon
 		fill: #194073
+	&__bar-content > div
+		display: none
 	&__bar-icon
 		position: relative
 		display: inline-block
@@ -82,7 +84,6 @@
 		z-index: 1
 
 	&__search
-		display: none
 		padding: 15px 15px
 		background: #ebecec
 		+r(374)
@@ -92,14 +93,34 @@
 		padding: 5px 0
 		z-index: 1
 	&__cart
-	
+		padding: 15px 0
+		background: #ebecec
+		text-align: center
+		&-field
+			margin-bottom: 6px
+			& + &
+				margin-top: 3px
+				margin-bottom: 0
+		&-text
+			display: inline-block
+			padding: 2px 0
+			border-bottom: 1px solid #CED2D6
+			color: #999999
+			font-size: 18px
+			&_title
+				color: #194073
+				border-bottom: none
+			&_border
+				border-top: 1px solid #CED2D6
 	&__cart-btn
 		position: relative
 		width: 45px
-		margin-left: 4px
+		margin-left: 15px
+		+r(374)
+			margin-left: 4px
 	&__cart-btn-total
 		position: absolute
-		right: -20px
+		right: -21px
 		bottom: -4px
 		z-index: 1
 		min-width: 40px
@@ -112,8 +133,11 @@
 		white-space: nowrap
 		background: #fff
 		&_quantity
+			display: none
 			bottom: 20px
-			right: -28px
+			right: -29px
+			&.has-items
+				display: block
 	&__cart-btn-val
 		fill: currentColor
 		font-size: 11px
@@ -137,7 +161,7 @@
 		color: #000
 		+trs
 		+placeholder-color(#B3B3B3)
-		+sm
+		+r(374)
 			font-size: 16px
 	&__btn
 		position: absolute
@@ -214,7 +238,6 @@
 		
 // menu
 .menu
-	display: none
 	&__block
 		border-left: 10px solid #ebecec
 		border-right: 10px solid #ebecec
@@ -276,7 +299,6 @@
 				color: #fff
 			
 .login
-	display: none
 	padding: 20px 10px 40px
 	background: #ebecec
 	border-top: 1px solid #d9d9d9

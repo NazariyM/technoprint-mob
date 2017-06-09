@@ -27,16 +27,17 @@ $(document).ready(function () {
       var tabData = $(this).data('tab');
       $topBar.find($topBarContent).hide();
       $topBar.find($topBarContent).filter('[data-tab=' + tabData + ']').show();
-    });
 
-    $topBarMenu.click(function () {
-      var before = $('.header__bar-btn.is-active');
-      before.removeClass('is-active');
-      $(this).addClass('is-active');
+      if($(this).hasClass('is-active')) {
+        $(this).removeClass('is-active');
+        $topBar.find($topBarContent).filter('[data-tab=' + tabData + ']').hide();
+      } else {
+        var $before = $('.header__bar-btn.is-active');
+        $before.removeClass('is-active');
+        $(this).addClass('is-active');
+      }
     });
-
   }
-
   initTopBar();
 
   function initHomeSlider() {

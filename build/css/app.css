@@ -3744,6 +3744,10 @@ button {
   fill: #194073;
 }
 
+.header__bar-content > div {
+  display: none;
+}
+
 .header__bar-icon {
   position: relative;
   display: inline-block;
@@ -3795,7 +3799,6 @@ button {
 }
 
 .header__search {
-  display: none;
   padding: 15px 15px;
   background: #ebecec;
 }
@@ -3806,15 +3809,47 @@ button {
   z-index: 1;
 }
 
+.header__cart {
+  padding: 15px 0;
+  background: #ebecec;
+  text-align: center;
+}
+
+.header__cart-field {
+  margin-bottom: 6px;
+}
+
+.header__cart-field + .header__cart-field {
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+
+.header__cart-text {
+  display: inline-block;
+  padding: 2px 0;
+  border-bottom: 1px solid #CED2D6;
+  color: #999999;
+  font-size: 18px;
+}
+
+.header__cart-text_title {
+  color: #194073;
+  border-bottom: none;
+}
+
+.header__cart-text_border {
+  border-top: 1px solid #CED2D6;
+}
+
 .header__cart-btn {
   position: relative;
   width: 45px;
-  margin-left: 4px;
+  margin-left: 15px;
 }
 
 .header__cart-btn-total {
   position: absolute;
-  right: -20px;
+  right: -21px;
   bottom: -4px;
   z-index: 1;
   min-width: 40px;
@@ -3832,8 +3867,13 @@ button {
 }
 
 .header__cart-btn-total_quantity {
+  display: none;
   bottom: 20px;
-  right: -28px;
+  right: -29px;
+}
+
+.header__cart-btn-total_quantity.has-items {
+  display: block;
 }
 
 .header__cart-btn-val {
@@ -3936,10 +3976,6 @@ button {
   border-color: #348EBF;
 }
 
-.menu {
-  display: none;
-}
-
 .menu__block {
   border-left: 10px solid #ebecec;
   border-right: 10px solid #ebecec;
@@ -4029,7 +4065,6 @@ button {
 }
 
 .login {
-  display: none;
   padding: 20px 10px 40px;
   background: #ebecec;
   border-top: 1px solid #d9d9d9;
@@ -4473,9 +4508,6 @@ button {
   .header__container{
     padding: 20px 10px 5px;
   }
-  .search__input{
-    font-size: 16px;
-  }
   .top-links__link{
     font-size: 16px;
     width: calc(50% - 3px);
@@ -4494,6 +4526,12 @@ button {
 @media only screen and (max-width: 374px){
   .header__search{
     padding: 15px 4px;
+  }
+  .header__cart-btn{
+    margin-left: 4px;
+  }
+  .search__input{
+    font-size: 16px;
   }
 }
 
