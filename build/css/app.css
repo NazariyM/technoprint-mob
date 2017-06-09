@@ -2260,6 +2260,10 @@ body::after {
   background: #DFE6EB;
 }
 
+.product__sect_color + .product__inn .product__suggest-in {
+  border-color: #DFE6EB;
+}
+
 .product__sect_color + .product__inn .product__suggest,
 .product__sect_color + .product__inn .product__suggest-more,
 .product__sect_color + .product__inn .product__examples {
@@ -3944,11 +3948,13 @@ body::after {
   content: '';
   width: 21px;
   height: 17px;
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  background-position: -39px -162px;
-  background-image: url(../img/sprite.png);
-  background-size: 223px 192px;
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  background-image: url("../img/sprite.png");
+  width: 18px;
+  height: 16.66667px;
+  background-position: -164.66667px -71.33333px;
+  background-size: 202px 173.66667px;
 }
 
 .search__btn:active {
