@@ -41,13 +41,14 @@
 			text-transform: uppercase
 		&_color
 			background-color: #f5f8fd
-			//color: #000
 			&.open
 				background-color: #edf3fa
 			+ .rubric__sub-list
 				border-color: #edf3fa
 			+ .rubric__sub-list .rubric__sub-link
 					color: #00306B
+			+ .rubric__sub-list .rubric__sub-link:hover
+				color: #0051FF
 				
 	&__sub-list
 		display: none
@@ -64,6 +65,8 @@
 		display: block
 		color: #333333
 		background: #fff
+		&:hover
+			color: #0051FF
 	&__mini
 		margin: 5px 10px
 		color: #00306B
@@ -94,6 +97,7 @@
 		display: inline-block
 		border-bottom: 2px solid transparent
 		&:hover
+			color: #0051FF
 			border-bottom-color: #B2CCFF
 	&__mini-icon
 		position: absolute

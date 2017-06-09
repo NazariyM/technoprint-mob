@@ -33,48 +33,44 @@
 			left: -1px
 			top: -2px
 			z-index: 1
+			width: 49px
+			height: 39px
 			content: ''
-			+md
-				left: -6px
-				top: -4px
-				transform: scale(.8)
 		&_name::after
-			+s('user_form')
-			left: -8px!important
+			+ico('user-form')
 		&_tel::after
-			+s('phone_form')
+			+ico('phone-form')
 		&_email::after
-			+s('mail_form')
+			+ico('message-form')
 	&__input
 		display: inline-block
 		vertical-align: middle
 		width: 100%
-		padding: 0 5px 0 50px
-		height: 30px
-		line-height: 30px
+		padding: 0 5px 0 54px
+		height: 36px
+		line-height: 36px
 		background-color: #fff
-		+f("ver",15)
+		+f("ver", 15)
 		+placeholder-color(#999999)
-		+sm
-			font-size: 14px
 	&__message-wrap
 		position: relative
-		padding-left: 40px
+		padding-left: 48px
 		border: 1px solid #5d8dcd
 		background-color: #f3f4f4
 		overflow: hidden
 		&::after
 			content: ''
 			position: absolute
+			top: -7px
+			left: -1px
+			width: 49px
+			height: 48px
 			z-index: 1
-			top: -6px
-			left: -7px
-			transform: scale(.75)
-			+s('dots_form')
+			+ico('dots-form')
 			
 	&__message
 		display: block
-		padding: 6px 12px 12px 8px
+		padding: 6px 12px 40px 8px
 		min-height: 130px
 		width: 100%
 		background-color: #fff
@@ -83,10 +79,8 @@
 		+f("ver",15)
 		+placeholder-color(#999999)
 		+tr(min-height .3s)
-		+sm
-			font-size: 14px
 		&.extended
-			min-height: 190px
+			min-height: 210px
 		&-extend
 			position: absolute
 			width: 65px

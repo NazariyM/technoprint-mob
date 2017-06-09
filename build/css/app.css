@@ -2050,6 +2050,12 @@ button {
   margin-top: auto;
 }
 
+body::after {
+  display: none;
+  pointer-events: none;
+  content: url(../img/color-icons/cart.svg) url(../img/color-icons/cart-act.svg) url(../img/color-icons/cart-hvr.svg) url(../img/color-icons/cart_add.svg) url(../img/color-icons/cart_add-act.svg) url(../img/color-icons/cart_add-hvr.svg) url(../img/color-icons/btn_arr.svg) url(../img/color-icons/btn_arr-hvr.svg) url(../img/color-icons/btn_arr-act.svg) url(../img/color-icons/btn_arr_dark-hvr.svg) url(../img/color-icons/btn_arr_dark.svg) url(../img/color-icons/file.svg) url(../img/color-icons/file-act.svg) url(../img/color-icons/file-hvr.svg) url(../img/color-icons/send-hvr.svg) url(../img/color-icons/send-act.svg) url(../img/color-icons/send.svg);
+}
+
 .hamburger {
   position: relative;
   display: inline-block;
@@ -2555,30 +2561,23 @@ button {
 
 .product__cart-add::after {
   position: absolute;
-  right: -2px;
-  top: -2px;
+  right: 0;
+  top: 0;
   z-index: 1;
   content: '';
-  background-image: url("../img/sprite.png");
-  width: 43px;
-  height: 40px;
-  background-position: -620px -198px;
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
+  background-image: url("../img/color-icons/cart_add.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 28px;
+  height: 28px;
 }
 
 .product__cart-add:hover::after {
-  background-image: url("../img/sprite.png");
-  width: 43px;
-  height: 40px;
-  background-position: -620px -98px;
-}
-
-.product__cart-add:active::after {
-  background-image: url("../img/sprite.png");
-  width: 43px;
-  height: 40px;
-  background-position: -620px -148px;
+  background-image: url("../img/color-icons/cart_add-act.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .product__price-current {
@@ -2972,38 +2971,39 @@ button {
   left: -1px;
   top: -2px;
   z-index: 1;
+  width: 49px;
+  height: 39px;
   content: '';
 }
 
 .request__field_name::after {
-  background-image: url("../img/sprite.png");
-  width: 52px;
-  height: 38px;
-  background-position: -430px -486px;
-  left: -8px !important;
+  background-image: url("../img/color-icons/user-form.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .request__field_tel::after {
-  background-image: url("../img/sprite.png");
-  width: 49px;
-  height: 39px;
-  background-position: -620px -49px;
+  background-image: url("../img/color-icons/phone-form.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .request__field_email::after {
-  background-image: url("../img/sprite.png");
-  width: 50px;
-  height: 39px;
-  background-position: -620px 0px;
+  background-image: url("../img/color-icons/message-form.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .request__input {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  padding: 0 5px 0 50px;
-  height: 30px;
-  line-height: 30px;
+  padding: 0 5px 0 54px;
+  height: 36px;
+  line-height: 36px;
   background-color: #fff;
   font-family: "Verdana", Arial, sans-serif;
   font-size: 15px;
@@ -3027,7 +3027,7 @@ button {
 
 .request__message-wrap {
   position: relative;
-  padding-left: 40px;
+  padding-left: 48px;
   border: 1px solid #5d8dcd;
   background-color: #f3f4f4;
   overflow: hidden;
@@ -3036,20 +3036,20 @@ button {
 .request__message-wrap::after {
   content: '';
   position: absolute;
+  top: -7px;
+  left: -1px;
+  width: 49px;
+  height: 48px;
   z-index: 1;
-  top: -6px;
-  left: -7px;
-  -ms-transform: scale(0.75);
-  transform: scale(0.75);
-  background-image: url("../img/sprite.png");
-  width: 53px;
-  height: 39px;
-  background-position: -367px -486px;
+  background-image: url("../img/color-icons/dots-form.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .request__message {
   display: block;
-  padding: 6px 12px 12px 8px;
+  padding: 6px 12px 40px 8px;
   min-height: 130px;
   width: 100%;
   background-color: #fff;
@@ -3077,7 +3077,7 @@ button {
 }
 
 .request__message.extended {
-  min-height: 190px;
+  min-height: 210px;
 }
 
 .request__message-extend {
@@ -3422,6 +3422,10 @@ button {
   color: #00306B;
 }
 
+.rubric__list-link_color + .rubric__sub-list .rubric__sub-link:hover {
+  color: #0051FF;
+}
+
 .rubric__sub-list {
   display: none;
   padding: 10px 0 20px;
@@ -3440,6 +3444,10 @@ button {
   display: block;
   color: #333333;
   background: #fff;
+}
+
+.rubric__sub-link:hover {
+  color: #0051FF;
 }
 
 .rubric__mini {
@@ -3488,6 +3496,7 @@ button {
 }
 
 .rubric__mini-link:hover {
+  color: #0051FF;
   border-bottom-color: #B2CCFF;
 }
 
@@ -4071,7 +4080,7 @@ button {
   position: relative;
   display: block;
   width: 100%;
-  padding: 20px 35px;
+  padding: 15px 35px;
   background: #fafafa;
   text-align: center;
   color: #194073;
@@ -4103,6 +4112,23 @@ button {
 .menu__rubric-arr.is-active {
   background: #d1d1d1;
   color: #fff;
+}
+
+.menu__version-link {
+  display: block;
+  padding: 20px;
+  background: #ebecec;
+  text-align: center;
+  font-size: 16px;
+  color: #274F7F;
+}
+
+.menu__version-link span {
+  border-bottom: 1px solid #274F7F;
+}
+
+.menu__version-link:hover span {
+  border-bottom-color: transparent;
 }
 
 .login {
@@ -4357,20 +4383,8 @@ button {
     width: 7px;
     height: 8px;
   }
-  .product__cart-add::after{
-    top: -6px;
-    right: -6px;
-    -ms-transform: scale(0.7);
-    transform: scale(0.7);
-  }
   .product__price-current{
     font-size: 15px;
-  }
-  .request__field::after{
-    left: -6px;
-    top: -4px;
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
   }
   .request__send-btn-add::after{
     -ms-transform: scale(0.8);
@@ -4526,12 +4540,6 @@ button {
   }
   .request__wrap{
     margin: 20px 0 0;
-  }
-  .request__input{
-    font-size: 14px;
-  }
-  .request__message{
-    font-size: 14px;
   }
   .request__send-message{
     font-size: 14px;
