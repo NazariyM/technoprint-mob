@@ -1380,7 +1380,7 @@ button {
   background-image: url("../img/sprite.png");
   width: 35px;
   height: 35px;
-  background-position: -620px -338px;
+  background-position: 0px -486px;
   -ms-transform: scale(0.75);
   transform: scale(0.75);
 }
@@ -1394,7 +1394,7 @@ button {
   background-image: url("../img/sprite.png");
   width: 35px;
   height: 35px;
-  background-position: -620px -293px;
+  background-position: -554px -371px;
 }
 
 .btn:active {
@@ -1406,7 +1406,7 @@ button {
   background-image: url("../img/sprite.png");
   width: 35px;
   height: 35px;
-  background-position: -620px -248px;
+  background-position: -556px -323px;
 }
 
 .btn_dark {
@@ -1418,7 +1418,7 @@ button {
   background-image: url("../img/sprite.png");
   width: 35px;
   height: 35px;
-  background-position: -620px -428px;
+  background-position: -90px -486px;
 }
 
 .btn_dark:hover {
@@ -1430,7 +1430,7 @@ button {
   background-image: url("../img/sprite.png");
   width: 35px;
   height: 35px;
-  background-position: -620px -383px;
+  background-position: -45px -486px;
 }
 
 .btn_dark:active {
@@ -1456,39 +1456,27 @@ button {
 
 .send-btn::after {
   position: absolute;
-  top: -3px;
-  right: -4px;
-  background-image: url("../img/sprite.png");
-  width: 50px;
-  height: 50px;
-  background-position: -307px -486px;
+  top: 0;
+  right: -1px;
+  width: 45px;
+  height: 45px;
+  background-image: url("../img/color-icons/send.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
   content: '';
-  -ms-transform: scale(0.87);
-  transform: scale(0.87);
 }
 
 .send-btn:hover {
-  background-color: #63afed;
-  border-bottom-color: #ffff74;
-}
-
-.send-btn:hover::after {
-  background-image: url("../img/sprite.png");
-  width: 50px;
-  height: 50px;
-  background-position: -247px -486px;
-}
-
-.send-btn:active {
   background-color: #415c89;
   border-bottom-color: #a95a63;
 }
 
-.send-btn:active::after {
-  background-image: url("../img/sprite.png");
-  width: 51px;
-  height: 50px;
-  background-position: -186px -486px;
+.send-btn:hover::after {
+  background-image: url("../img/color-icons/send-act.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .contacts__in {
@@ -2250,8 +2238,8 @@ body::after {
 }
 
 .slick-dots li.slick-active + li {
-  width: 11px;
-  height: 11px;
+  width: 8px;
+  height: 8px;
   border-radius: 15px;
 }
 
@@ -2826,7 +2814,7 @@ body::after {
 
 .extra__title {
   text-align: center;
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .extra__text {
@@ -2834,7 +2822,7 @@ body::after {
 }
 
 .extra__item + .extra__item {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .extra__item-list {
@@ -2877,7 +2865,7 @@ body::after {
 
 .extra__item-title_offset {
   padding-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .extra__item-product {
@@ -3159,8 +3147,8 @@ body::after {
   background-image: url("../img/sprite.png");
   width: 56px;
   height: 52px;
-  background-position: -247px -56px;
-  background-size: 335px 288px;
+  background-position: -247px 0px;
+  background-size: 303px 260.5px;
   -ms-transform: scale(0.9);
   transform: scale(0.9);
 }
@@ -3169,16 +3157,16 @@ body::after {
   background-image: url("../img/sprite.png");
   width: 56px;
   height: 52px;
-  background-position: -247px -170px;
-  background-size: 335px 288px;
+  background-position: -179px -183px;
+  background-size: 303px 260.5px;
 }
 
 .request__send-btn-add:active::after {
   background-image: url("../img/sprite.png");
   width: 56px;
   height: 52px;
-  background-position: -247px -113px;
-  background-size: 335px 288px;
+  background-position: -118px -183px;
+  background-size: 303px 260.5px;
 }
 
 .request__send-btn-add:hover {
@@ -3277,7 +3265,7 @@ body::after {
   width: 78.66667px;
   height: 76px;
   background-position: 0px 0px;
-  background-size: 223.33333px 192px;
+  background-size: 202px 173.66667px;
 }
 
 .benefits {
@@ -3311,7 +3299,7 @@ body::after {
   width: 59px;
   height: 59px;
   background-position: -123px 0px;
-  background-size: 335px 288px;
+  background-size: 303px 260.5px;
 }
 
 .benefits__item-pic_pic-2::after {
@@ -3319,7 +3307,7 @@ body::after {
   width: 59px;
   height: 59px;
   background-position: -64px -119px;
-  background-size: 335px 288px;
+  background-size: 303px 260.5px;
 }
 
 .benefits__item-pic_pic-3::after {
@@ -3327,7 +3315,7 @@ body::after {
   width: 59px;
   height: 59px;
   background-position: 0px -119px;
-  background-size: 335px 288px;
+  background-size: 303px 260.5px;
 }
 
 .benefits__item-text {
@@ -3439,7 +3427,7 @@ body::after {
 }
 
 .rubric__sub-link {
-  padding: 3px 15px;
+  padding: 3px 15px 3px 22px;
   text-transform: none;
   display: block;
   color: #333333;
@@ -3758,6 +3746,10 @@ body::after {
 
 .header__bar-btn.is-active .header__bar-icon {
   fill: #194073;
+}
+
+.header__bar-content {
+  border-top: 1px solid #d9d9d9;
 }
 
 .header__bar-content > div {
@@ -4134,7 +4126,6 @@ body::after {
 .login {
   padding: 20px 10px 40px;
   background: #ebecec;
-  border-top: 1px solid #d9d9d9;
 }
 
 .login__in {
@@ -4379,10 +4370,6 @@ body::after {
   .slick-dots{
     margin-top: -25px;
   }
-  .slick-dots li.slick-active + li{
-    width: 7px;
-    height: 8px;
-  }
   .product__price-current{
     font-size: 15px;
   }
@@ -4514,19 +4501,6 @@ body::after {
   }
   .product__item-pic .decor__line::after{
     right: -12px;
-  }
-  .extra__title{
-    font-size: 17px;
-  }
-  .extra__item-title{
-    margin-bottom: 20px;
-    font-size: 15px;
-  }
-  .extra__item-title_offset{
-    margin-bottom: 25px;
-  }
-  .extra__item-product{
-    font-size: 16px;
   }
   .extra__pic-wrap{
     height: 230px;

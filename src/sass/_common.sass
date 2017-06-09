@@ -126,18 +126,15 @@ button
 	-webkit-tap-highlight-color: transparent
 	&::after
 		position: absolute
-		top: -3px
-		right: -4px
-		+s('send')
+		top: 0
+		right: -1px
+		width: 45px
+		height: 45px
+		+ico('send')
 		content: ''
-		transform: scale(.87)
 	&:hover
-		background-color: #63afed
-		border-bottom-color: #ffff74
-	&:hover::after
-		+s('send-hvr')
-	&:active
 		background-color: #415c89
 		border-bottom-color: #a95a63
-	&:active::after
-		+s('send-act')
+	&:hover::after
+		+ico('send-act')
+		

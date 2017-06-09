@@ -5,8 +5,6 @@
 	z-index: 3
 	&.slick-initialized
 		display: block
-	&:hover &__btn
-		//opacity: 0
 	&__item
 		position: relative
 		height: 160px
@@ -42,16 +40,10 @@
 	&__btn_prev
 		left: 15px
 		display: none!important
-	//&__btn_prev[aria-disabled='true']
-	//	opacity: 0
-	//	visibility: hidden
 	&__btn_prev &__icon
 		+rotate(180)
 	&__btn_next
 		right: 15px
-	//&__btn_prev[aria-disabled='false'] ~ &__btn_next[aria-disabled='false']
-	//	opacity: 0
-	//	visibility: hidden
 	&__btn:hover &__icon
 		fill: #fff
 	&__icon
@@ -93,9 +85,6 @@
 			height: 14px
 			background-color: #BABABA
 		li.slick-active + li
-			width: 11px
-			height: 11px
+			width: 8px
+			height: 8px
 			border-radius: 15px
-			+md
-				width: 7px
-				height: 8px
