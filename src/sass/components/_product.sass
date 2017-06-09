@@ -20,6 +20,10 @@
 				background: #DFE6EB
 			.product__sect-count
 				background: #DFE6EB
+			+ .product__inn .product__suggest,
+			+ .product__inn .product__suggest-more,
+			+ .product__inn .product__examples
+				background: #DFE6EB
 		&_padding
 			+sm
 				padding: 6px 30px 6px 15px
@@ -225,6 +229,10 @@
 	&__suggest
 		position: relative
 		background: #EBECEC
+		&-in
+			border: 5px solid #ebecec
+			border-top: none
+			background: #fff
 		&-text
 			padding: 20px 15px 5px
 			border-top: 1px solid #DBDBDB
@@ -274,9 +282,7 @@
 			& + &
 				margin-top: 15px
 		&-btn
-			margin: 20px auto
-			+sm
-				margin: 10px auto
+			margin: 33px auto
 	&__item-pic
 		+sm
 			.decor__line

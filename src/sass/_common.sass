@@ -70,7 +70,7 @@ button
 	position: relative
 	display: inline-block
 	min-width: 238px
-	padding: 12px 41px 12px 5px
+	padding: 13px 41px 13px 5px
 	+f("psr",18)
 	color: $white
 	outline: none
@@ -82,34 +82,27 @@ button
 	&::after
 		content: ''
 		position: absolute
-		top: calc(50% - 18px)
-		right: 10px
+		top: calc(50% - 14px)
+		right: 13px
 		z-index: 1
-		+s('btn_arr')
-		transform: scale(.75)
+		width: 28px
+		height: 28px
+		+ico('btn_arr')
 	&:hover
-		background-color: #128FCD
-		border-bottom-color: #F9BF84
-	&:hover::after
-		+s('btn_arr-hvr')
-	&:active
 		background-color: #24568D
 		border-bottom-color: #E63833
-	&:active::after
-		+s('btn_arr-act')
+	&:hover::after
+		+ico('btn_arr-hvr')
 	&_dark
 		background-color: #1768BF
 		border-bottom-color: #F9BF84
 		&::after
-			+s('btn_dark')
+			+ico('btn_arr_dark')
 		&:hover
-			background-color: #00BBFF
-			border-bottom-color: #F9BF84
-		&:hover::after
-			+s('btn_dark-hvr')
-		&:active
 			background-color: #24568D
 			border-bottom-color: #E63833
+		&:hover::after
+			+ico('btn_arr_dark-hvr')
 
 .send-btn
 	position: relative
