@@ -2,15 +2,6 @@ $(document).ready(function () {
 
   $('.js-nav-list-scroll').perfectScrollbar();
 
-  (function () {
-    var $prodSectOpen = $('.js-product-sect-open');
-
-    $prodSectOpen.on('click', function () {
-      $(this).toggleClass('open');
-      $(this).next().toggle();
-    });
-  })();
-
   function initTopBar() {
     var $topBar = $('.js-header-bar'),
       $topBarMenu = $topBar.find('.header__bar-btn'),
@@ -28,7 +19,7 @@ $(document).ready(function () {
       $topBar.find($topBarContent).hide();
       $topBar.find($topBarContent).filter('[data-tab=' + tabData + ']').show();
 
-      if($(this).hasClass('is-active')) {
+      if ($(this).hasClass('is-active')) {
         $(this).removeClass('is-active');
         $topBar.find($topBarContent).filter('[data-tab=' + tabData + ']').hide();
       } else {
@@ -37,7 +28,28 @@ $(document).ready(function () {
         $(this).addClass('is-active');
       }
     });
+
+    var $menuBtn = $('.js-menu-hamburger');
+    var $win = $(window);
+    var myWinH = $win.height() * 3;
+
+    $win.on('scroll', function () {
+      if ($(this).scrollTop() > myWinH) {
+        $menuBtn.addClass('is-active');
+      } else {
+        $menuBtn.removeClass('is-active');
+      }
+    }).on('resize', function() {
+      myWinH = $(this).height();
+    });
+
+    $menuBtn.on('click', function () {
+      $('html, body').animate({
+        scrollTop: $("[data-tab='tab0']").offset().top
+      }, 400);
+    });
   }
+
   initTopBar();
 
   function initHomeSlider() {
@@ -53,10 +65,18 @@ $(document).ready(function () {
       prevArrow: '<button type="button" class="home-slider__btn home-slider__btn_prev"><svg class="home-slider__icon icon-arr-sld-big"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-big"></use></svg></button>',
       nextArrow: '<button type="button" class="home-slider__btn home-slider__btn_next"><svg class="home-slider__icon icon-arr-sld-big"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-big"></use></svg></button>'
     });
-
   }
 
   initHomeSlider();
+
+  (function () {
+    var $prodSectOpen = $('.js-product-sect-open');
+
+    $prodSectOpen.on('click', function () {
+      $(this).toggleClass('open');
+      $(this).next().toggle();
+    });
+  })();
 
   // message extend
   (function () {

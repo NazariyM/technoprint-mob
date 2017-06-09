@@ -4,15 +4,6 @@ $(document).ready(function () {
 
   $('.js-nav-list-scroll').perfectScrollbar();
 
-  (function () {
-    var $prodSectOpen = $('.js-product-sect-open');
-
-    $prodSectOpen.on('click', function () {
-      $(this).toggleClass('open');
-      $(this).next().toggle();
-    });
-  })();
-
   function initTopBar() {
     var $topBar = $('.js-header-bar'),
         $topBarMenu = $topBar.find('.header__bar-btn'),
@@ -39,7 +30,28 @@ $(document).ready(function () {
         $(this).addClass('is-active');
       }
     });
+
+    var $menuBtn = $('.js-menu-hamburger');
+    var $win = $(window);
+    var myWinH = $win.height() * 3;
+
+    $win.on('scroll', function () {
+      if ($(this).scrollTop() > myWinH) {
+        $menuBtn.addClass('is-active');
+      } else {
+        $menuBtn.removeClass('is-active');
+      }
+    }).on('resize', function () {
+      myWinH = $(this).height();
+    });
+
+    $menuBtn.on('click', function () {
+      $('html, body').animate({
+        scrollTop: $("[data-tab='tab0']").offset().top
+      }, 400);
+    });
   }
+
   initTopBar();
 
   function initHomeSlider() {
@@ -58,6 +70,15 @@ $(document).ready(function () {
   }
 
   initHomeSlider();
+
+  (function () {
+    var $prodSectOpen = $('.js-product-sect-open');
+
+    $prodSectOpen.on('click', function () {
+      $(this).toggleClass('open');
+      $(this).next().toggle();
+    });
+  })();
 
   // message extend
   (function () {

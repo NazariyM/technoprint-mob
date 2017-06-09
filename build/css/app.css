@@ -2054,7 +2054,6 @@ button {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 20px;
   width: 26px;
   height: 20px;
   cursor: pointer;
@@ -3740,6 +3739,14 @@ button {
   background: #ebecec;
 }
 
+.header__bar-btn.is-active .hamburger__bar {
+  background: #053b76;
+}
+
+.header__bar-btn.is-active .hamburger__bar::before, .header__bar-btn.is-active .hamburger__bar::after {
+  background: #053b76;
+}
+
 .header__bar-btn.is-active .header__bar-icon {
   fill: #194073;
 }
@@ -3759,6 +3766,10 @@ button {
 
 .header__bar-icon.icon-user {
   font-size: 39px;
+}
+
+.header__hamburger {
+  margin-left: 20px;
 }
 
 .header__bottom {
@@ -3974,6 +3985,36 @@ button {
 .top-links__link:hover {
   background-color: rgba(56, 87, 148, 0.3);
   border-color: #348EBF;
+}
+
+.menu__hamburger {
+  display: none;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 101;
+  opacity: .5;
+}
+
+.menu__hamburger:active {
+  opacity: 1;
+}
+
+.menu__hamburger .hamburger__bar {
+  background: #053b76;
+  transition: background .3s;
+}
+
+.menu__hamburger .hamburger__bar::before, .menu__hamburger .hamburger__bar::after {
+  transition: background .3s;
+}
+
+.menu__hamburger .hamburger__bar::before, .menu__hamburger .hamburger__bar::after {
+  background: #053b76;
+}
+
+.menu__hamburger.is-active {
+  display: block;
 }
 
 .menu__block {

@@ -47,6 +47,11 @@
 			width: 100%
 			bottom: -2px
 			background: #ebecec
+		&.is-active .hamburger__bar
+			background: #053b76
+			&::before, &::after
+				background: #053b76
+			
 	&__bar-btn.is-active &__bar-icon
 		fill: #194073
 	&__bar-content > div
@@ -60,6 +65,8 @@
 		font-size: 38px
 		&.icon-user
 			font-size: 39px
+	&__hamburger
+		margin-left: 20px
 	&__bottom
 		position: relative
 		background-color: #09A1D9
@@ -238,6 +245,24 @@
 		
 // menu
 .menu
+	&__hamburger
+		display: none
+		position: fixed
+		top: 30px
+		right: 20px
+		z-index: 101
+		opacity: .5
+		&:active
+			opacity: 1
+		.hamburger__bar
+			background: #053b76
+			transition: background .3s
+			&::before, &::after
+				transition: background .3s
+			&::before, &::after
+				background: #053b76
+		&.is-active
+			display: block
 	&__block
 		border-left: 10px solid #ebecec
 		border-right: 10px solid #ebecec
