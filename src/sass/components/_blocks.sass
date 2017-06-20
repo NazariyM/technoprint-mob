@@ -1,0 +1,135 @@
+// send
+.send
+	font-size: 0
+	&__add
+		display: inline-block
+		vertical-align: top
+		margin-right: 15px
+		white-space: nowrap
+		&-btn
+			display: inline-block
+			vertical-align: middle
+			padding: 5px 5px 0
+			max-width: 100px
+			min-height: 90px
+			color: #fff
+			background-color: #80C9E8
+			white-space: normal
+			+f("ver", 13)
+			text-transform: uppercase
+			text-align: center
+			cursor: pointer
+			border-bottom: 1px solid #A8B3BF
+			&::after
+				content: ''
+				display: block
+				width: 40px
+				height: 37px
+				margin: 6px auto 0
+				+ico('file')
+			&:hover::after
+				+ico('file-hvr')
+			&:active::after
+				+ico('file-act')
+			&:hover
+				background: #5EAFDA
+				border-bottom-color: #FFFF00
+			&:active
+				background: #2A578A
+				border-bottom-color: #E63E2D
+		&-input
+			display: none
+		&-text
+			display: inline-block
+			vertical-align: top
+			margin-left: 20px
+			margin-top: -3px
+			max-width: 160px
+			padding-left: 3px
+			+f("ver",18)
+			color: #040404
+			white-space: normal
+			transition: .4s
+			&.is-visible
+				opacity: 1
+				visibility: visible
+			+md
+				font-size: 15px
+			+sm
+				font-size: 14px
+	&__files
+		display: inline-block
+		vertical-align: bottom
+		width: calc(100% - 125px)
+		font-size: 0
+		white-space: normal
+		+r(599)
+			width: 100%
+			margin-top: 15px
+			text-align: center
+	&__item
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		width: 110px
+		height: 98px
+		margin-right: 15px
+		+vertical
+		+r(599)
+			margin: 0 15px
+		&:last-child
+			margin-right: 0
+		&:nth-child(2n)
+			margin-right: 20px
+		&:nth-child(2) ~ &
+			margin-top: 0
+		&:nth-child(3) ~ &
+			margin-top: 20px
+		img
+			display: inline-block
+			vertical-align: middle
+			width: 100%
+			height: 100%
+			object-fit: contain
+		.decor__line
+			width: 82%
+		.decor__line::before
+			border-width: 0 0 16px 15px
+			right: -5px
+		.decor__line::after
+			border-width: 15px 15px 0 0
+		
+		&-cancel
+			position: absolute
+			right: -15px
+			top: -15px
+			border-radius: 50%
+			background: #E63833
+			border: 2px solid #fff
+			+tr(background .2s)
+			z-index: 2
+			width: 24px
+			height: 24px
+			&:hover
+				background: #3e5b8a
+			&-icon
+				fill: #fff
+				+vcenter
+				font-size: 12px
+				+md
+					font-size: 10px
+	
+	&__message
+		text-align: center
+		&-text
+			display: inline-block
+			vertical-align: -13px
+			+f("ver", 16)
+		&-icon
+			display: inline-block
+			vertical-align: middle
+			font-size: 50px
+			fill: #aec94d
+			
+	&_request
+		margin-top: 20px

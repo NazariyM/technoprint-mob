@@ -1,6 +1,12 @@
 .request
 	padding: 20px 0 30px
 	background-color: #ececec
+	&__row
+		&:not(:last-child)
+			margin: 0 0 15px
+		&:last-child
+			text-align: center
+			margin: 25px 0 0
 	&__title
 		margin-bottom: 20px
 		text-align: center
@@ -28,6 +34,8 @@
 		border: 1px solid #5d8dcd
 		overflow: hidden
 		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
 		&::after
 			position: absolute
 			left: -1px
@@ -98,133 +106,3 @@
 		&-icon
 			font-size: 21px
 			fill: #C4C4C4
-	&__send
-		margin-top: 20px
-		font-size: 0
-	&__send-row
-		font-size: 0
-		& + &
-			text-align: center
-			margin-top: 20px
-	&__send-btn
-		padding: 0 73px 0 5px
-		min-width: 220px
-		font-size: 18px
-		line-height: 45px
-		height: 45px
-	&__send-add
-		display: inline-block
-		vertical-align: top
-		margin-right: 15px
-		white-space: nowrap
-	&__send-btn-add
-		display: inline-block
-		vertical-align: middle
-		padding: 0 5px
-		max-width: 128px
-		min-height: 114px
-		color: #fff
-		background-color: #80C9E8
-		white-space: normal
-		+f("ver",16)
-		text-transform: uppercase
-		border-bottom: 1px solid #A8B3BF
-		+lg
-			font-size: 13px
-			max-width: 108px
-			min-height: 96px
-		&::after
-			content: ''
-			display: block
-			margin: 3px auto 0
-			+sr('file')
-			transform: scale(.9)
-			+md
-				transform: scale(.8)
-		&:hover::after
-			+sr('file-hvr')
-		&:active::after
-			+sr('file-act')
-		&:hover
-			background: #5EAFDA
-			border-bottom-color: #FFFF00
-		&:active
-			background: #2A578A
-			border-bottom-color: #E63E2D
-	&__send-files
-		margin-bottom: 10px
-		text-align: left
-	&__send-item
-		position: relative
-		display: inline-block
-		vertical-align: middle
-		width: 110px
-		height: 98px
-		margin-right: 15px
-		margin-bottom: 15px
-		+vertical
-		&:last-child
-			margin-right: 0
-		&:nth-child(2n)
-			margin-right: 0
-			+xs
-				margin-right: 20px
-		&:nth-child(2) ~ &
-			margin-top: 20px
-			+xs
-				margin-top: 0
-		&:nth-child(3) ~ &
-			+xs
-				margin-top: 20px
-		img
-			display: inline-block
-			vertical-align: middle
-			width: 100%
-			height: 100%
-			object-fit: contain
-		.decor__line
-			+md
-				width: 82%
-		.decor__line::before
-			+md
-				border-width: 0 0 16px 15px
-				right: -5px
-		.decor__line::after
-			+md
-				border-width: 15px 15px 0 0
-	&__send-btn-close
-		position: absolute
-		right: -15px
-		top: -15px
-		width: 30px
-		height: 30px
-		border-radius: 50%
-		background: #E63833
-		border: 3px solid #fff
-		+tr(background .2s)
-		+md
-			width: 24px
-			height: 24px
-			border-width: 2px
-		&:hover
-			background: #3e5b8a
-	&__send-icon-close
-		fill: #fff
-		+vcenter
-		font-size: 12px
-		+md
-			font-size: 10px
-	&__send-message
-		+f("ver",20)
-		+md
-			font-size: 15px
-		+sm
-			font-size: 14px
-		&::before
-			content: ''
-			display: inline-block
-			vertical-align: -30px
-			transform: scale(.7)
-			+st('mark')
-			+md
-				transform: scale(.4)
