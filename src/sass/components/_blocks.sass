@@ -133,3 +133,41 @@
 			
 	&_request
 		margin-top: 20px
+		
+/* breadcrumbs
+	----------------------------------- */
+.breadcrumbs
+	position: relative
+	padding: 5px 0
+	z-index: 1
+	&__list
+		font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: middle
+		&:last-child a::after
+			display: none
+		&.is-active
+			pointer-events: none
+	&__link
+		font-size: 18px
+		color: #003470
+		&::after
+			display: inline-block
+			vertical-align: middle
+			margin: 0 4px
+			content: '/'
+			pointer-events: none
+		&:hover
+			color: $hover
+		&:hover::after
+			color: #000
+	span
+		display: inline-block
+		vertical-align: middle
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		margin-right: 8px
+		fill: #0B73A7
+		

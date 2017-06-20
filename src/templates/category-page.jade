@@ -4,344 +4,118 @@ title: Техно-принт
 extends layouts/_layout
 
 block content
-	+b.MAIN.page._default
+	+b.MAIN.page
 		+e.container.container
-			+e.bar.bordered
-				+b.breadcrumbs
-					+e.A.link(href='#!')
-						+icon('icon-house', 'breadcrumbs__icon')
-						= ' '
-						+e.SPAN Главная
-					+e.A.link(href='#!')
-						+e.SPAN Машинная вышивка
-					+e.A.link(href='#!')
-						+e.SPAN Вышивка имени на полотенце
+			+e.bar
+				-
+					var breadCrumbsList = [{text: 'Машинная вышивка'}, {text: 'Вышивка имени на полотенце', active: 'is-active'}];
+				include components/_breadcrumbs
 
 				+e.bar-title
 					+e.SPAN Артикул: 22
 
 			+e.in
-				+e.ASIDE.side
-					+b.rubric._side
-						+e.item
-							+e.UL.list
-								+e.list-item._color.is-active
-									+e.A(href="#!").list-link._color
-										+e.SPAN СУВЕНИРЫ ПО ТЕМАТИКЕ
-										+icon('icon-arr-def','rubric__list-icon')
-									+e.UL.sub-list
-										+e.sub-item
-											+e.A(href="#!").sub-link Подарки мужчине
-										+e.sub-item
-											+e.A(href="#!").sub-link Подарки женщине
-										+e.mini.js-rubric-list
-											+e.mini-title Корпоративные
-												+icon('icon-arr-def','rubric__mini-icon')
-											+e.UL.mini-list
-												+e.mini-item
-													+e.A.mini-link(href='#!') Корпоративные 1
-												+e.mini-item
-													+e.A.mini-link(href='#!') Корпоративные 2
-												+e.mini-item
-													+e.A.mini-link(href='#!') Корпоративные 3
-										+e.sub-item
-											+e.A(href="#!").sub-link Популярные
-										+e.sub-item
-											+e.A(href="#!").sub-link В День Рождения
-										+e.sub-item
-											+e.A(href="#!").sub-link Оригинальные идеи
-										+e.sub-item
-											+e.A(href="#!").sub-link Для детей
-										+e.sub-item
-											+e.A(href="#!").sub-link Учителю
-										+e.sub-item
-											+e.A(href="#!").sub-link Маме
-										+e.sub-item
-											+e.A(href="#!").sub-link Папе
-										+e.sub-item
-											+e.A(href="#!").sub-link Для бабушки
-										+e.sub-item._best
-											+e.A(href="#!").sub-link._decor Лучшие подарки (наш выбор)
-										+e.mini.js-rubric-list.is-active
-											+e.mini-title Надписи имён
-													+icon('icon-arr-def','rubric__mini-icon')
-											+e.UL.mini-list
-												+e.mini-item
-													+e.A.mini-link(href='#!') Вышивки имён
-														+icon('icon-arr-def','rubric__mini-icon-sm')
-												+e.mini-item
-													+e.A.mini-link(href='#!') Имена на кружках
-												+e.mini-item
-													+e.A.mini-link(href='#!') Имена на майках
-										+e.mini.js-rubric-list
-											+e.mini-title Сезонные 23/8/9/31
-												+icon('icon-arr-def','rubric__mini-icon')
-											+e.UL.mini-list
-												+e.mini-item
-													+e.A.mini-link(href='#!') 8 марта
-												+e.mini-item
-													+e.A.mini-link(href='#!') 23 февраля
-												+e.mini-item
-													+e.A.mini-link(href='#!') 9 мая
-												+e.mini-item
-													+e.A.mini-link(href='#!') 1 сентября
-												+e.mini-item
-													+e.A.mini-link(href='#!') День Валентина
-												+e.mini-item
-													+e.A.mini-link(href='#!') Новый Год
-
-						+e.item
-							+e.UL.list
-								+e.list-item
-									+e.A(href="#!").list-link
-										+e.SPAN МАШИННАЯ ВЫШИВКА
-										+icon('icon-arr-def','rubric__list-icon')
-									+e.UL.sub-list
-										+e.mini.js-rubric-list
-											+e.mini-title Продукция и услуги
-												+icon('icon-arr-def','rubric__mini-icon')
-											+e.UL.mini-list
-												+e.mini-item
-													+e.A.mini-link(href='#!') Полотенца с вышивкой
-												+e.mini-item
-													+e.A.mini-link(href='#!') Халаты с вышивкой
-												+e.mini-item
-													+e.A.mini-link(href='#!') Вышивка шевронов
-												+e.mini-item
-													+e.A.mini-link(href='#!') Вышивание на крое
-										+e.sub-item._best
-											+e.A(href="#!").sub-link._decor Лучшие предложения по вышивке (наш выбор)
-										+e.sub-item
-											+e.A(href="#!").sub-link Новинки дизайнов вышивок
-										+e.sub-item
-											+e.A(href="#!").sub-link Образцы наших работ
-
-						+e.item
-							+e.UL.list
-								+e.list-item._color
-									+e.A(href="#!").list-link._more-text._color
-										+e.SPAN ПЕЧАТЬ НА ОДЕЖДЕ
-										+icon('icon-arr-def','rubric__list-icon')
-									+e.UL.sub-list
-										+e.sub-item
-											+e.A(href="#!").sub-link Майки - все дизайны
-										+e.sub-item
-											+e.A(href="#!").sub-link Новинки дизайнов
-										+e.sub-item._best
-											+e.A(href="#!").sub-link Лучшие предложения - одежда (наш выбор)
-										+e.mini.js-rubric-list
-											+e.mini-title Заготовки под нанесение
-												+icon('icon-arr-def','rubric__mini-icon')
-											+e.UL.mini-list
-												+e.mini-item
-													+e.A.mini-link(href='#!') Белые майки
-												+e.mini-item
-													+e.A.mini-link(href='#!') Цветные майки
-												+e.mini-item
-													+e.A.mini-link(href='#!') Майки поло
-												+e.mini-item
-													+e.A.mini-link(href='#!') Майки женские
-												+e.mini-item
-													+e.A.mini-link(href='#!') Детские майки
-												+e.mini-item
-													+e.A.mini-link(href='#!') Кепки
-												+e.mini-item
-													+e.A.mini-link(href='#!') Все заготовки
-										+e.sub-item
-											+e.A(href="#!").sub-link Печать на кепках
-										+e.sub-item
-											+e.A(href="#!").sub-link На «Вашей» одежде
-										+e.sub-item
-											+e.A(href="#!").sub-link Спортивная одежда
-										+e.sub-item
-											+e.A(href="#!").sub-link Логотипы на одежде
-										+e.sub-item._examples
-											+e.A(href="#!").sub-link Образцы наших работ
-						+e.item
-							+e.UL.list
-								+e.list-item._color
-									+e.A(href="#!").list-link._color
-										+e.SPAN ФОТОКНИГИ
-										+icon('icon-arr-def','rubric__list-icon')
-									+e.UL.sub-list
-										+e.sub-item
-											+e.A(href="#!").sub-link Печать фотокниг
-										+e.sub-item
-											+e.A(href="#!").sub-link Обложки эксклюзивные
-										+e.sub-item
-											+e.A(href="#!").sub-link Оригинальные форзацы
-										+e.sub-item
-											+e.A(href="#!").sub-link Дизайн на фотокнигу
-						+e.item
-							+e.UL.list
-								+e.list-item
-									+e.A(href="#!").list-link
-										+e.SPAN ЗНАЧКИ / БРЕЛКИ
-										+icon('icon-arr-def','rubric__list-icon')
-									+e.UL.sub-list
-										+e.sub-item
-											+e.A(href="#!").sub-link Значки - сувениры
-											+e.SPAN.hit Хит!
-										+e.sub-item
-											+e.A(href="#!").sub-link Новинки дизайна значков
-										+e.mini.js-rubric-list
-											+e.mini-title Возможные заготовки
-												+icon('icon-arr-def','rubric__mini-icon')
-											+e.UL.mini-list
-												+e.mini-item
-													+e.A.mini-link(href='#!') Значки на иголочке
-												+e.mini-item
-													+e.A.mini-link(href='#!') Значки на магнитах
-												+e.mini-item
-													+e.A.mini-link(href='#!') Брелки
-												+e.mini-item
-													+e.A.mini-link(href='#!') Брелки ГосНомер
-												+e.mini-item
-													+e.A.mini-link(href='#!') Ручки
-												+e.mini-item
-													+e.A.mini-link(href='#!') Скрепки с логотипами
-												+e.mini-item
-													+e.A.mini-link(href='#!') Зеркальца закатные
-												+e.mini-item
-													+e.A.mini-link(href='#!') Открывашки
-												+e.mini-item
-													+e.A.mini-link(href='#!') Бейджи
-												+e.mini-item
-													+e.A.mini-link(href='#!') Медальоны
-												+e.mini-item
-													+e.A.mini-link(href='#!') На холодильник
-												+e.mini-item
-													+e.A.mini-link(href='#!') Магниты из винила
-										+e.sub-item._examples
-											+e.A(href="#!").sub-link Образцы наших работ
-										+e.sub-item._examples
-											+e.A(href="#!").sub-link Логотипы на значках
-						+e.item
-							+e.UL.list
-								+e.list-item
-									+e.A(href="#!").list-link
-										+e.SPAN ПЕЧАТЬ КАРТИН И БАГЕТ
-										+icon('icon-arr-def','rubric__list-icon')
-									+e.UL.sub-list
-										+e.mini.js-rubric-list
-											+e.mini-title Каталог картин
-												+icon('icon-arr-def','rubric__mini-icon')
-											+e.UL.mini-list
-												+e.mini-item
-													+e.A.mini-link(href='#!') Картины для дома (выбор)
-												+e.mini-item
-													+e.A.mini-link(href='#!') Картины для офиса
-												+e.mini-item
-													+e.A.mini-link(href='#!') Постеры
-												+e.mini-item
-													+e.A.mini-link(href='#!') Современные фото
-												+e.mini-item
-													+e.A.mini-link(href='#!') Репродукции картин
-													+e.SPAN.hit Хит!
-												+e.mini-item
-													+e.A.mini-link(href='#!') Все картины художников
-												+e.mini-item
-													+e.A(href="#!").sub-link Наш выбор (рекомендуем)
-
-										+e.sub-item
-											+e.A(href="#!").sub-link Модульные картины
-										+e.sub-item
-											+e.A(href="#!").sub-link Мозаика из фотографий
-										+e.sub-item
-											+e.A(href="#!").sub-link Портрет по фото на холсте
-										+e.sub-item
-											+e.A(href="#!").sub-link Багетное оформление
-
+				include components/_rubric-side
 				+e.main
 					+b.product
 						+e.FORM(action='#!')
-							+e.inn._float
-								+e.col
+							+e.card
+								+e.card-col
 									+e.look
-										+e.look-pic
-											+e.IMG(src='img/content/look-img.jpg')
-										+e.look-pictures
-											+e.item-pic._xs.decor._xs
+										+e.look-view.js-look-view
+											+e.look-pic
+												+e.IMG(src='img/content/look-img-1.jpg')
+											+e.look-pic
+												+e.IMG(src='img/content/look-img-2.jpg')
+											+e.look-pic
+												+e.IMG(src='img/content/look-img-1.jpg')
+											+e.look-pic
+												+e.IMG(src='img/content/look-img-2.jpg')
+											+e.look-pic
+												+e.IMG(src='img/content/look-img-1.jpg')
+										+e.look-thumbs.js-look-thumbs
+											+e.look-thumbs-pic.decor._xs
 												+e.IMG(src='img/content/look-1.jpg')
-												.decor__line
-											+e.item-pic._xs.decor._xs
+												+b.decor__line
+											+e.look-thumbs-pic.decor._xs
 												+e.IMG(src='img/content/look-2.jpg')
-												.decor__line
-											+e.item-pic._xs.decor._xs
+												+b.decor__line
+											+e.look-thumbs-pic.decor._xs
 												+e.IMG(src='img/content/look-3.jpg')
-												.decor__line
-											+e.item-pic._xs.decor._xs
+												+b.decor__line
+											+e.look-thumbs-pic.decor._xs
 												+e.IMG(src='img/content/look-4.jpg')
-												.decor__line
-											+e.item-pic._xs.decor._xs
+												+b.decor__line
+											+e.look-thumbs-pic.decor._xs
 												+e.IMG(src='img/content/look-5.jpg')
-												.decor__line
+												+b.decor__line
 									+e.props
-										+e.props-row
-											+e.actions
-												+e.BUTTON(type='button').wish-btn
+										+e.props-col
+											+e.props-row
+												+e.BUTTON(type='button').wish-add-btn
 												+e.BUTTON(type='button').calc-btn
 													+icon('icon-arr-def', 'product__calc-icon')
 													+e.SPAN Рассчитать свой - заказной дизайн
-											+e.hashtags
-													+e.A.hashtags-link(href='#!') #полотенце в подарок
-													+e.A.hashtags-link(href='#!') #вышивки на полотенце
-													+e.A.hashtags-link(href='#!') #сувениры с вышивкой
-										+e.props-row
-											+e.rating
-												+e.rating-text Оцените данный товар:
-												+e.rating-in
-													+e.INPUT.rating-input(id='product-rating-6' value='6' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-6')
-														+icon('icon-star', 'product__rating-star')
-													+e.INPUT.rating-input.js-product-rating(id='product-rating-5' value='5' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-5')
-														+icon('icon-star', 'product__rating-star')
-													+e.INPUT.rating-input(id='product-rating-4' value='4' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-4')
-														+icon('icon-star', 'product__rating-star')
-													+e.INPUT.rating-input(id='product-rating-3' value='3' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-3')
-														+icon('icon-star', 'product__rating-star')
-													+e.INPUT.rating-input(id='product-rating-2' value='2' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-2')
-														+icon('icon-star', 'product__rating-star')
-													+e.INPUT.rating-input(id='product-rating-1' value='1' type='radio' name='product-rating')
-													+e.LABEL.rating-icon(for='product-rating-1')
-														+icon('icon-star', 'product__rating-star')
+											+e.props-row
+												+b.rating._product-card
+													+e.text Оцените данный товар:
+													+e.in.js-rating
+														+e.INPUT.input(id='product-rating-6' value='6' type='radio' name='product-rating')
+														+e.LABEL.icon(for='product-rating-6')
+															+icon('icon-star', 'rating__star')
+														+e.INPUT.input(id='product-rating-5' value='5' type='radio' name='product-rating')
+														+e.LABEL.icon(for='product-rating-5')
+															+icon('icon-star', 'rating__star')
+														+e.INPUT.input(id='product-rating-4' value='4' type='radio' name='product-rating')
+														+e.LABEL.icon(for='product-rating-4')
+															+icon('icon-star', 'rating__star')
+														+e.INPUT.input(id='product-rating-3' value='3' type='radio' name='product-rating')
+														+e.LABEL.icon(for='product-rating-3')
+															+icon('icon-star', 'rating__star')
+														+e.INPUT.input(id='product-rating-2' value='2' type='radio' name='product-rating')
+														+e.LABEL.icon(for='product-rating-2')
+															+icon('icon-star', 'rating__star')
+														+e.INPUT.input(id='product-rating-1' value='1' type='radio' name='product-rating')
+														+e.LABEL.icon(for='product-rating-1')
+															+icon('icon-star', 'rating__star')
 
-											- var socialsClass = '_product'
+												- var socialsClass = '_product-card'
 												include components/_socials
 
-								+e.col.descr
+										+e.props-col.hashtags
+											+e.A.hashtags-link(href='#!') #полотенце в подарок
+											+e.A.hashtags-link(href='#!') #вышивки на полотенце
+											+e.A.hashtags-link(href='#!') #сувениры с вышивкой
+
+								+e.card-col.product__descr
 									+e.descr-title ВЫШИВКА ИМЕНИ НА ПОЛОТЕНЦЕ,
 										br
 										| БУДЕТ НУЖНОЕ ВАМ ИМЯ И ШРИФТЫ
 									+e.descr-item
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Подарочные полотенца
-											=	' '
+											=  ' '
 											| - это наша новинка! Приятный, душевный сувенир. Вам стоит обозначить лишь имя будущего владельца. Шрифты подберём какие нужно, макет на утверждение отправим по почте или куда скажете.
 									+e.descr-item
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Дизайн:
 											=  ' '
 											| дизайн  шрифтов предлагается из наработанных нами  ранее, если необходимо что-то эксклюзивное, то можно будет и разработать, за дополнительную оплату.
 									+e.descr-item
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Размер надписи:
 											=  ' '
 											| 200 мм или около того (с мужскую ладонь).
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Макет:
 											=  ' '
 											| макет вышлем вам на утверждение по электронной  почте.
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Срок исполнения:
 											=  ' '
 											| от 30 минут.
 									+e.descr-item
-										+e.P.descr-text
+										+e.P
 											+e.STRONG Стоимость:
 											=  ' '
 											| не учитывает саму заготовку полотенца.  Вы приносите своё или добавляете в корзину дополнительно «чистое» полотенце.
@@ -351,225 +125,262 @@ block content
 											+e.amount
 												+e.amount-text Количество:
 												+e.amount-count
-													+e.INPUT.amount-input.js-product-amount(type='number' min='1' max='999' value='1' name='')
+													+e.INPUT.amount-input.js-product-amount(type='number' min='1' max='999' value='1' name='' required)
 											+e.price
 												+e.SPAN 350
 												+icon('icon-ruble')
-										+e.A.sale-link(href='#!') Цены на опт.
-									+e.BUTTON.cart-btn.btn(type='button') ДОБАВИТЬ В КОРЗИНУ
+										+e.A.link-sale(href='#!').link-sale
+											+e.SPAN Цены на опт.
+									+e.BUTTON.btn-cart.btn-cart(type='submit') ДОБАВИТЬ В КОРЗИНУ
+						+e.sect._has-filter.js-product-filter
+							+e.sect-title
+								+icon('icon-lovers', 'product__sect-icon')
+								+e.SPAN Похожие и сопутствующие товары.
+							+e.filter
+								+e.BUTTON.filter-btn(type='button')
+									+icon('icon-filter-down', 'product__filter-icon')
+									= ' '
+									+e.SPAN Цена
+								+e.BUTTON.filter-btn(type='button')
+									+icon('icon-filter-up', 'product__filter-icon')
+									= ' '
+									+e.SPAN Цена
+								+e.BUTTON.filter-btn.is-active(type='button')
+									+e.SPAN Лучшие
+									= ' '
+									+icon('icon-filter-best', 'product__filter-icon')
+								+e.BUTTON.filter-btn(type='button')
+									+icon('icon-filter-squares', 'product__filter-icon')
+									= ' '
+									+e.SPAN 20
+								+e.BUTTON.filter-btn(type='button')
+									+icon('icon-filter-squares', 'product__filter-icon')
+									= ' '
+									+e.SPAN 60
+								+e.BUTTON.filter-btn.js-filter-view-btn(type='button')
+									+icon('icon-filter-list', 'product__filter-icon')
 
-							+e.sect._has-filter.bordered
-								+e.sect-title
-									+icon('icon-lovers', 'product__sect-icon')
-									+e.SPAN Похожие и сопутствующие товары.
-								+e.filter
-									+e.BUTTON.filter-btn(type='button')
-										+icon('icon-filter-down', 'product__filter-icon')
+						+e.examples._default.js-filter-container
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
 										= ' '
-										+e.SPAN Цена
-									+e.BUTTON.filter-btn(type='button')
-										+icon('icon-filter-up', 'product__filter-icon')
+									+e.item-descr Размер: 120х180мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
 										= ' '
-										+e.SPAN Цена
-									+e.BUTTON.filter-btn.is-active(type='button')
-										+e.SPAN Лучшие
+										+e.SPAN 240&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 400&nbsp;
+											+icon('icon-ruble','product__val-icon')
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-12.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Любая вышивка на  полотенце, под  «Золото».
+									+e.item-descr Размер: 250х100 мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
 										= ' '
-										+icon('icon-filter-best', 'product__filter-icon')
-									+e.BUTTON.filter-btn(type='button')
-										+icon('icon-filter-squares', 'product__filter-icon')
+										+e.SPAN 140&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 400&nbsp;
+											+icon('icon-ruble','product__val-icon')
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-10.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Полотенце -зайчик!
 										= ' '
-										+e.SPAN 20
-									+e.BUTTON.filter-btn(type='button')
-										+icon('icon-filter-squares', 'product__filter-icon')
+									+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка.
+								+e.item-buy
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 150&nbsp;
+											+icon('icon-ruble','product__val-icon')
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
 										= ' '
-										+e.SPAN 60
-									+e.BUTTON.filter-btn(type='button')
-										+icon('icon-filter-list', 'product__filter-icon')
+									+e.item-descr Размер: 120х180мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
+										= ' '
+										+e.SPAN 240&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 400&nbsp;
+											+icon('icon-ruble','product__val-icon')
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
+										= ' '
+									+e.item-descr Размер: 120х180мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
+										= ' '
+										+e.SPAN 240&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 400&nbsp;
+											+icon('icon-ruble','product__val-icon')
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-12.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Любая вышивка на  полотенце, под  «Золото».
+									+e.item-descr Размер: 250х100 мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
+										= ' '
+										+e.SPAN 140&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 400&nbsp;
+											+icon('icon-ruble','product__val-icon')
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-10.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Полотенце -зайчик!
+										= ' '
+									+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка.
+								+e.item-buy
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 150&nbsp;
+											+icon('icon-ruble','product__val-icon')
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
+										= ' '
+									+e.item-descr Размер: 120х180мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
+										= ' '
+										+e.SPAN 240&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 400&nbsp;
+											+icon('icon-ruble','product__val-icon')
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
+										= ' '
+									+e.item-descr Размер: 120х180мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
+										= ' '
+										+e.SPAN 240&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 400&nbsp;
+											+icon('icon-ruble','product__val-icon')
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Любая вышивка на  полотенце, под  «Золото».
+									+e.item-descr Размер: 250х100 мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
+										= ' '
+										+e.SPAN 140&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 400&nbsp;
+											+icon('icon-ruble','product__val-icon')
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Полотенце -зайчик!
+										= ' '
+									+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка.
+								+e.item-buy
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 150&nbsp;
+											+icon('icon-ruble','product__val-icon')
+							+e.item
+								+e.item-pic-wrap.js-product-item-pic
+									+e.A(href='#!').item-pic.decor
+										+e.IMG.item-img(src="img/content/prod-11.jpg")
+										.decor__line
+									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+										+icon('icon-loupe','product__zoom-icon')
+								+e.item-info
+									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
+										= ' '
+									+e.item-descr Размер: 120х180мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
+										= ' '
+										+e.SPAN 240&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 400&nbsp;
+											+icon('icon-ruble','product__val-icon')
 
-						+e.examples._x4
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-										= ' '
-									+e.item-descr Размер: 120х180мм
-								+e.item-buy
-									+e.A.buy-opt(href="#!") Опт. от
-										= ' '
-										+e.SPAN 240&nbsp;
-										+icon('icon-ruble','product__val-icon')
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-12.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Любая вышивка на  полотенце, под  «Золото».
-									+e.item-descr Размер: 250х100 мм
-								+e.item-buy
-									+e.A.buy-opt(href="#!") Опт. от
-										= ' '
-										+e.SPAN 140&nbsp;
-										+icon('icon-ruble','product__val-icon')
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-10.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Полотенце -зайчик!
-										= ' '
-									+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка.
-								+e.item-buy
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 150&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-										= ' '
-									+e.item-descr Размер: 120х180мм
-								+e.item-buy
-									+e.A.buy-opt(href="#!") Опт. от
-										= ' '
-										+e.SPAN 240&nbsp;
-										+icon('icon-ruble','product__val-icon')
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-										= ' '
-									+e.item-descr Размер: 120х180мм
-								+e.item-buy
-									+e.A.buy-opt(href="#!") Опт. от
-										= ' '
-										+e.SPAN 240&nbsp;
-										+icon('icon-ruble','product__val-icon')
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-12.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Любая вышивка на  полотенце, под  «Золото».
-									+e.item-descr Размер: 250х100 мм
-								+e.item-buy
-									+e.A.buy-opt(href="#!") Опт. от
-										= ' '
-										+e.SPAN 140&nbsp;
-										+icon('icon-ruble','product__val-icon')
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-10.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Полотенце -зайчик!
-										= ' '
-									+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка.
-								+e.item-buy
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 150&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-										= ' '
-									+e.item-descr Размер: 120х180мм
-								+e.item-buy
-									+e.A.buy-opt(href="#!") Опт. от
-										= ' '
-										+e.SPAN 240&nbsp;
-										+icon('icon-ruble','product__val-icon')
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-										= ' '
-									+e.item-descr Размер: 120х180мм
-								+e.item-buy
-									+e.A.buy-opt(href="#!") Опт. от
-										= ' '
-										+e.SPAN 240&nbsp;
-										+icon('icon-ruble','product__val-icon')
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-12.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Любая вышивка на  полотенце, под  «Золото».
-									+e.item-descr Размер: 250х100 мм
-								+e.item-buy
-									+e.A.buy-opt(href="#!") Опт. от
-										= ' '
-										+e.SPAN 140&nbsp;
-										+icon('icon-ruble','product__val-icon')
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-10.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Полотенце -зайчик!
-										= ' '
-									+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка.
-								+e.item-buy
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 150&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic.decor
-									+e.IMG.img(src="img/content/prod-11.jpg")
-									.decor__line
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-										= ' '
-									+e.item-descr Размер: 120х180мм
-								+e.item-buy
-									+e.A.buy-opt(href="#!") Опт. от
-										= ' '
-										+e.SPAN 240&nbsp;
-										+icon('icon-ruble','product__val-icon')
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
-											+icon('icon-ruble','product__val-icon')
 
 						+b.pagination._product
 							+e.UL.list
 								+e.list-item._prev
 									+e.list-link(href='#!')
-										+icon('icon-arr-page', 'icon')
+										+icon('icon-arr-page', 'pagination__icon-arr')
 								+e.list-item.is-active
 									+e.list-link(href='#!') 1
 								+e.list-item
@@ -588,7 +399,7 @@ block content
 									+e.list-link(href='#!') Следующая
 
 						+e.watched
-							+e.sect._watched.bordered
+							+e.sect._watched
 								+e.sect-title
 									+icon('icon-watched', 'product__sect-icon')
 									+e.SPAN Просмотренные ранее и рекомендуемые:
@@ -604,9 +415,12 @@ block content
 											+e.SPAN.sect-count 11
 							+e.examples._watched
 								+e.item
-									+e.item-pic.decor
-										+e.IMG.img(src="img/content/prod-11.jpg")
-										.decor__line
+									+e.item-pic-wrap.js-product-item-pic
+										+e.A(href='#!').item-pic.decor
+											+e.IMG.item-img(src="img/content/prod-11.jpg")
+											.decor__line
+										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+											+icon('icon-loupe','product__zoom-icon')
 									+e.item-info
 										+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
 											= ' '
@@ -616,9 +430,12 @@ block content
 											+e.SPAN.price-current 400&nbsp;
 												+icon('icon-ruble','product__val-icon')
 								+e.item
-									+e.item-pic.decor
-										+e.IMG.img(src="img/content/prod-12.jpg")
-										.decor__line
+									+e.item-pic-wrap.js-product-item-pic
+										+e.A(href='#!').item-pic.decor
+											+e.IMG.item-img(src="img/content/prod-12.jpg")
+											.decor__line
+										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+											+icon('icon-loupe','product__zoom-icon')
 									+e.item-info
 										+e.item-title Любая вышивка на  полотенце, под  «Золото».
 										+e.item-descr Размер: 250х100 мм
@@ -627,9 +444,12 @@ block content
 											+e.SPAN.price-current 400&nbsp;
 												+icon('icon-ruble','product__val-icon')
 								+e.item
-									+e.item-pic.decor
-										+e.IMG.img(src="img/content/prod-10.jpg")
-										.decor__line
+									+e.item-pic-wrap.js-product-item-pic
+										+e.A(href='#!').item-pic.decor
+											+e.IMG.item-img(src="img/content/prod-10.jpg")
+											.decor__line
+										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+											+icon('icon-loupe','product__zoom-icon')
 									+e.item-info
 										+e.item-title Полотенце -зайчик!
 											= ' '
@@ -639,9 +459,12 @@ block content
 											+e.SPAN.price-current 150&nbsp;
 												+icon('icon-ruble','product__val-icon')
 								+e.item
-									+e.item-pic.decor
-										+e.IMG.img(src="img/content/prod-11.jpg")
-										.decor__line
+									+e.item-pic-wrap.js-product-item-pic
+										+e.A(href='#!').item-pic.decor
+											+e.IMG.item-img(src="img/content/prod-11.jpg")
+											.decor__line
+										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+											+icon('icon-loupe','product__zoom-icon')
 									+e.item-info
 										+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
 											= ' '
@@ -651,9 +474,12 @@ block content
 											+e.SPAN.price-current 400&nbsp;
 												+icon('icon-ruble','product__val-icon')
 								+e.item
-									+e.item-pic.decor
-										+e.IMG.img(src="img/content/prod-11.jpg")
-										.decor__line
+									+e.item-pic-wrap.js-product-item-pic
+										+e.A(href='#!').item-pic.decor
+											+e.IMG.item-img(src="img/content/prod-11.jpg")
+											.decor__line
+										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+											+icon('icon-loupe','product__zoom-icon')
 									+e.item-info
 										+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
 											= ' '
@@ -678,8 +504,11 @@ block content
 									+e.list-item._next
 										+e.list-link(href='#!') Все
 
-					-var catMenuClass = '_default bordered'
-						include components/_category-menu
+					-
+						var catMenu = {
+						classMod: '_default'};
+					include components/_category-menu
+
 
 		- var benefitsClass = '_default'
-			include components/_benefits
+		include components/_benefits

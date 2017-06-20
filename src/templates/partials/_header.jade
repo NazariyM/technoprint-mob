@@ -161,11 +161,19 @@
 				+e.A(href="#!").link Корпоративные
 				+e.A(href="#!").link Лучшие
 
-			+b.breadcrumbs.header__breadcrumbs
-				+e.A.link(href='#!')
-					+icon('icon-house', 'breadcrumbs__icon')
-					= ' '
-					+e.SPAN Главная
+			if breadCrumbs ? breadCrumbs : breadCrumbs = []
+			+b.breadcrumbs(class= breadCrumbs ? breadCrumbs : '')
+				+e.UL.list
+					+e.LI.item
+						+e.A.link(href='#!')
+							+icon('icon-house', 'breadcrumbs__icon')
+							+e.SPAN Главная
+					mixin breadCrumbsItem(item)
+						+e.LI.item(class= item.active)
+							+e.A.link(href='#!')
+								+e.SPAN= item.text
+					each item in breadCrumbsList
+						+breadCrumbsItem(item)
 
 	+b.hamburger.menu__hamburger.js-menu-hamburger
 		+e.bar

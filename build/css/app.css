@@ -312,7 +312,7 @@ html {
 }
 
 .icon-shirts {
-  width: 3.07em;
+  width: 0.94em;
   height: 1em;
   fill: initial;
 }
@@ -1852,50 +1852,6 @@ button {
   border-width: 0 0 18px 13px;
 }
 
-/* breadcrumbs
-	----------------------------------- */
-.breadcrumbs {
-  font-size: 0;
-}
-
-.breadcrumbs__link {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 18px;
-  color: #003470;
-}
-
-.breadcrumbs__link span {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.breadcrumbs__link::after {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 3px;
-  content: '/';
-}
-
-.breadcrumbs__link:last-child::after {
-  display: none;
-}
-
-.breadcrumbs__link:hover {
-  color: #0055FF;
-}
-
-.breadcrumbs__link:hover::after {
-  color: #000;
-}
-
-.breadcrumbs__icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-  fill: #0B73A7;
-}
-
 /* page
 	----------------------------------- */
 .page_default {
@@ -2274,7 +2230,8 @@ body::after {
 
 .product__sect {
   position: relative;
-  padding: 15px 30px 15px 15px;
+  padding: 15px 25px 15px 15px;
+  height: 77px;
   background-color: #EBECEC;
   border-bottom: 1px solid #D1D1D1;
 }
@@ -2325,34 +2282,43 @@ body::after {
 }
 
 .product__sect-icon {
+  position: relative;
   fill: #C7CBCF;
 }
 
 .product__sect-icon.icon-machine {
+  top: 5px;
+  left: -4px;
   font-size: 28px;
 }
 
 .product__sect-icon.icon-shirts {
-  font-size: 34px;
+  font-size: 44px;
 }
 
 .product__sect-icon.icon-cups {
+  right: 5px;
   font-size: 28px;
 }
 
 .product__sect-icon.icon-books {
-  font-size: 38px;
+  left: 5px;
+  font-size: 41px;
 }
 
 .product__sect-icon.icon-souvenirs {
+  top: 5px;
   font-size: 28px;
 }
 
 .product__sect-icon.icon-pictures {
+  left: -3px;
   font-size: 26px;
 }
 
 .product__sect-icon.icon-balloons {
+  top: 5px;
+  left: 5px;
   font-size: 32px;
 }
 
@@ -2911,7 +2877,7 @@ body::after {
 
 .extra__item-product {
   padding: 3px 0;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .extra__links {
@@ -4439,6 +4405,64 @@ body::after {
   margin-top: 20px;
 }
 
+/* breadcrumbs
+	----------------------------------- */
+.breadcrumbs {
+  position: relative;
+  padding: 5px 0;
+  z-index: 1;
+}
+
+.breadcrumbs__list {
+  font-size: 0;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.breadcrumbs__item:last-child a::after {
+  display: none;
+}
+
+.breadcrumbs__item.is-active {
+  pointer-events: none;
+}
+
+.breadcrumbs__link {
+  font-size: 18px;
+  color: #003470;
+}
+
+.breadcrumbs__link::after {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 4px;
+  content: '/';
+  pointer-events: none;
+}
+
+.breadcrumbs__link:hover {
+  color: #0055FF;
+}
+
+.breadcrumbs__link:hover::after {
+  color: #000;
+}
+
+.breadcrumbs span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.breadcrumbs__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  fill: #0B73A7;
+}
+
 @media only screen and (max-width: 1835px){
   .product__price-current{
     font-size: 19px;
@@ -4507,9 +4531,6 @@ body::after {
     font-size: 18px;
   }
   .nav_footer .nav__link{
-    font-size: 16px;
-  }
-  .breadcrumbs__link{
     font-size: 16px;
   }
   .home-slider__label{
