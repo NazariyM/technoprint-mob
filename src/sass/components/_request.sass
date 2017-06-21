@@ -63,8 +63,9 @@
 	&__message-wrap
 		position: relative
 		padding-left: 48px
+		padding-bottom: 40px
 		border: 1px solid #5d8dcd
-		background-color: #f3f4f4
+		background-color: #fff
 		overflow: hidden
 		&::after
 			content: ''
@@ -75,10 +76,19 @@
 			height: 48px
 			z-index: 1
 			+ico('dots-form')
+		&::before
+			position: absolute
+			top: 0
+			left: 0
+			content: ''
+			z-index: 1
+			width: 48px
+			height: 100%
+			background: #f3f4f4
 			
 	&__message
 		display: block
-		padding: 6px 12px 40px 8px
+		padding: 6px 20px 0 8px
 		min-height: 130px
 		width: 100%
 		background-color: #fff
@@ -94,7 +104,7 @@
 			width: 65px
 			height: 29px
 			background-color: #f7f7f7
-			bottom: 9px
+			bottom: 6px
 			right: 7px
 			line-height: 43px
 		&-extend.is-active &-icon

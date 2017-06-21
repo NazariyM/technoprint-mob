@@ -129,6 +129,46 @@ button
 	&:hover::after
 		+ico('send-act')
 		
+.confirm-btn
+	position: relative
+	height: 48px
+	min-width: 270px
+	padding: 0 27px 0 10px
+	line-height: 44px
+	font-size: 19px
+	color: #fff
+	background: #28B0E2
+	border-bottom: 2px solid #E0E0E1
+	overflow: hidden
+	text-align: center
+	text-transform: uppercase
+	
+	span
+		border-radius: 2px
+		border-bottom: 2px solid #2B99CC
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		height: 46px
+		width: 47px
+		+ico('confirm')
+	&:hover
+		background: #06B2F0
+		border-bottom-color: #FFBE77
+		span
+			border-bottom-color: #079DE3
+	&:active
+		background: #23568B
+		border-bottom-color: #FF0000
+		span
+			border-bottom-color: #254478
+	&:hover::after
+		+ico('confirm-hvr')
+	&:active::after
+		+ico('confirm-act')
+		
 .order-btn
 	position: relative
 	min-width: 270px

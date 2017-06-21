@@ -101,8 +101,8 @@
 		
 		&-cancel
 			position: absolute
-			right: -15px
-			top: -15px
+			right: -12px
+			top: -12px
 			border-radius: 50%
 			background: #E63833
 			border: 2px solid #fff
@@ -134,10 +134,6 @@
 	&_request
 		margin-top: 20px
 		
-	&_basket
-		max-width: 260px
-		margin: 0 auto
-		+clr
 	&_basket &__add
 		float: left
 	&_basket &__add-btn
@@ -150,6 +146,10 @@
 		margin: 0 10px 20px
 		.decor__line:after
 			background-color: #e0e0e0
+	&_order &__item
+		margin: 0 10px 20px
+		.decor__line:after
+			background-color: #ebecec
 
 /* breadcrumbs
 	----------------------------------- */
@@ -508,6 +508,8 @@
 					line-height: 29px
 		&_dots
 			margin: 0 2px
+		&_dots .pagination__list-link
+			pointer-events: none
 	&__list-item_next &__list-link
 		color: #768EA7
 	&__list-item.is-active &__list-link
@@ -572,11 +574,6 @@
 		line-height: 29px
 		text-align: right
 
-.main
-	&_basket
-		padding-bottom: 5px
-		border: 5px solid #ebecec
-		
 /* summary
 	----------------------------------- */
 .summ
@@ -619,3 +616,206 @@
 				height: 34px
 				line-height: 34px
 				font-size: 16px
+				
+
+/* entry pages
+	----------------------------------- */
+.basket
+	padding-bottom: 5px
+	border: 5px solid #ebecec
+	
+.order
+	background: #ebecec
+	padding: 10px 10px 35px
+	&__row
+		margin: 15px 0 0
+		text-align: center
+	&__form-group
+		&-label
+			color: #999
+			+f('ver', 17)
+			& + &
+				margin-top: 10px
+		& + &
+			margin-top: 25px
+	&__form-field
+		position: relative
+		padding-left: 48px
+		border: 1px solid #99AFCF
+		overflow: hidden
+		&.is-focus
+			outline: 1px solid #99AFCF
+		&::before
+			pointer-events: none
+			position: absolute
+			top: -3px
+			left: 0
+			width: 48px
+			height: 39px
+			content: ''
+		&_name::before
+			+ico('user-log')
+		&_email::before
+			+ico('email-log')
+		&_pass::before
+			+ico('dots-log')
+		&_tel::before
+			+ico('phone-log')
+		&_text
+			margin-top: 20px!important
+			padding: 0 15px
+			text-align: center
+			border: none
+		&_required
+			position: relative
+			&::after
+				position: absolute
+				content: '*'
+				color: #E63833
+				+f('ver', 22)
+				font-weight: 700
+				top: 2px
+				right: 4px
+				font-size: 19px
+				
+		&_address
+			padding: 0
+			margin-top: 5px
+			textarea
+				display: block
+				width: 100%
+				min-height: 100px
+				padding: 5px 20px 10px 10px
+				resize: none
+				border: 0
+				+f('ver', 16)
+				
+		& + &
+			margin-top: 15px
+	
+	&__form-ask
+		margin: 15px 0
+		text-align: center
+		font-size: 17px
+		&-in
+			margin-top: 15px
+			font-size: 0
+			.order__check
+				margin: 0 15px
+	&__input
+		width: 100%
+		+f('ver', 16)
+		color: #000
+		+placeholder-color(#999999)
+		height: 34px
+		padding: 0 20px 0 10px
+		line-height: 34px
+	
+	&__check
+		display: inline-block
+	&__comment
+		padding: 20px 0 0
+		&-in
+			padding: 10px 0
+		&-title
+			margin-bottom: 10px
+			+f('ver', 18)
+			color: #000
+			text-align: center
+		&-descr
+			color: #4D4D4D
+			max-width: 232px
+			margin: 0 auto 10px
+			text-align: center
+			font-size: 15px
+		&-message-wrap
+			position: relative
+			margin-bottom: 20px
+			padding-left: 48px
+			padding-bottom: 36px
+			border: 1px solid #99AFCF
+			background: #fff
+			overflow: hidden
+			&.is-focus
+				outline: 1px solid #99AFCF
+			&::before
+				content: ''
+				position: absolute
+				top: -1px
+				left: 0
+				z-index: 1
+				width: 48px
+				height: 38px
+				+ico('dots-log')
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 48px
+				height: 100%
+				background: #f7f7f7
+				z-index: 0
+		&-message
+			display: block
+			width: 100%
+			padding: 6px 10px 0
+			resize: none
+			min-height: 120px
+			border: none
+			+f('psr', 17)
+			transition: min-height 0.3s
+			&.extended
+				min-height: 190px
+		&-extend
+			position: absolute
+			right: 5px
+			bottom: 3px
+			width: 66px
+			height: 27px
+			padding-top: 5px
+			background: #F7F7F7
+			&:hover
+				background: #E0E0E0
+			&:hover &-icon
+				fill: #56708A
+			&:active &-icon
+				fill: #103559
+			&-icon
+				fill: #C4C4C4
+				font-size: 17px
+			&.is-active &-icon
+				transform: scaleY(-1)
+				
+/* check
+	----------------------------------- */
+.check
+	&__circle
+		display: inline-block
+		margin-left: 4px
+		border: 2px solid #99AFCF
+		border-radius: 50%
+		text-align: center
+		width: 20px
+		height: 20px
+		line-height: 14px
+		background: #fff
+		&::after
+			display: inline-block
+			border-radius: 50%
+			background: #768FAE
+			content: ''
+			transform: scale(.4)
+			opacity: 0
+			transition: .15s
+			width: 10px
+			height: 10px
+	label
+		color: #000
+		cursor: pointer
+		font-size: 17px
+	input
+		display: none
+	input:checked + label .check__circle::after
+		transform: scale(1)
+		opacity: 1

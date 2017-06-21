@@ -2,14 +2,16 @@ ProjectTitle: template
 
 PageList:
 - file: home-page.html
-  ready: 95%
+  ready: 100%
 
 - file: category-page.html
-  ready: 85%
-
+  ready: 100%
 
 - file: basket-page.html
-  ready: 30%
+  ready: 100%
+
+- file: basket-page-2.html
+  ready: 100%
 
 - file: contacts-page.html
-  ready: 30%
+  ready: 100%
