@@ -4751,6 +4751,7 @@ body::after {
 
 .send_basket .send__files {
   margin-top: 20px;
+  margin-left: -10px;
   width: 100%;
   text-align: left;
 }
