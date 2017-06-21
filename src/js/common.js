@@ -29,6 +29,11 @@ $(document).ready(function () {
       }
     });
 
+    $topBarMenu.each(function () {
+      var $this = $(this);
+      if ($this.hasClass('is-open')) $this.trigger('click');
+    });
+
     var $menuBtn = $('.js-menu-hamburger');
     var $win = $(window);
     var myWinH = $win.height() * 3;
@@ -39,7 +44,7 @@ $(document).ready(function () {
       } else {
         $menuBtn.removeClass('is-active');
       }
-    }).on('resize', function() {
+    }).on('resize', function () {
       myWinH = $(this).height();
     });
 
@@ -49,36 +54,59 @@ $(document).ready(function () {
       }, 400);
     });
   }
-
   initTopBar();
 
-  function initHomeSlider() {
-    var homeSlider = $('.home-slider');
-
-    homeSlider.slick({
-      variableWidth: true,
-      dots: true,
-      infinite: false,
-      speed: 400,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      prevArrow: '<button type="button" class="home-slider__btn home-slider__btn_prev"><svg class="home-slider__icon icon-arr-sld-big"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-big"></use></svg></button>',
-      nextArrow: '<button type="button" class="home-slider__btn home-slider__btn_next"><svg class="home-slider__icon icon-arr-sld-big"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-big"></use></svg></button>'
-    });
-  }
-
-  initHomeSlider();
+  var $homeSlider = $('.js-home-slider');
+  var $productSlider = $('.js-product-look');
+  $homeSlider.slick({
+    variableWidth: true,
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="home-slider__btn home-slider__btn_prev"><svg class="home-slider__icon icon-arr-sld-big"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-big"></use></svg></button>',
+    nextArrow: '<button type="button" class="home-slider__btn home-slider__btn_next"><svg class="home-slider__icon icon-arr-sld-big"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-big"></use></svg></button>'
+  });
+  $productSlider.slick({
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="product__look-btn product__look-btn_prev"><svg class="product__look-btn-icon icon-arr-sld-big"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-big"></use></svg></button>',
+    nextArrow: '<button type="button" class="product__look-btn product__look-btn_next"><svg class="product__look-btn-icon icon-arr-sld-big"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld-big"></use></svg></button>'
+  });
 
   (function () {
     var $prodSectOpen = $('.js-product-sect-open');
-
     $prodSectOpen.on('click', function () {
       $(this).toggleClass('open');
-      $(this).next().toggle();
+      $(this).next().toggleClass('is-open');
     });
   })();
 
-  // message extend
+  (function () {
+    var $showMoreText = $('.js-more-text');
+    $showMoreText.on('click', function (e) {
+      e.preventDefault();
+      var $thisBtn = $(this);
+      var $items = $thisBtn.siblings();
+
+      $items.each(function () {
+        if ($(this).hasClass('is-visible')) {
+          $(this).hide().removeClass('is-visible');
+          $thisBtn.text('Показать полностью');
+        } else if ($(this).hasClass('hidden')) {
+          $(this).show().addClass('is-visible');
+          $thisBtn.text('Скрыть');
+        }
+      });
+
+    });
+  })();
+
+// message extend
   (function () {
     var $extendBtn = $('.js-message-extend');
     var $moreSuggestText = $('.js-product-suggest-more');
@@ -112,7 +140,7 @@ $(document).ready(function () {
 
   initFocusFields();
 
-  // stepper plugin
+// stepper plugin
   function initStepper() {
     $('.js-product-amount').stepper();
 
@@ -127,7 +155,7 @@ $(document).ready(function () {
 
   initStepper();
 
-  // rubric menu toggling
+// rubric menu toggling
   (function () {
     var $rubricList = $('.js-rubric-list');
     var $rubricMiniList = $('.js-rubric-mini-list');
@@ -149,27 +177,22 @@ $(document).ready(function () {
       $(this).next().toggle();
       $(this).toggleClass('is-active');
     });
-
   })();
 
-  // init img zoom
+// init img zoom
   $('[data-fancybox]').fancybox();
-
   (function () {
     var $productPic = $('.js-product-item-pic');
-
     $productPic.on('mouseover', function () {
       $(this).addClass('is-active');
     });
-
     $productPic.on('mouseleave', function () {
       $(this).removeClass('is-active');
     });
-
     $productPic.on('click', function () {
       $(this).removeClass('is-active');
     });
-
   })();
 
-});
+})
+;

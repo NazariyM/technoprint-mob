@@ -1,0 +1,180 @@
+---
+title: Техно-принт
+---
+extends layouts/_layout
+
+block header
+	// begin header
+	+b.HEADER.header
+		+e.bar.js-header-bar
+			+e.bar-in
+				+e.bar-btn
+					+b.hamburger.header__hamburger
+						+e.bar
+				+e.bar-btn
+					+icon('icon-user', 'header__bar-icon')
+				+e.bar-btn
+					+icon('icon-loupe', 'header__bar-icon')
+				+e.bar-btn.is-open
+					+e.cart-btn
+						+icon('icon-cart', 'header__bar-icon')
+						+e.DIV.cart-btn-total._quantity
+							+e.SPAN 4 шт.
+						+e.DIV.cart-btn-total
+							+e.SPAN 0
+							= ' '
+							+icon('icon-ruble','header__cart-btn-val')
+
+			+e.bar-content
+				+b.menu
+					+e.block
+						+e.title
+							+e.H3.title-text Меню
+						+e.UL.list
+							+e.item
+								+e.A(href="#!").link Главная
+							+e.item
+								+e.A(href="#!").link Услуги фирмы
+							+e.item
+								+e.A(href="#!").link О нас
+							+e.item
+								+e.A(href="#!").link Новости
+							+e.item
+								+e.A(href="#!").link Доставка
+							+e.item
+								+e.A(href="#!").link Оплата
+							+e.item
+								+e.A(href="#!").link Оптовые цены
+							+e.item
+								+e.A(href="#!").link Контакты
+						+e.UL.list
+							+e.item
+								+e.A(href="#!").link Корпоративные
+							+e.item
+								+e.A(href="#!").link Подарки
+							+e.item
+								+e.A(href="#!").link Сувениры по тематике
+							+e.item
+								+e.A(href="#!").link Лучшие
+						+e.UL.list
+							+e.item
+								+e.A(href="#!").link Войти
+							+e.item
+								+e.A(href="#!").link Регистрация
+							+e.item
+								+e.A(href="#!").link Мои заказы
+						+e.title
+							+e.H3.title-text Продукция
+						+e.UL.list
+							+e.item
+								+e.A(href="#!").link Футболки / Одежда
+							+e.item
+								+e.A(href="#!").link Вышивка
+							+e.item
+								+e.A(href="#!").link Кружки / Сувениры
+							+e.item
+								+e.A(href="#!").link Значки / Брелки
+							+e.item
+								+e.A(href="#!").link Фотокниги
+							+e.item
+								+e.A(href="#!").link Печать на холсте / Картины
+
+					+e.rubric
+						+e.BUTTON(type='button').rubric-open.js-rubric-open
+							+e.SPAN Вся продукция подробно
+							+icon('icon-arr-def', 'menu__rubric-arr')
+						- var rubricClass = '_menu'
+						include components/_rubric
+
+					+e.A.version-link(href='#!')
+						+e.SPAN Полная версия сайта
+
+				+b.login.js-focus-fields
+					+e.in
+						+e.enter
+							+e.text
+								+e.SPAN Вход:
+							+e.FORM(action='#!')
+								+e.field._name
+									+e.INPUT.input(type='name' name='' placeholder='Имя / Организация' required)
+								+e.field._pass
+									+e.INPUT.input(type='password' name='' placeholder='Пароль' required)
+								+e.BUTTON(type='submit').btn
+									+e.SPAN ВОЙТИ
+						+e.registr
+							+e.text
+								+e.SPAN Регистрация:
+							+e.FORM(action='#!')
+								+e.field._name
+									+e.INPUT.input(type='name' name='' placeholder='Имя / Организация' required)
+								+e.field._email
+									+e.INPUT.input(type='email' name='' placeholder='Почта' required)
+								+e.field._pass
+									+e.INPUT.input(type='password' name='' placeholder='Пароль' required)
+								+e.field._pass
+									+e.INPUT.input(type='password' name='' placeholder='Повторите пароль' required)
+								+e.BUTTON(type='submit').btn
+									+e.SPAN ЗАРЕГИСТРИРОВАТЬ
+
+				+b.search.header__search.js-focus-fields
+					+e.field
+						+e.INPUT.input(type="text" name="" placeholder='Изготовление сувениров и подарков' required)
+						+e.BUTTON.btn(type="submit")
+
+				+e.cart
+					+e.cart-field
+						+e.cart-text._title Корзина заказов
+					+e.cart-field
+						+e.cart-text._border Количество товаров в корзине:
+							=  ' '
+							+e.SPAN 0
+					+e.cart-field
+						+e.cart-text Мои оформленные заказы:
+							=  ' '
+							+e.SPAN 0
+
+		+b.hamburger.menu__hamburger.js-menu-hamburger
+			+e.bar
+	// end header
+
+block content
+	+b.MAIN
+		+b.product._basket
+			+e.item
+				+e.item-pic-wrap.js-product-item-pic
+					+e.A(href='#!').item-pic.decor
+						+e.IMG.img(src="img/content/prod-6.jpg")
+						.decor__line
+					+e.A.zoom(href='img/content/prod-2_lg.jpg' data-fancybox='product-1')
+						+e.SPAN.zoom-icon-wrap
+							+icon('icon-loupe','product__zoom-icon')
+				+e.item-info
+					+e.item-title Комплексное брендирование одежды.
+					+e.item-descr Нанесение на кепки и майки. Спецпредложение на опт.
+					+e.item-article Артикул:&nbsp;
+						+e.SPAN 22
+					+e.item-price Всего за товар:
+						+e.SPAN.item-price-count 150&nbsp;
+							+icon('icon-ruble','product__val-icon')
+				+e.BUTTON(type='button').close-btn.js-remove-item
+					+icon('icon-close', 'product__close-btn-icon')
+			+e.buy-options
+				+b.amount
+					+e.text Количество:
+					+e.count
+						+e.INPUT.input.js-product-amount(type='number' min='1' max='999' value='1' name='' required)
+				+e.BUTTON(type='button').calc-btn._comment.js-open-comment
+					+icon('icon-arr-def', 'product__calc-icon')
+					+e.SPAN Комментарий
+
+				+e.comment
+					+e.comment-message-wrap
+						+e.TEXTAREA.comment-message
+						+e.BUTTON.comment-extend.js-message-extend(type='button')
+							+icon('icon-arr-double', 'product__comment-extend-icon')
+					+e.comment-row
+						+e.file-add
+							+e.INPUT(type='file' id='file-add-input')
+							+e.LABEL.file-add-btn(for='file-add-input') Добавить файл
+						+e.BUTTON.comment-btn(type='button')
+							+e.SPAN Сохранить

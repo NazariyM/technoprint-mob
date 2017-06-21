@@ -11,9 +11,9 @@
 		width: 36px
 		height: 36px
 		border-radius: 50%
-		background-color: #C0C0C2
+		background-color: #ccdce8
 		text-align: center
-		+trs
+		-webkit-tap-highlight-color: transparent
 		& + &
 			margin-left: 5px
 		&_vk:hover
@@ -43,24 +43,29 @@
 			+trs
 			fill: #fff
 		.icon-vk
-			font-size: 13px
+			font-size: 10px
+			left: 45%
 		.icon-fb
-			font-size: 18px
+			font-size: 14px
 		.icon-tw
-			font-size: 16px
+			font-size: 13px
 		.icon-od
-			font-size: 20px
+			font-size: 17px
 		.icon-gp
-			font-size: 16px
+			font-size: 12px
 	
 	&_footer
 		display: inline-block
-		margin-top: 30px
+		margin-top: 45px
+		margin-left: 20px
 		+sm
-			margin-top: 20px
+			margin-left: 0
 		.socials__item
 			width: 28px
 			height: 28px
+			+md
+				width: 22px
+				height: 22px
 			&_vk
 				background-color: #1E78B0
 			&_fb
@@ -72,17 +77,39 @@
 			&_gp
 				background-color: #E63E2D
 			.icon-gp
-				font-size: 12px
+				font-size: 13px
+				+md
+					font-size: 11px
+				+sm
+					font-size: 10px
 			.icon-tw
-				font-size: 12px
+				font-size: 13px
+				+md
+					font-size: 10px
 			.icon-vk
-				font-size: 10px
+				font-size: 11px
+				+md
+					font-size: 9px
+				+sm
+					font-size: 9px
 			.icon-od
-				font-size: 16px
+				font-size: 17px
+				+md
+					font-size: 15px
 			.icon-fb
-				font-size: 14px
+				font-size: 16px
+				+md
+					font-size: 13px
+				+sm
+					font-size: 12px
 	
-	&_product
-		display: inline-block
-		vertical-align: middle
-		margin-top: 8px
+	&_product-card
+		+r(349)
+			margin: 5px 10px 0
+	&_product-card &__item
+		+md
+			width: 30px
+			height: 30px
+			margin-left: 3px
+			&:first-child
+				margin-left: 0

@@ -161,8 +161,7 @@
 				+e.A(href="#!").link Корпоративные
 				+e.A(href="#!").link Лучшие
 
-			if breadCrumbs ? breadCrumbs : breadCrumbs = []
-			+b.breadcrumbs(class= breadCrumbs ? breadCrumbs : '')
+			+b.breadcrumbs
 				+e.UL.list
 					+e.LI.item
 						+e.A.link(href='#!')

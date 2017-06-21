@@ -17,14 +17,16 @@
 		position: relative
 		z-index: 50
 		display: inline-block
-		width: 30px
-		height: 39px
+		width: 60px
+		height: 30px
 		background: #D7EAFA
 		border-bottom: 1px solid #C5E1FA
 		+hide-text
 		+vertical
 		text-align: center
 		transition: .15s
+		+r(374)
+			width: 40px
 		&:hover
 			background: #9ECDFF
 			border-bottom-color: #DFDFDF
@@ -39,7 +41,7 @@
 		&.up
 			order: 1
 	.stepper-arrow + .stepper-arrow
-		margin-right: 3px
+		margin-right: 5px
 	.stepper-icon
 		display: inline-block
 		vertical-align: middle

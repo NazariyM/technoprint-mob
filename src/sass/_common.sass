@@ -1,11 +1,9 @@
 body
 	min-width: 320px
-	+f("psr", 18)
+	+f("psr", 16)
 	line-height: 1.2
 	color: $black
 	-webkit-font-smoothing: subpixel-antialiased
-	+sm
-		font-size: 16px
 	
 // layout
 .container
@@ -131,3 +129,36 @@ button
 	&:hover::after
 		+ico('send-act')
 		
+.btn-cart
+	position: relative
+	padding: 13px 60px 13px 26px
+	font-size: 16px
+	color: #fff
+	background: #2AB1E2
+	border-bottom: 2px solid #E3E3E3
+	overflow: hidden
+	&::after
+		position: absolute
+		top: -1px
+		right: -1px
+		width: 47px
+		height: 47px
+		+ico('cart_add-lg')
+		content: ''
+	&:hover
+		background: #01B6F8
+		border-bottom-color: #FFBE77
+	&:hover::after
+		+ico('cart_add-lg-hvr')
+	&:active
+		background: #23568A
+		border-bottom-color: #E63E2D
+	&:active::after
+		+ico('cart_add-lg-act')
+		
+// basic helpers
+.hidden
+	display: none
+	
+=no-highlight
+	-webkit-tap-highlight-color: transparent

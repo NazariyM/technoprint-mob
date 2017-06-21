@@ -3,193 +3,193 @@ title: Техно-принт
 ---
 extends layouts/_layout
 
+block header
+	-
+		var breadCrumbsList = [{text: 'Машинная вышивка'}, {text: 'Вышивка на полотенцах', active: 'is-active'}];
+	include partials/_header
+
 block content
-	+b.MAIN.page
-		+e.container.container
-			+e.bar
-				-
-					var breadCrumbsList = [{text: 'Машинная вышивка'}, {text: 'Вышивка имени на полотенце', active: 'is-active'}];
-				include components/_breadcrumbs
+	+b.MAIN
+		+b.product._entry
+			+e.look.js-product-look
+				+e.look-item
+					+e.IMG(src='img/content/look-img-1.jpg')
+					+e.A(href='img/content/look-img-1.jpg' data-fancybox='product-look').look-zoom
+						+icon('icon-loupe', 'product__look-zoom-icon')
+				+e.look-item
+					+e.IMG(src='img/content/look-img-2.jpg')
+					+e.A(href='img/content/look-img-2.jpg' data-fancybox='product-look').look-zoom
+						+icon('icon-loupe', 'product__look-zoom-icon')
+				+e.look-item
+					+e.IMG(src='img/content/look-img-1.jpg')
+					+e.A(href='img/content/look-img-1.jpg' data-fancybox='product-look').look-zoom
+						+icon('icon-loupe', 'product__look-zoom-icon')
+				+e.look-item
+					+e.IMG(src='img/content/look-img-2.jpg')
+					+e.A(href='img/content/look-img-2.jpg' data-fancybox='product-look').look-zoom
+						+icon('icon-loupe', 'product__look-zoom-icon')
+				+e.look-item
+					+e.IMG(src='img/content/look-img-1.jpg')
+					+e.A(href='img/content/look-img-1.jpg' data-fancybox='product-look').look-zoom
+						+icon('icon-loupe', 'product__look-zoom-icon')
+				+e.look-item
+					+e.IMG(src='img/content/look-img-2.jpg')
+					+e.A(href='img/content/look-img-2.jpg' data-fancybox='product-look').look-zoom
+						+icon('icon-loupe', 'product__look-zoom-icon')
+				+e.look-item
+					+e.IMG(src='img/content/look-img-1.jpg')
+					+e.A(href='img/content/look-img-1.jpg' data-fancybox='product-look').look-zoom
+						+icon('icon-loupe', 'product__look-zoom-icon')
 
-				+e.bar-title
-					+e.SPAN Артикул: 22
+			+e.descr
+				+e.descr-title ВЫШИВКА ИМЕНИ НА ПОЛОТЕНЦЕ, БУДЕТ НУЖНОЕ ВАМ ИМЯ И ШРИФТЫ
+				+e.descr-item
+					+e.P
+						+e.STRONG Подарочные полотенца
+						=  ' '
+						| - это наша новинка! Приятный, душевный сувенир. Вам стоит обозначить лишь имя будущего владельца. Шрифты подберём какие нужно, макет на утверждение отправим по почте или куда скажете.
+				+e.descr-item
+					+e.P
+						+e.STRONG Дизайн:
+						=  ' '
+						| дизайн  шрифтов предлагается из наработанных нами  ранее, если необходимо что-то эксклюзивное, то можно будет и разработать, за дополнительную оплату.
+				+e.descr-item
+					+e.P
+						+e.STRONG Размер надписи:
+						=  ' '
+						| 200 мм или около того (с мужскую ладонь).
+					+e.P
+						+e.STRONG Макет:
+						=  ' '
+						| макет вышлем вам на утверждение по электронной  почте.
+					+e.P
+						+e.STRONG Срок исполнения:
+						=  ' '
+						| от 30 минут.
+				+e.descr-item
+					+e.P
+						+e.STRONG Стоимость:
+						=  ' '
+						| не учитывает саму заготовку полотенца.  Вы приносите своё или добавляете в корзину дополнительно «чистое» полотенце.
+				+e.descr-item.hidden
+					+e.P
+						+e.STRONG Подарочные полотенца
+						=  ' '
+						| - это наша новинка! Приятный, душевный сувенир. Вам стоит обозначить лишь имя будущего владельца. Шрифты подберём какие нужно, макет на утверждение отправим по почте или куда скажете.
+				+e.descr-item.hidden
+					+e.P
+						+e.STRONG Дизайн:
+						=  ' '
+						| дизайн  шрифтов предлагается из наработанных нами  ранее, если необходимо что-то эксклюзивное, то можно будет и разработать, за дополнительную оплату.
 
-			+e.in
-				include components/_rubric-side
-				+e.main
-					+b.product
-						+e.FORM(action='#!')
-							+e.card
-								+e.card-col
-									+e.look
-										+e.look-view.js-look-view
-											+e.look-pic
-												+e.IMG(src='img/content/look-img-1.jpg')
-											+e.look-pic
-												+e.IMG(src='img/content/look-img-2.jpg')
-											+e.look-pic
-												+e.IMG(src='img/content/look-img-1.jpg')
-											+e.look-pic
-												+e.IMG(src='img/content/look-img-2.jpg')
-											+e.look-pic
-												+e.IMG(src='img/content/look-img-1.jpg')
-										+e.look-thumbs.js-look-thumbs
-											+e.look-thumbs-pic.decor._xs
-												+e.IMG(src='img/content/look-1.jpg')
-												+b.decor__line
-											+e.look-thumbs-pic.decor._xs
-												+e.IMG(src='img/content/look-2.jpg')
-												+b.decor__line
-											+e.look-thumbs-pic.decor._xs
-												+e.IMG(src='img/content/look-3.jpg')
-												+b.decor__line
-											+e.look-thumbs-pic.decor._xs
-												+e.IMG(src='img/content/look-4.jpg')
-												+b.decor__line
-											+e.look-thumbs-pic.decor._xs
-												+e.IMG(src='img/content/look-5.jpg')
-												+b.decor__line
-									+e.props
-										+e.props-col
-											+e.props-row
-												+e.BUTTON(type='button').wish-add-btn
-												+e.BUTTON(type='button').calc-btn
-													+icon('icon-arr-def', 'product__calc-icon')
-													+e.SPAN Рассчитать свой - заказной дизайн
-											+e.props-row
-												+b.rating._product-card
-													+e.text Оцените данный товар:
-													+e.in.js-rating
-														+e.INPUT.input(id='product-rating-6' value='6' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-6')
-															+icon('icon-star', 'rating__star')
-														+e.INPUT.input(id='product-rating-5' value='5' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-5')
-															+icon('icon-star', 'rating__star')
-														+e.INPUT.input(id='product-rating-4' value='4' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-4')
-															+icon('icon-star', 'rating__star')
-														+e.INPUT.input(id='product-rating-3' value='3' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-3')
-															+icon('icon-star', 'rating__star')
-														+e.INPUT.input(id='product-rating-2' value='2' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-2')
-															+icon('icon-star', 'rating__star')
-														+e.INPUT.input(id='product-rating-1' value='1' type='radio' name='product-rating')
-														+e.LABEL.icon(for='product-rating-1')
-															+icon('icon-star', 'rating__star')
+				+b.BUTTON.js-more-text.more-text.product__more-text(type='button') Показать полностью
 
-												- var socialsClass = '_product-card'
-												include components/_socials
+			+e.buy
+				+e.buy-prices
+					+e.A.link-sale(href='#!').link-sale
+						+e.SPAN Цены на опт.
+					+e.price
+						+e.SPAN 350
+						+icon('icon-ruble')
+				+e.buy-options
+					+b.amount
+						+e.text Количество:
+						+e.count
+							+e.INPUT.input.js-product-amount(type='number' min='1' max='999' value='1' name='' required)
+					+e.actions
+						+e.BUTTON(type='button').wish-add-btn
+						+e.BUTTON(type='button').calc-btn
+							+icon('icon-arr-def', 'product__calc-icon')
+							+e.SPAN Рассчитать свой - заказной дизайн
+				+e.buy-block
+					+e.buy-block-row
+						+b.rating.product__rating
+							+e.text Оцените данный товар:
+							+e.in
+								+e.INPUT.input(id='product-rating-6' value='6' type='radio' name='product-rating')
+								+e.LABEL.icon(for='product-rating-6')
+									+icon('icon-star', 'rating__star')
+								+e.INPUT.input(id='product-rating-5' value='5' type='radio' name='product-rating')
+								+e.LABEL.icon(for='product-rating-5')
+									+icon('icon-star', 'rating__star')
+								+e.INPUT.input(id='product-rating-4' value='4' type='radio' name='product-rating')
+								+e.LABEL.icon(for='product-rating-4')
+									+icon('icon-star', 'rating__star')
+								+e.INPUT.input(id='product-rating-3' value='3' type='radio' name='product-rating')
+								+e.LABEL.icon(for='product-rating-3')
+									+icon('icon-star', 'rating__star')
+								+e.INPUT.input(id='product-rating-2' value='2' type='radio' name='product-rating')
+								+e.LABEL.icon(for='product-rating-2')
+									+icon('icon-star', 'rating__star')
+								+e.INPUT.input(id='product-rating-1' value='1' type='radio' name='product-rating')
+								+e.LABEL.icon(for='product-rating-1')
+									+icon('icon-star', 'rating__star')
 
-										+e.props-col.hashtags
-											+e.A.hashtags-link(href='#!') #полотенце в подарок
-											+e.A.hashtags-link(href='#!') #вышивки на полотенце
-											+e.A.hashtags-link(href='#!') #сувениры с вышивкой
+						- var socialsClass = '_product-card'
+						include components/_socials
 
-								+e.card-col.product__descr
-									+e.descr-title ВЫШИВКА ИМЕНИ НА ПОЛОТЕНЦЕ,
-										br
-										| БУДЕТ НУЖНОЕ ВАМ ИМЯ И ШРИФТЫ
-									+e.descr-item
-										+e.P
-											+e.STRONG Подарочные полотенца
-											=  ' '
-											| - это наша новинка! Приятный, душевный сувенир. Вам стоит обозначить лишь имя будущего владельца. Шрифты подберём какие нужно, макет на утверждение отправим по почте или куда скажете.
-									+e.descr-item
-										+e.P
-											+e.STRONG Дизайн:
-											=  ' '
-											| дизайн  шрифтов предлагается из наработанных нами  ранее, если необходимо что-то эксклюзивное, то можно будет и разработать, за дополнительную оплату.
-									+e.descr-item
-										+e.P
-											+e.STRONG Размер надписи:
-											=  ' '
-											| 200 мм или около того (с мужскую ладонь).
-										+e.P
-											+e.STRONG Макет:
-											=  ' '
-											| макет вышлем вам на утверждение по электронной  почте.
-										+e.P
-											+e.STRONG Срок исполнения:
-											=  ' '
-											| от 30 минут.
-									+e.descr-item
-										+e.P
-											+e.STRONG Стоимость:
-											=  ' '
-											| не учитывает саму заготовку полотенца.  Вы приносите своё или добавляете в корзину дополнительно «чистое» полотенце.
+					+e.buy-block-row
+						+b.BUTTON(type='submit').btn-cart ДОБАВИТЬ В КОРЗИНУ
 
-									+e.buy
-										+e.buy-in
-											+e.amount
-												+e.amount-text Количество:
-												+e.amount-count
-													+e.INPUT.amount-input.js-product-amount(type='number' min='1' max='999' value='1' name='' required)
-											+e.price
-												+e.SPAN 350
-												+icon('icon-ruble')
-										+e.A.link-sale(href='#!').link-sale
-											+e.SPAN Цены на опт.
-									+e.BUTTON.btn-cart.btn-cart(type='submit') ДОБАВИТЬ В КОРЗИНУ
-						+e.sect._has-filter.js-product-filter
-							+e.sect-title
-								+icon('icon-lovers', 'product__sect-icon')
-								+e.SPAN Похожие и сопутствующие товары.
-							+e.filter
-								+e.BUTTON.filter-btn(type='button')
-									+icon('icon-filter-down', 'product__filter-icon')
-									= ' '
-									+e.SPAN Цена
-								+e.BUTTON.filter-btn(type='button')
-									+icon('icon-filter-up', 'product__filter-icon')
-									= ' '
-									+e.SPAN Цена
-								+e.BUTTON.filter-btn.is-active(type='button')
-									+e.SPAN Лучшие
-									= ' '
-									+icon('icon-filter-best', 'product__filter-icon')
-								+e.BUTTON.filter-btn(type='button')
-									+icon('icon-filter-squares', 'product__filter-icon')
-									= ' '
-									+e.SPAN 20
-								+e.BUTTON.filter-btn(type='button')
-									+icon('icon-filter-squares', 'product__filter-icon')
-									= ' '
-									+e.SPAN 60
-								+e.BUTTON.filter-btn.js-filter-view-btn(type='button')
-									+icon('icon-filter-list', 'product__filter-icon')
-
-						+e.examples._default.js-filter-container
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-11.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+			+e.container.container
+				+e.sect._similar.js-product-sect-open
+					+icon('icon-arr-def', 'product__sect-arr')
+					+e.sect-title
+						+e.sect-icon-wrap
+							+icon('icon-lovers', 'product__sect-icon')
+						+e.SPAN Похожие и сопутствующие товары
+				+e.inn
+					+e.examples
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-4.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-4_lg.jpg' data-fancybox='product-1')
+									+e.SPAN.zoom-icon-wrap
 										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
+							+e.item-info
+								+e.item-title Майка с печатью, подарочная.
+									= ' '
+								+e.item-descr Женская, мужская или детская - любой вариант заготовки.
+								+e.item-buy
+									+e.A.buy-opt(href="#!") 2 шт. -
 										= ' '
-									+e.item-descr Размер: 120х180мм
+										+e.SPAN 480&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 620&nbsp;
+											+icon('icon-ruble','product__val-icon')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-5.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-5_lg.jpg' data-fancybox='product-1')
+									+e.SPAN.zoom-icon-wrap
+										+icon('icon-loupe','product__zoom-icon')
+							+e.item-info
+								+e.item-title Нанесение на спортивные майки, термотрансферная пленка.
+								+e.item-descr Размер нанесения: 280х120 мм
 								+e.item-buy
 									+e.A.buy-opt(href="#!") Опт. от
 										= ' '
-										+e.SPAN 240&nbsp;
+										+e.SPAN 140&nbsp;
 										+icon('icon-ruble','product__val-icon')
 									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
+										+e.SPAN.price-current 350&nbsp;
 											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-12.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-6.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-2_lg.jpg' data-fancybox='product-1')
+									+e.SPAN.zoom-icon-wrap
 										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Любая вышивка на  полотенце, под  «Золото».
-									+e.item-descr Размер: 250х100 мм
+							+e.item-info
+								+e.item-title Комплексное брендирование одежды.
+								+e.item-descr Нанесение на кепки и майки. Спецпредложение на опт.
 								+e.item-buy
 									+e.A.buy-opt(href="#!") Опт. от
 										= ' '
@@ -198,69 +198,56 @@ block content
 									+e.BUTTON(type="button").cart-add
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-10.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-4.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-4_lg.jpg' data-fancybox='product-1')
+									+e.SPAN.zoom-icon-wrap
 										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Полотенце -зайчик!
-										= ' '
-									+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка.
+							+e.item-info
+								+e.item-title Майка с печатью, подарочная.
+									= ' '
+								+e.item-descr Женская, мужская или детская - любой вариант заготовки.
 								+e.item-buy
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 150&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-11.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
+									+e.A.buy-opt(href="#!") 2 шт. -
 										= ' '
-									+e.item-descr Размер: 120х180мм
+										+e.SPAN 480&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 620&nbsp;
+											+icon('icon-ruble','product__val-icon')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-5.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-5_lg.jpg' data-fancybox='product-1')
+									+e.SPAN.zoom-icon-wrap
+										+icon('icon-loupe','product__zoom-icon')
+							+e.item-info
+								+e.item-title Нанесение на спортивные майки, термотрансферная пленка.
+								+e.item-descr Размер нанесения: 280х120 мм
 								+e.item-buy
 									+e.A.buy-opt(href="#!") Опт. от
 										= ' '
-										+e.SPAN 240&nbsp;
+										+e.SPAN 140&nbsp;
 										+icon('icon-ruble','product__val-icon')
 									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
+										+e.SPAN.price-current 350&nbsp;
 											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-11.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-6.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-2_lg.jpg' data-fancybox='product-1')
+									+e.SPAN.zoom-icon-wrap
 										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-										= ' '
-									+e.item-descr Размер: 120х180мм
-								+e.item-buy
-									+e.A.buy-opt(href="#!") Опт. от
-										= ' '
-										+e.SPAN 240&nbsp;
-										+icon('icon-ruble','product__val-icon')
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-12.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Любая вышивка на  полотенце, под  «Золото».
-									+e.item-descr Размер: 250х100 мм
+							+e.item-info
+								+e.item-title Комплексное брендирование одежды.
+								+e.item-descr Нанесение на кепки и майки. Спецпредложение на опт.
 								+e.item-buy
 									+e.A.buy-opt(href="#!") Опт. от
 										= ' '
@@ -269,69 +256,56 @@ block content
 									+e.BUTTON(type="button").cart-add
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-10.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-4.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-4_lg.jpg' data-fancybox='product-1')
+									+e.SPAN.zoom-icon-wrap
 										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Полотенце -зайчик!
-										= ' '
-									+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка.
+							+e.item-info
+								+e.item-title Майка с печатью, подарочная.
+									= ' '
+								+e.item-descr Женская, мужская или детская - любой вариант заготовки.
 								+e.item-buy
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 150&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-11.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
+									+e.A.buy-opt(href="#!") 2 шт. -
 										= ' '
-									+e.item-descr Размер: 120х180мм
+										+e.SPAN 480&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 620&nbsp;
+											+icon('icon-ruble','product__val-icon')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-5.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-5_lg.jpg' data-fancybox='product-1')
+									+e.SPAN.zoom-icon-wrap
+										+icon('icon-loupe','product__zoom-icon')
+							+e.item-info
+								+e.item-title Нанесение на спортивные майки, термотрансферная пленка.
+								+e.item-descr Размер нанесения: 280х120 мм
 								+e.item-buy
 									+e.A.buy-opt(href="#!") Опт. от
 										= ' '
-										+e.SPAN 240&nbsp;
+										+e.SPAN 140&nbsp;
 										+icon('icon-ruble','product__val-icon')
 									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
+										+e.SPAN.price-current 350&nbsp;
 											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-11.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-6.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-2_lg.jpg' data-fancybox='product-1')
+									+e.SPAN.zoom-icon-wrap
 										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-										= ' '
-									+e.item-descr Размер: 120х180мм
-								+e.item-buy
-									+e.A.buy-opt(href="#!") Опт. от
-										= ' '
-										+e.SPAN 240&nbsp;
-										+icon('icon-ruble','product__val-icon')
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-11.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Любая вышивка на  полотенце, под  «Золото».
-									+e.item-descr Размер: 250х100 мм
+							+e.item-info
+								+e.item-title Комплексное брендирование одежды.
+								+e.item-descr Нанесение на кепки и майки. Спецпредложение на опт.
 								+e.item-buy
 									+e.A.buy-opt(href="#!") Опт. от
 										= ' '
@@ -340,175 +314,239 @@ block content
 									+e.BUTTON(type="button").cart-add
 										+e.SPAN.price-current 400&nbsp;
 											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-11.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
+
+					+b.pagination._product
+						+e.UL.list
+							+e.list-item._prev
+								+e.list-link(href='#!')
+									+icon('icon-arr-page', 'pagination__icon-arr')
+							+e.list-item.is-active
+								+e.list-link(href='#!') 1
+							+e.list-item
+								+e.list-link(href='#!') 2
+							+e.list-item
+								+e.list-link(href='#!') 3
+							+e.list-item._dots
+								+e.list-link(href='#!') ...
+							+e.list-item
+								+e.list-link(href='#!') 11
+							+e.list-item._next
+								+e.list-link(href='#!') Дальше
+
+			+e.container.container
+				+e.sect._watched.js-product-sect-open
+					+icon('icon-arr-def', 'product__sect-arr')
+					+e.sect-title
+						+e.sect-icon-wrap
+							+icon('icon-watched', 'product__sect-icon')
+						+e.SPAN Просмотренные ранее и рекомендуемые:
+
+				+e.inn
+					+e.links
+						+e.A(href='#!').link
+							+e.SPAN.link-text Вышивка на халатах
+							+e.SPAN.link-count 9
+						+e.A(href='#!').link
+							+e.SPAN.link-text Печать на холсте
+							+e.SPAN.link-count 16
+						+e.A(href='#!').link
+							+e.SPAN.link-text Корпоративные сувениры
+							+e.SPAN.link-count 11
+					+e.examples._watched
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-4.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-4_lg.jpg' data-fancybox='product-2')
+									+e.SPAN.zoom-icon-wrap
 										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Полотенце -зайчик!
-										= ' '
-									+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка.
+							+e.item-info
+								+e.item-title Майка с печатью, подарочная.
+									= ' '
+								+e.item-descr Женская, мужская или детская - любой вариант заготовки.
 								+e.item-buy
-									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 150&nbsp;
-											+icon('icon-ruble','product__val-icon')
-							+e.item
-								+e.item-pic-wrap.js-product-item-pic
-									+e.A(href='#!').item-pic.decor
-										+e.IMG.item-img(src="img/content/prod-11.jpg")
-										.decor__line
-									+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-										+icon('icon-loupe','product__zoom-icon')
-								+e.item-info
-									+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
+									+e.A.buy-opt(href="#!") 2 шт. -
 										= ' '
-									+e.item-descr Размер: 120х180мм
+										+e.SPAN 480&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 620&nbsp;
+											+icon('icon-ruble','product__val-icon')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-5.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-5_lg.jpg' data-fancybox='product-2')
+									+e.SPAN.zoom-icon-wrap
+										+icon('icon-loupe','product__zoom-icon')
+							+e.item-info
+								+e.item-title Нанесение на спортивные майки, термотрансферная пленка.
+								+e.item-descr Размер нанесения: 280х120 мм
 								+e.item-buy
 									+e.A.buy-opt(href="#!") Опт. от
 										= ' '
-										+e.SPAN 240&nbsp;
+										+e.SPAN 140&nbsp;
 										+icon('icon-ruble','product__val-icon')
 									+e.BUTTON(type="button").cart-add
-										+e.SPAN.price-current 400&nbsp;
+										+e.SPAN.price-current 350&nbsp;
+											+icon('icon-ruble','product__val-icon')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-4.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-4_lg.jpg' data-fancybox='product-2')
+									+e.SPAN.zoom-icon-wrap
+										+icon('icon-loupe','product__zoom-icon')
+							+e.item-info
+								+e.item-title Майка с печатью, подарочная.
+									= ' '
+								+e.item-descr Женская, мужская или детская - любой вариант заготовки.
+								+e.item-buy
+									+e.A.buy-opt(href="#!") 2 шт. -
+										= ' '
+										+e.SPAN 480&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 620&nbsp;
+											+icon('icon-ruble','product__val-icon')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-5.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-5_lg.jpg' data-fancybox='product-2')
+									+e.SPAN.zoom-icon-wrap
+										+icon('icon-loupe','product__zoom-icon')
+							+e.item-info
+								+e.item-title Нанесение на спортивные майки, термотрансферная пленка.
+								+e.item-descr Размер нанесения: 280х120 мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
+										= ' '
+										+e.SPAN 140&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 350&nbsp;
+											+icon('icon-ruble','product__val-icon')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-4.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-4_lg.jpg' data-fancybox='product-2')
+									+e.SPAN.zoom-icon-wrap
+										+icon('icon-loupe','product__zoom-icon')
+							+e.item-info
+								+e.item-title Майка с печатью, подарочная.
+									= ' '
+								+e.item-descr Женская, мужская или детская - любой вариант заготовки.
+								+e.item-buy
+									+e.A.buy-opt(href="#!") 2 шт. -
+										= ' '
+										+e.SPAN 480&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 620&nbsp;
+											+icon('icon-ruble','product__val-icon')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-5.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-5_lg.jpg' data-fancybox='product-2')
+									+e.SPAN.zoom-icon-wrap
+										+icon('icon-loupe','product__zoom-icon')
+							+e.item-info
+								+e.item-title Нанесение на спортивные майки, термотрансферная пленка.
+								+e.item-descr Размер нанесения: 280х120 мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
+										= ' '
+										+e.SPAN 140&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 350&nbsp;
+											+icon('icon-ruble','product__val-icon')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-4.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-4_lg.jpg' data-fancybox='product-2')
+									+e.SPAN.zoom-icon-wrap
+										+icon('icon-loupe','product__zoom-icon')
+							+e.item-info
+								+e.item-title Майка с печатью, подарочная.
+									= ' '
+								+e.item-descr Женская, мужская или детская - любой вариант заготовки.
+								+e.item-buy
+									+e.A.buy-opt(href="#!") 2 шт. -
+										= ' '
+										+e.SPAN 480&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 620&nbsp;
+											+icon('icon-ruble','product__val-icon')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-5.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-5_lg.jpg' data-fancybox='product-2')
+									+e.SPAN.zoom-icon-wrap
+										+icon('icon-loupe','product__zoom-icon')
+							+e.item-info
+								+e.item-title Нанесение на спортивные майки, термотрансферная пленка.
+								+e.item-descr Размер нанесения: 280х120 мм
+								+e.item-buy
+									+e.A.buy-opt(href="#!") Опт. от
+										= ' '
+										+e.SPAN 140&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 350&nbsp;
+											+icon('icon-ruble','product__val-icon')
+						+e.item
+							+e.item-pic-wrap.js-product-item-pic
+								+e.A(href='#!').item-pic.decor
+									+e.IMG.img(src="img/content/prod-4.jpg")
+									.decor__line
+								+e.A.zoom(href='img/content/prod-4_lg.jpg' data-fancybox='product-2')
+									+e.SPAN.zoom-icon-wrap
+										+icon('icon-loupe','product__zoom-icon')
+							+e.item-info
+								+e.item-title Майка с печатью, подарочная.
+									= ' '
+								+e.item-descr Женская, мужская или детская - любой вариант заготовки.
+								+e.item-buy
+									+e.A.buy-opt(href="#!") 2 шт. -
+										= ' '
+										+e.SPAN 480&nbsp;
+										+icon('icon-ruble','product__val-icon')
+									+e.BUTTON(type="button").cart-add
+										+e.SPAN.price-current 620&nbsp;
 											+icon('icon-ruble','product__val-icon')
 
+					+b.pagination._watched
+						+e.UL.list
+							+e.list-item._prev
+								+e.list-link(href='#!')
+									+icon('icon-arr-page', 'pagination__icon-arr')
+							+e.list-item.is-active
+								+e.list-link(href='#!') 1
+							+e.list-item
+								+e.list-link(href='#!') 2
+							+e.list-item
+								+e.list-link(href='#!') 3
+							+e.list-item._dots
+								+e.list-link(href='#!') ...
+							+e.list-item
+								+e.list-link(href='#!') 11
+							+e.list-item._next
+								+e.list-link(href='#!') Дальше
 
-						+b.pagination._product
-							+e.UL.list
-								+e.list-item._prev
-									+e.list-link(href='#!')
-										+icon('icon-arr-page', 'pagination__icon-arr')
-								+e.list-item.is-active
-									+e.list-link(href='#!') 1
-								+e.list-item
-									+e.list-link(href='#!') 2
-								+e.list-item
-									+e.list-link(href='#!') 3
-								+e.list-item
-									+e.list-link(href='#!') 4
-								+e.list-item
-									+e.list-link(href='#!') 5
-								+e.list-item._dots
-									+e.list-link(href='#!') ...
-								+e.list-item
-									+e.list-link(href='#!') 12
-								+e.list-item._next
-									+e.list-link(href='#!') Следующая
-
-						+e.watched
-							+e.sect._watched
-								+e.sect-title
-									+icon('icon-watched', 'product__sect-icon')
-									+e.SPAN Просмотренные ранее и рекомендуемые:
-								+e.sect-links._watched
-									+e.sect-link
-										+e.A(href="#!") ВЫШИВКА НА ХАЛАТАХ
-											+e.SPAN.sect-count 9
-									+e.sect-link
-										+e.A(href="#!") ПЕЧАТЬ НА ХОЛСТЕ
-											+e.SPAN.sect-count 16
-									+e.sect-link
-										+e.A(href="#!") КОРПОРАТИВНЫЕ СУВЕНИРЫ
-											+e.SPAN.sect-count 11
-							+e.examples._watched
-								+e.item
-									+e.item-pic-wrap.js-product-item-pic
-										+e.A(href='#!').item-pic.decor
-											+e.IMG.item-img(src="img/content/prod-11.jpg")
-											.decor__line
-										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-											+icon('icon-loupe','product__zoom-icon')
-									+e.item-info
-										+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-											= ' '
-										+e.item-descr Размер: 120х180мм
-									+e.item-buy
-										+e.BUTTON(type="button").cart-add
-											+e.SPAN.price-current 400&nbsp;
-												+icon('icon-ruble','product__val-icon')
-								+e.item
-									+e.item-pic-wrap.js-product-item-pic
-										+e.A(href='#!').item-pic.decor
-											+e.IMG.item-img(src="img/content/prod-12.jpg")
-											.decor__line
-										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-											+icon('icon-loupe','product__zoom-icon')
-									+e.item-info
-										+e.item-title Любая вышивка на  полотенце, под  «Золото».
-										+e.item-descr Размер: 250х100 мм
-									+e.item-buy
-										+e.BUTTON(type="button").cart-add
-											+e.SPAN.price-current 400&nbsp;
-												+icon('icon-ruble','product__val-icon')
-								+e.item
-									+e.item-pic-wrap.js-product-item-pic
-										+e.A(href='#!').item-pic.decor
-											+e.IMG.item-img(src="img/content/prod-10.jpg")
-											.decor__line
-										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-											+icon('icon-loupe','product__zoom-icon')
-									+e.item-info
-										+e.item-title Полотенце -зайчик!
-											= ' '
-										+e.item-descr Услуга - сворачивание полотенец в виде  зайчиков, для подарка.
-									+e.item-buy
-										+e.BUTTON(type="button").cart-add
-											+e.SPAN.price-current 150&nbsp;
-												+icon('icon-ruble','product__val-icon')
-								+e.item
-									+e.item-pic-wrap.js-product-item-pic
-										+e.A(href='#!').item-pic.decor
-											+e.IMG.item-img(src="img/content/prod-11.jpg")
-											.decor__line
-										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-											+icon('icon-loupe','product__zoom-icon')
-									+e.item-info
-										+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-											= ' '
-										+e.item-descr Размер: 120х180мм
-									+e.item-buy
-										+e.BUTTON(type="button").cart-add
-											+e.SPAN.price-current 400&nbsp;
-												+icon('icon-ruble','product__val-icon')
-								+e.item
-									+e.item-pic-wrap.js-product-item-pic
-										+e.A(href='#!').item-pic.decor
-											+e.IMG.item-img(src="img/content/prod-11.jpg")
-											.decor__line
-										+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
-											+icon('icon-loupe','product__zoom-icon')
-									+e.item-info
-										+e.item-title Любая вышивка на  шевронной ткани, 7 цветов
-											= ' '
-										+e.item-descr Размер: 120х180мм
-									+e.item-buy
-										+e.BUTTON(type="button").cart-add
-											+e.SPAN.price-current 400&nbsp;
-												+icon('icon-ruble','product__val-icon')
-
-							+b.pagination._watched
-								+e.UL.list
-									+e.list-item.is-active
-										+e.list-link(href='#!') 1
-									+e.list-item
-										+e.list-link(href='#!') 2
-									+e.list-item
-										+e.list-link(href='#!') 3
-									+e.list-item._dots
-										+e.list-link(href='#!') ...
-									+e.list-item._next
-										+e.list-link(href='#!') Дальше
-									+e.list-item._next
-										+e.list-link(href='#!') Все
-
-					-
-						var catMenu = {
-						classMod: '_default'};
-					include components/_category-menu
-
-
-		- var benefitsClass = '_default'
+		include components/_rubric
 		include components/_benefits
