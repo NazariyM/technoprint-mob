@@ -138,43 +138,194 @@ block header
 	// end header
 
 block content
-	+b.MAIN
+	+b.MAIN.main._basket
 		+b.product._basket
 			+e.item
 				+e.item-pic-wrap.js-product-item-pic
 					+e.A(href='#!').item-pic.decor
-						+e.IMG.img(src="img/content/prod-6.jpg")
+						+e.IMG.img(src="img/content/prod-3.jpg")
 						.decor__line
-					+e.A.zoom(href='img/content/prod-2_lg.jpg' data-fancybox='product-1')
+					+e.A.zoom(href='img/content/prod-3_lg.jpg' data-fancybox='product-1')
 						+e.SPAN.zoom-icon-wrap
 							+icon('icon-loupe','product__zoom-icon')
 				+e.item-info
-					+e.item-title Комплексное брендирование одежды.
-					+e.item-descr Нанесение на кепки и майки. Спецпредложение на опт.
+					+e.item-title Полотенце - зайчик!
+					+e.item-descr Услуга - сворачивание полотенец в виде зайчиков, для подарка.
 					+e.item-article Артикул:&nbsp;
 						+e.SPAN 22
 					+e.item-price Всего за товар:
 						+e.SPAN.item-price-count 150&nbsp;
 							+icon('icon-ruble','product__val-icon')
-				+e.BUTTON(type='button').close-btn.js-remove-item
-					+icon('icon-close', 'product__close-btn-icon')
 			+e.buy-options
 				+b.amount
 					+e.text Количество:
 					+e.count
 						+e.INPUT.input.js-product-amount(type='number' min='1' max='999' value='1' name='' required)
-				+e.BUTTON(type='button').calc-btn._comment.js-open-comment
-					+icon('icon-arr-def', 'product__calc-icon')
+				+e.BUTTON(type='button').open-comment-btn.js-open-comment
+					+icon('icon-arr-def', 'product__open-comment-btn-icon')
 					+e.SPAN Комментарий
 
-				+e.comment
+				+e.comment.js-focus-fields
 					+e.comment-message-wrap
 						+e.TEXTAREA.comment-message
 						+e.BUTTON.comment-extend.js-message-extend(type='button')
 							+icon('icon-arr-double', 'product__comment-extend-icon')
-					+e.comment-row
-						+e.file-add
-							+e.INPUT(type='file' id='file-add-input')
-							+e.LABEL.file-add-btn(for='file-add-input') Добавить файл
+					+e.comment-block
+						+b.send._basket
+							+e.add
+								+e.LABEL.add-btn(for='upload-1') Добавить файл
+									+e.INPUT.add-input(id='upload-1' type='file' accept='image/*' name='' multiple)
+								+e.add-text(style='display: none') Прикрепленные файлы:
+							+e.files
+								+e.item.decor._sm
+									+e.IMG(src='img/content/file-1.jpg')
+									+e.BUTTON.item-cancel(type='button')
+										+icon('icon-close', 'send__item-cancel-icon')
+									+b.decor__line
+								+e.item.decor._sm
+									+e.IMG(src='img/content/file-2.jpg')
+									+e.BUTTON.item-cancel(type='button')
+										+icon('icon-close', 'send__item-cancel-icon')
+									+b.decor__line
+								+e.message(style='display: none')
+									+icon('icon-mark', 'send__message-icon')
+									+e.message-text Письмо отправлено!
 						+e.BUTTON.comment-btn(type='button')
 							+e.SPAN Сохранить
+
+			+e.BUTTON(type='button').close-btn.js-remove-product
+				+icon('icon-close', 'product__close-btn-icon')
+
+		+b.product._basket
+			+e.item
+				+e.item-pic-wrap.js-product-item-pic
+					+e.A(href='#!').item-pic.decor
+						+e.IMG.img(src="img/content/prod-1.jpg")
+						.decor__line
+					+e.A.zoom(href='img/content/prod-1_lg.jpg' data-fancybox='product-2')
+						+e.SPAN.zoom-icon-wrap
+							+icon('icon-loupe','product__zoom-icon')
+				+e.item-info
+					+e.item-title Любая вышивка на шевронной ткани, 7 цветов
+					+e.item-descr Размер: 120х180мм
+					+e.item-article Артикул:&nbsp;
+						+e.SPAN 22
+					+e.item-price Всего за товар:
+						+e.SPAN.item-price-count 150&nbsp;
+							+icon('icon-ruble','product__val-icon')
+			+e.buy-options
+				+b.amount
+					+e.text Количество:
+					+e.count
+						+e.INPUT.input.js-product-amount(type='number' min='1' max='999' value='1' name='' required)
+				+e.BUTTON(type='button').open-comment-btn.js-open-comment
+					+icon('icon-arr-def', 'product__open-comment-btn-icon')
+					+e.SPAN Комментарий
+
+				+e.comment.js-focus-fields
+					+e.comment-message-wrap
+						+e.TEXTAREA.comment-message
+						+e.BUTTON.comment-extend.js-message-extend(type='button')
+							+icon('icon-arr-double', 'product__comment-extend-icon')
+					+e.comment-block
+						+b.send._basket
+							+e.add
+								+e.LABEL.add-btn(for='upload-1') Добавить файл
+									+e.INPUT.add-input(id='upload-1' type='file' accept='image/*' name='' multiple)
+								+e.add-text(style='display: none') Прикрепленные файлы:
+							+e.files
+								+e.item.decor._sm
+									+e.IMG(src='img/content/file-1.jpg')
+									+e.BUTTON.item-cancel(type='button')
+										+icon('icon-close', 'send__item-cancel-icon')
+									+b.decor__line
+								+e.item.decor._sm
+									+e.IMG(src='img/content/file-2.jpg')
+									+e.BUTTON.item-cancel(type='button')
+										+icon('icon-close', 'send__item-cancel-icon')
+									+b.decor__line
+								+e.message(style='display: none')
+									+icon('icon-mark', 'send__message-icon')
+									+e.message-text Письмо отправлено!
+						+e.BUTTON.comment-btn(type='button')
+							+e.SPAN Сохранить
+
+			+e.BUTTON(type='button').close-btn.js-remove-product
+				+icon('icon-close', 'product__close-btn-icon')
+
+		+b.product._basket
+			+e.item
+				+e.item-pic-wrap.js-product-item-pic
+					+e.A(href='#!').item-pic.decor
+						+e.IMG.img(src="img/content/prod-2.jpg")
+						.decor__line
+					+e.A.zoom(href='img/content/prod-2_lg.jpg' data-fancybox='product-3')
+						+e.SPAN.zoom-icon-wrap
+							+icon('icon-loupe','product__zoom-icon')
+				+e.item-info
+					+e.item-title Любая вышивка на полотенце, под «Золото».
+					+e.item-descr Размер: 250х100 мм
+					+e.item-article Артикул:&nbsp;
+						+e.SPAN 22
+					+e.item-price Всего за товар:
+						+e.SPAN.item-price-count 150&nbsp;
+							+icon('icon-ruble','product__val-icon')
+			+e.buy-options
+				+b.amount
+					+e.text Количество:
+					+e.count
+						+e.INPUT.input.js-product-amount(type='number' min='1' max='999' value='1' name='' required)
+				+e.BUTTON(type='button').open-comment-btn.js-open-comment
+					+icon('icon-arr-def', 'product__open-comment-btn-icon')
+					+e.SPAN Комментарий
+
+				+e.comment.js-focus-fields
+					+e.comment-message-wrap
+						+e.TEXTAREA.comment-message
+						+e.BUTTON.comment-extend.js-message-extend(type='button')
+							+icon('icon-arr-double', 'product__comment-extend-icon')
+					+e.comment-block
+						+b.send._basket
+							+e.add
+								+e.LABEL.add-btn(for='upload-1') Добавить файл
+									+e.INPUT.add-input(id='upload-1' type='file' accept='image/*' name='' multiple)
+								+e.add-text(style='display: none') Прикрепленные файлы:
+							+e.files
+								+e.item.decor._sm
+									+e.IMG(src='img/content/file-1.jpg')
+									+e.BUTTON.item-cancel(type='button')
+										+icon('icon-close', 'send__item-cancel-icon')
+									+b.decor__line
+								+e.item.decor._sm
+									+e.IMG(src='img/content/file-2.jpg')
+									+e.BUTTON.item-cancel(type='button')
+										+icon('icon-close', 'send__item-cancel-icon')
+									+b.decor__line
+								+e.message(style='display: none')
+									+icon('icon-mark', 'send__message-icon')
+									+e.message-text Письмо отправлено!
+						+e.BUTTON.comment-btn(type='button')
+							+e.SPAN Сохранить
+
+			+e.BUTTON(type='button').close-btn.js-remove-product
+				+icon('icon-close', 'product__close-btn-icon')
+
+		+b.summ
+			+e.text ИТОГО ВСЕХ ТОВАРОВ:
+				+e.text-price
+					+e.SPAN 2150
+					= ' '
+					+icon('icon-ruble')
+				+e.text-words
+					+e.SPAN (Две тысячи сто пятьдесят рублей, ноль копеек).
+					= ' '
+					+e.SPAN.text-delivery Без учёта доставки.
+
+			+e.promo
+				+e.promo-text Промо - код (если имеется)
+				+e.promo-input-wrap.js-focus-fields
+					+e.INPUT(type='text' name='')
+
+			+b.BUTTON.order-btn(type='submit') Оформить заказ
+
+	include components/_benefits

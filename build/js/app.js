@@ -3972,6 +3972,7 @@ $(document).ready(function () {
       }, 400);
     });
   }
+
   initTopBar();
 
   var $homeSlider = $('.js-home-slider');
@@ -4042,7 +4043,7 @@ $(document).ready(function () {
   })();
 
   function initFocusFields() {
-    var $focusInput = $('.js-focus-fields').find('input');
+    var $focusInput = $('.js-focus-fields').find('input:not("[type=file]"), textarea');
 
     $focusInput.on('focus', function () {
       var $focusField = $(this).parent();
@@ -4108,4 +4109,17 @@ $(document).ready(function () {
       $(this).removeClass('is-active');
     });
   })();
+
+  // open basket comment
+  var $commentOpenBtn = $('.js-open-comment');
+  $commentOpenBtn.on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('is-open');
+    $(this).next().toggle();
+  });
+  // remove item from basket
+  var $removeBtn = $('.js-remove-product');
+  $removeBtn.on('click', function () {
+    $(this).parent().remove();
+  });
 });

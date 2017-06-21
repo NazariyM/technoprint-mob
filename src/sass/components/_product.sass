@@ -500,13 +500,6 @@
 		padding: 2px 50px 0 25px
 		font-size: 16px
 		-webkit-tap-highlight-color: transparent
-		&.is-open .product__calc-icon
-			fill: #c9c9c9
-		&.is-open
-			background: #e0e0e0
-			color: #000
-		&.is-open::after
-			+ico('edit-dark')
 		span
 			display: block
 			max-width: 240px
@@ -533,13 +526,6 @@
 			+ico('edit-hvr')
 		&:active::after
 			+ico('edit-act')
-			
-		&_comment
-			margin-top: 5px
-			width: 100%
-			max-width: none
-			font-size: 18px
-			border-bottom-color: #c9c9c9
 	&__calc-btn:hover &__calc-icon
 		fill: #2ABAFC
 	&__calc-btn:active &__calc-icon
@@ -550,6 +536,44 @@
 		left: 5px
 		fill: #DFE9F5
 		font-size: 11px
+	&__open-comment-btn
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		line-height: 1.2
+		color: #00306B
+		min-height: 48px
+		padding: 2px 50px 0 25px
+		-webkit-tap-highlight-color: transparent
+		margin-top: 5px
+		width: 100%
+		font-size: 18px
+		background: #f4f8fd
+		border-bottom: 1px solid #c9c9c9
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			width: 47px
+			height: 47px
+			right: 0
+			top: 0
+			+ico('edit')
+		&.is-open .product__calc-icon
+			fill: #c9c9c9
+		&.is-open
+			background: #e0e0e0
+			color: #000
+		&.is-open::after
+			+ico('edit-dark')
+		&.is-open &-icon
+			fill: #c9c9c9
+		&-icon
+			position: absolute
+			top: 10px
+			left: 5px
+			fill: #DFE9F5
+			font-size: 11px
 	&__wish-add-btn
 		position: relative
 		display: inline-block
@@ -636,35 +660,48 @@
 		fill: #8C1212
 			
 	&__comment
-		padding: 15px
+		display: none
+		padding: 15px 10px 30px
 		background: #E0E0E0
-		+sm
-			padding: 10px
+		&-block
+			text-align: center
 		&-message-wrap
 			position: relative
 			padding-left: 39px
+			padding-bottom: 30px
+			margin-bottom: 20px
 			border: 1px solid #99AFCF
-			background: #F7F7F7
+			background: #fff
 			overflow: hidden
 			&::before
 				content: ''
 				position: absolute
 				top: -1px
 				left: -1px
+				z-index: 2
 				width: 40px
 				height: 30px
 				+ico('dots-log')
+			&::after
+				position: absolute
+				left: 0
+				top: 0
+				z-index: 1
+				content: ''
+				height: 100%
+				background: #f7f7f7
+				width: 40px
+			&.is-focus
+				outline: 1px solid #99afcf
 		&-message
 			display: block
 			width: 100%
-			padding: 2px 10px 25px
+			padding: 2px 10px 0
 			resize: none
-			min-height: 120px
+			min-height: 100px
 			border: none
 			+f('psr', 18)
 			transition: min-height 0.3s
-			+sm
-				font-size: 16px
 			&.extended
 				min-height: 160px
 		&-extend
@@ -687,22 +724,14 @@
 			&.is-active &-icon
 				transform: scaleY(-1)
 		&-btn
-			margin-top: 10px
+			margin-top: 15px
 			min-width: 216px
 			height: 40px
 			padding: 0 10px
-			line-height: 40px
 			color: #fff
 			text-transform: uppercase
 			background: #B9C0C9
-			border: 1px solid #99AFCF
 			+f('oss', 15, 15)
-			+sm
-				min-width: 180px
-				margin-top: 35px
-				font-size: 13px
-				height: 34px
-				line-height: 30px
 			&:hover
 				background: darken(#B9C0C9, 8)
 			&:active
@@ -712,8 +741,10 @@
 			span
 				border-bottom: 2px solid #A0AABA
 	
+	&_basket
+		position: relative
 	&_basket &__item
-		+r(374)
+		+r(424)
 			padding: 10px 5px
 	&_basket &__item-title
 		padding-right: 35px

@@ -134,6 +134,23 @@
 	&_request
 		margin-top: 20px
 		
+	&_basket
+		max-width: 260px
+		margin: 0 auto
+		+clr
+	&_basket &__add
+		float: left
+	&_basket &__add-btn
+		background: #b9c0c9
+	&_basket &__files
+		margin-top: 20px
+		width: 100%
+		text-align: left
+	&_basket &__item
+		margin: 0 10px 20px
+		.decor__line:after
+			background-color: #e0e0e0
+
 /* breadcrumbs
 	----------------------------------- */
 .breadcrumbs
@@ -535,10 +552,10 @@
 	display: flex
 	justify-content: space-between
 	align-items: center
-	padding: 0 0 0 15px
+	padding: 0 0 0 10px
 	background: #f4f8fd
 	&__text
-		font-size: 20px
+		font-size: 19px
 		color: #00306B
 	&__count
 		padding: 8px 10px 8px 25px
@@ -554,3 +571,58 @@
 		height: 29px
 		line-height: 29px
 		text-align: right
+
+.main
+	&_basket
+		padding-bottom: 5px
+		border: 5px solid #ebecec
+		
+/* summary
+	----------------------------------- */
+.summ
+	padding: 15px 5px
+	text-align: center
+	font-size: 17px
+	&__text
+		color: #00306B
+		text-transform: uppercase
+		font-size: 18px
+		&-price, &-words, &-delivery
+			display: inline-block
+		&-price
+			margin: 0 15px
+			+f('psb')
+			+md
+				margin: 0 8px
+			.icon-ruble
+				fill: #00306B
+				font-size: 17px
+				+md
+					font-size: 14px
+		&-words, &-delivery
+			text-transform: none
+		&-delivery
+			color: #808080
+	
+	&__promo
+		margin: 20px 0
+		&-text
+			color: #B3B3B3
+		&-input-wrap
+			max-width: 200px
+			margin: 3px auto 0
+			border: 1px solid #99AFCF
+			&.is-focus
+				outline: 1px solid #99afcf
+			input
+				width: 100%
+				height: 45px
+				line-height: 45px
+				padding: 0 10px
+				+f('ver', 22)
+				+md
+					height: 34px
+					line-height: 34px
+					font-size: 19px
+				+sm
+					font-size: 16px

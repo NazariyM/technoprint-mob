@@ -129,6 +129,38 @@ button
 	&:hover::after
 		+ico('send-act')
 		
+.order-btn
+	position: relative
+	min-width: 270px
+	text-align: center
+	color: #fff
+	background: #28B0E2
+	border-bottom: 2px solid #E0E0E1
+	overflow: hidden
+	text-transform: uppercase
+	height: 45px
+	padding: 0 33px 0 10px
+	line-height: 44px
+	font-size: 18px
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		height: 43px
+		width: 44px
+		+ico('like')
+	&:hover
+		background: #06B2F0
+		border-bottom-color: #FFBE77
+	&:active
+		background: #23568B
+		border-bottom-color: #FF0000
+	&:hover::after
+		+ico('like-hvr')
+	&:active::after
+		+ico('like-act')
+		
 .btn-cart
 	position: relative
 	padding: 13px 60px 13px 26px
