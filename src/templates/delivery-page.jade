@@ -1,0 +1,40 @@
+---
+title: Техно-принт
+---
+extends layouts/_layout
+
+block header
+	-
+		var breadCrumbsList = [{text: 'Оплата', active: 'is-active'}];
+	include partials/_header
+
+block content
+	+b.MAIN
+
+		+b.SECTION.delivery
+			.container-mob
+				+e.country
+					+e.title.title-lg ДОСТАВКА ПО РОССИИ ТРАНСПОРТНЫМИ КОМПАНИЯМИ
+					+e.country-in
+						+e.country-text
+							+e.UL
+								+e.LI ПЭК
+								+e.LI СДЭК
+								+e.LI ДЕЛОВЫЕ ЛИНИИ
+								+e.LI DHL
+						+e.country-pic
+							+e.IMG(src='img/bg/delivery_map.png')
+
+			.container-mob.container-mob_no-padding
+				+e.city-wrap
+					+e.city
+						+e.city-text
+							+e.title.title-lg ДОСТАВКА ПО ГОРОДУ САМАРА
+							+e.city-descr
+								+e.P Штучные товары заказанные через интернет-магазин - 250 руб. по Самаре (такую доставку желательно планировать заранее в рабочее время)
+								+e.P Заказы-грузы до 10 кг веса в центре - 300 руб.
+								+e.P Дальние районы города - 350 руб.
+						+e.city-bg(style='background-image: url(img/bg/delivery.png)')
+
+		include components/_rubric
+		include components/_benefits

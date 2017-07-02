@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,cyrillic-ext')
 +font("Verdana", Verdana)
 +font("TruthCYRMedium", TruthCYRMedium)
++font("ASimplerDnm", ASimplerDnm)
 
 =f($name, $font-size: null, $line-height: null, $font-weight: null)
 	$font-family: null
@@ -21,6 +22,8 @@
 		$font-family: "Verdana"
 	@if $name == "tcm"
 		$font-family: "TruthCYRMedium"
+	@if $name == "asd"
+		$font-family: "ASimplerDnm"
 	font-family: $font-family, Arial, sans-serif
 	@if $font-family != null
 	@if $font-size != null
