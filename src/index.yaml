@@ -15,3 +15,6 @@ PageList:
 
 - file: contacts-page.html
   ready: 100%
+
+- file: payment-page.html
+  ready: 100%

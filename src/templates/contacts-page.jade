@@ -10,80 +10,23 @@ block header
 
 block content
 	+b.MAIN
+		.container-mob.container-mob_no-padding
+			+b.payment
+				+e.in
+					+e.title ОПЛАТА ТОВАРОВ И УСЛУГ
+					+e.P.descr Принимаем наличный и безналичный расчеты. Работаем по договорам с организациями. Для дистанционной оплаты заказов на опт - свяжитесь с нами.
+					+e.UL.list
+						+e.LI Наличными
+							+icon('icon-mark', 'payment__list-icon')
+						+e.LI Безналичными
+							+icon('icon-mark', 'payment__list-icon')
+						+e.LI По договорам
+							+icon('icon-mark', 'payment__list-icon')
+				+e.bg-wrap
+					+e.bg
+						+e.bg-img(style='background-image: url(img/bg/payment.svg)')
 
-		+b.SECTION.contacts
-			.container-mob
-				+e.info
-					+e.info-data
-						+e.info-title АДРЕСА И КОНТАКТЫ
-						+e.info-item
-							+e.info-text
-								+e.P.info-descr 1. г. Самара, ул. Чапаевская, 232 офис
-								+e.P.info-descr._no-wrap Режим работы с 9-00 до 18-00
-									br
-									| сб. сокращённый рабочий день до 14-00.
-							+e.info-text
-								+e.info-mail
-									+e.STRONG Почта:
-									= ' '
-									+e.A(href='mailto:tp-sam@yandex.ru') tp-sam@yandex.ru
-								+e.info-tel
-									+e.STRONG Тел.:
-									= ' '
-									+e.SPAN 332-7740, 267-21-70
-
-							+e.info-text
-								+e.P.info-descr Отдел большей частью занимается по широкоформатной полиграфии и документации. Печать возможна в вашем присутствии!
-
-					+e.info-map
-						+e.IFRAME(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.978980134671!2d50.10050231616926!3d53.200293179948694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41661e415581f6b1%3A0x9a1064c111216ab7!2z0KLQtdGF0L3Qvi3Qn9GA0LjQvdGC!5e0!3m2!1suk!2sua!4v1492587717170', frameborder='0', style='border:0', allowfullscreen='')
-			.container-mob
-				+e.info
-					+e.info-data
-						+e.info-item
-							+e.info-text
-								+e.P.info-descr 2. Самара, ул. Первомайская, 25
-								+e.P.info-descr Режим работы с 9-00 до 18-00 сб.
-									br
-									| плавающий график, звоните.
-							+e.info-text
-								+e.info-mail
-									+e.STRONG Почта:
-									= ' '
-									+e.A(href='mailto:tp-smr@yandex.ru') tp-smr@yandex.ru
-								+e.info-tel
-									+e.STRONG Тел.:
-									= ' '
-									+e.SPAN 332-7740, 267-21-70
-
-							+e.info-text
-								+e.P.info-descr Офис по сувенирной продукции, оперативная полиграфия.
-							+e.info-text
-								+e.P.info-descr Дополнительный телефон руководителя:
-									+e.BR
-									| Виктор Лунин
-									=  ' '
-								+e.info-tel Телефон:
-									= ' '
-									+e.A(href='tel:89277016292') 8-927-701-62-92
-
-					+e.info-map
-						+e.IFRAME(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.555577145599!2d50.12225481616951!3d53.207886179950194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41661e5f40e96793%3A0xa4e2189533bd01a2!2z0KLQtdGF0L3QviDQv9GA0LjQvdGC!5e0!3m2!1suk!2sua!4v1492588044290', frameborder='0', style='border:0', allowfullscreen='')
-
-			+e.socials
-				+e.socials-links
-					| Мы в
-					= ' '
-					+e.A(href='#!') Инстаграмм
-					|  и в
-					= ' '
-					+e.A(href='#!') ВКонтакте
-			.container-mob
-				+e.descr
-					+e.descr-title Придя к нам, вы увидите много интересного!
-					+e.descr-text Посмотрите как изготавливается ваша печать и сувениры, оцените качество и скорость выполнения заказов. Рассмотрите предложения по различным услугам на будущее, узнаете место, где всё производится по ценам оптового предприятия, где всрочном порядке можно заказывать продукцию для праздников и подарков близким.
-				+e.wait-text Ждём Ваших заказов!
-
+				+e.wait-text ЖДЁМ ВАШИХ ЗАКАЗОВ!
 
 		include components/_rubric
 		include components/_benefits
