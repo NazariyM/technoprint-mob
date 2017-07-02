@@ -21,3 +21,6 @@ PageList:
 
 - file: delivery-page.html
   ready: 100%
+
+- file: news-page.html
+  ready: 100%

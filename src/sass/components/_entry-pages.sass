@@ -165,3 +165,56 @@
 			font-size: 16px
 			p + p
 				margin-top: 15px
+
+/* news
+	----------------------------------- */
+.news
+	&__post
+		padding: 8px 0
+		& + &
+			margin-top: 20px
+		&-img-wrap
+			img
+				width: 100%
+				height: 100%
+		&-date
+			display: flex
+			justify-content: space-between
+			padding: 10px
+			+f('oss', 14)
+			color: #BCBFC2
+		&-title
+			margin-bottom: 15px
+			+f('oss', 20)
+			background: #F4F8FD
+			padding: 10px
+			font-size: 16px
+			text-align: center
+		&-descr
+			position: relative
+			padding: 0 8px 40px
+			min-height: 245px
+			p
+				text-indent: 20px
+			&_important
+				font-weight: bold
+		&-descr.is-open.news__post-descr_important
+			border-color: transparent
+		&-more-btn
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			bottom: 10px
+			z-index: 1
+			color: #004D87
+			font-size: 16px
+			span
+				display: inline-block
+				vertical-align: middle
+			&.is-active .news__post-more-icon
+				+rotate(180)
+		&-more-icon
+			display: inline-block
+			vertical-align: middle
+			fill: #999999
+			font-size: 13px

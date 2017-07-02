@@ -194,4 +194,16 @@ $(document).ready(function () {
       $(this).removeClass('is-active');
     });
   })();
+
+  // news toggling
+  (function() {
+    const $moreNewsBtn = $('.js-more-text-news');
+
+    $moreNewsBtn.on('click', function(e) {
+      e.preventDefault();
+      $(this).prev().toggle();
+      $(this).toggleClass('is-active');
+    });
+  }());
+
 });
