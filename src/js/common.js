@@ -194,17 +194,4 @@ $(document).ready(function () {
       $(this).removeClass('is-active');
     });
   })();
-
-  // open basket comment
-    var $commentOpenBtn = $('.js-open-comment');
-    $commentOpenBtn.on('click', function (e) {
-      e.preventDefault();
-      $(this).toggleClass('is-open');
-      $(this).next().toggle();
-    });
-  // remove item from basket
-    var $removeBtn = $('.js-remove-product');
-    $removeBtn.on('click', function () {
-      $(this).parent().remove();
-    });
 });

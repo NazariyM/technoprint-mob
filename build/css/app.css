@@ -1331,6 +1331,16 @@ body {
   padding: 0 15px;
 }
 
+.container-mob {
+  padding: 0 10px;
+  background: #fff;
+  border: 8px solid #ebecec;
+}
+
+.container-mob + .container-mob {
+  border-top: 0;
+}
+
 .out {
   overflow: hidden;
 }
@@ -1672,34 +1682,21 @@ button {
   display: none;
 }
 
-.contacts__in {
-  padding-bottom: 70px;
-}
-
 .contacts__info {
-  font-style: normal;
-  *zoom: 1;
-}
-
-.contacts__info:after {
-  content: " ";
-  display: table;
-  clear: both;
+  padding: 10px 0;
 }
 
 .contacts__info + .contacts__info {
-  padding-top: 50px;
+  margin-top: 20px;
 }
 
 .contacts__info-data {
-  float: left;
-  width: 40.45802%;
-  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
 .contacts__info-title {
-  margin-bottom: 45px;
-  font-size: 27px;
+  padding: 10px 0 25px;
+  font-size: 21px;
   text-align: center;
 }
 
@@ -1718,8 +1715,6 @@ button {
 
 .contacts__info-map {
   position: relative;
-  float: right;
-  width: 52.67176%;
 }
 
 .contacts__info-map::after {
@@ -1735,25 +1730,31 @@ button {
 
 .contacts__info-map iframe {
   width: 100%;
-  height: 450px;
+  height: 360px;
 }
 
 .contacts__info-item {
-  margin-top: 25px;
-  font-size: 22px;
+  font-size: 16px;
+}
+
+.contacts__info-descr_no-wrap {
+  white-space: nowrap;
 }
 
 .contacts__info-text + .contacts__info-text {
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 .contacts__socials {
-  padding: 40px 0;
+  padding: 25px 0;
+  border: 8px solid #ebecec;
+  border-top: 0;
+  border-bottom: 0;
 }
 
 .contacts__socials-links {
   font-family: "PT Sans", Arial, sans-serif;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 700;
   text-align: center;
 }
@@ -1768,31 +1769,28 @@ button {
 }
 
 .contacts__descr {
-  padding: 50px 0;
-  margin: 0 40px;
-  border-top: 1px solid #D1D1D1;
-  border-bottom: 1px solid #D1D1D1;
-  font-size: 22px;
+  padding: 25px 0 40px;
+  font-size: 18px;
 }
 
 .contacts__descr-title {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 600;
+  line-height: 1.4;
   text-align: center;
 }
 
 .contacts__descr-text {
+  font-size: 17px;
   text-indent: 35px;
 }
 
 .contacts__wait-text {
-  margin: 95px 0 60px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
   text-align: center;
-}
-
-.contacts_default {
-  padding-left: 30px;
+  font-size: 18px;
 }
 
 body::after {

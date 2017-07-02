@@ -1,18 +1,13 @@
 .contacts
-	&__in
-		padding-bottom: 70px
 	&__info
-		font-style: normal
-		+clr
+		padding: 10px 0
 		& + &
-			padding-top: 50px
+			margin-top: 20px
 	&__info-data
-		float: left
-		width: percentage(530 / 1310)
-		padding-top: 15px
+		padding-bottom: 10px
 	&__info-title
-		margin-bottom: 45px
-		font-size: 27px
+		padding: 10px 0 25px
+		font-size: 21px
 		text-align: center
 	&__info-mail
 		margin-bottom: 5px
@@ -23,8 +18,6 @@
 			text-decoration: none
 	&__info-map
 		position: relative
-		float: right
-		width: percentage(690 / 1310)
 		&::after
 			content: ''
 			+coverdiv
@@ -32,17 +25,21 @@
 			box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4)
 	&__info-map iframe
 		width: 100%
-		height: 450px
+		height: 360px
 	&__info-item
-		margin-top: 25px
-		font-size: 22px
+		font-size: 16px
+	&__info-descr_no-wrap
+		white-space: nowrap
 	&__info-text + &__info-text
-		margin-top: 35px
+		margin-top: 20px
 		
 	&__socials
-		padding: 40px 0
+		padding: 25px 0
+		border: 8px solid #ebecec
+		border-top: 0
+		border-bottom: 0
 	&__socials-links
-		+f('psb', 22)
+		+f('psb', 17)
 		text-align: center
 		a
 			color: #274F7F
@@ -50,21 +47,20 @@
 			&:hover
 				text-decoration: none
 	&__descr
-		padding: 50px 0
-		margin: 0 40px
-		border-top: 1px solid #D1D1D1
-		border-bottom: 1px solid #D1D1D1
-		font-size: 22px
+		padding: 25px 0 40px
+		font-size: 18px
 		&-title
-			margin-bottom: 40px
+			margin-bottom: 20px
 			+f('oss')
+			line-height: 1.4
 			text-align: center
 		&-text
+			font-size: 17px
 			text-indent: 35px
 			
 	&__wait-text
-		margin: 95px 0 60px
+		padding-bottom: 30px
+		text-transform: uppercase
 		text-align: center
-	&_default
-		padding-left: 30px
+		font-size: 18px
 		
